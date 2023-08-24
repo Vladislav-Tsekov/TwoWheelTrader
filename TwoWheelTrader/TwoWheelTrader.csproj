@@ -8,7 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Models\Motocross\" />
+    <Folder Include="Models\Enduro\" />
+    <Folder Include="Models\Naked\" />
+    <Folder Include="Models\Sport\" />
+    <Folder Include="Models\Tourer\" />
   </ItemGroup>
 
 </Project>
