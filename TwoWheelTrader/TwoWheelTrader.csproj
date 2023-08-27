@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Naked\" />
     <Folder Include="Models\Sport\" />
     <Folder Include="Models\Tourer\" />
   </ItemGroup>
