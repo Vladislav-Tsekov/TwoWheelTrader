@@ -2,7 +2,7 @@
 
 namespace TwoWheelTrader.Core
 {
-    public class Logic : ILogic
+    public class Controller : ILogic
     {
         // APPLICATION'S BUSINESS LOGIC
     }

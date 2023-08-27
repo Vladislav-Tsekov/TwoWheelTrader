@@ -2,3 +2,13 @@ C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\Tw
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.AssemblyInfoInputs.cache
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.AssemblyInfo.cs
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.csproj.CoreCompileInputs.cache
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\bin\Debug\net6.0\TwoWheelTrader.exe
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\bin\Debug\net6.0\TwoWheelTrader.deps.json
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\bin\Debug\net6.0\TwoWheelTrader.runtimeconfig.json
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\bin\Debug\net6.0\TwoWheelTrader.dll
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\bin\Debug\net6.0\TwoWheelTrader.pdb
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.dll
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\refint\TwoWheelTrader.dll
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.pdb
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.genruntimeconfig.cache
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\ref\TwoWheelTrader.dll
