@@ -1,0 +1,4 @@
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.AssemblyInfoInputs.cache
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.AssemblyInfo.cs
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\obj\Debug\net6.0\TwoWheelTrader.csproj.CoreCompileInputs.cache
