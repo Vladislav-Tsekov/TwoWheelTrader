@@ -8,8 +8,4 @@
     <StartupObject>TwoWheelTrader.Core.StartUp</StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\Sport\" />
-  </ItemGroup>
-
 </Project>
