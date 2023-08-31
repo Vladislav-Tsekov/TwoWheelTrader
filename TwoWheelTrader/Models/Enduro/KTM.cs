@@ -18,37 +18,37 @@ namespace TwoWheelTrader.Models.Enduro
                 case 2007:
                     MarketPrice = 5800; break;
                 case 2008:
-                    MarketPrice = 6400; break;
+                    MarketPrice = 6200; break;
                 case 2009:
-                    MarketPrice = 6700; break;
+                    MarketPrice = 6500; break;
                 case 2010:
-                    MarketPrice = 6900; break;
+                    MarketPrice = 6800; break;
                 case 2011:
-                    MarketPrice = 7300; break;
+                    MarketPrice = 7200; break;
                 case 2012:
-                    MarketPrice = 7600; break;
+                    MarketPrice = 7500; break;
                 case 2013:
-                    MarketPrice = 7900; break;
+                    MarketPrice = 8000; break;
                 case 2014:
                     MarketPrice = 8400; break;
                 case 2015:
-                    MarketPrice = 8700; break;
-                case 2016:
                     MarketPrice = 9000; break;
+                case 2016:
+                    MarketPrice = 9800; break;
                 case 2017:
-                    MarketPrice = 9300; break;
+                    MarketPrice = 10500; break;
                 case 2018:
-                    MarketPrice = 9600; break;
-                case 2019:
-                    MarketPrice = 10000; break;
-                case 2020:
                     MarketPrice = 11000; break;
-                case 2021:
+                case 2019:
                     MarketPrice = 12000; break;
-                case 2022:
+                case 2020:
                     MarketPrice = 13000; break;
+                case 2021:
+                    MarketPrice = 14500; break;
+                case 2022:
+                    MarketPrice = 15500; break;
                 case 2023:
-                    MarketPrice = 14000; break;
+                    MarketPrice = 17000; break;
             }
         }
         public string Make { get; set; }
