@@ -1,6 +1,6 @@
 ﻿namespace TwoWheelTrader.Models.Interfaces
 {
-    public interface IEnduro
+    public interface IEnduro : IMotorcycle
     {
         // WILL BE THE SAME AS MOTOCROSS
     }
