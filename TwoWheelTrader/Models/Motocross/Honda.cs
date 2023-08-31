@@ -15,22 +15,24 @@ namespace TwoWheelTrader.Models.Motocross
 
             switch (Year)
             {
+                case 2007:
+                    MarketPrice = 4500; break;
                 case 2008:
-                    MarketPrice = 5050; break;
+                    MarketPrice = 4700; break;
                 case 2009:
                     MarketPrice = 5100; break;
                 case 2010:
-                    MarketPrice = 5600; break;
+                    MarketPrice = 5400; break;
                 case 2011:
-                    MarketPrice = 5800; break;
+                    MarketPrice = 5900; break;
                 case 2012:
                     MarketPrice = 6300; break;
                 case 2013:
                     MarketPrice = 6500; break;
                 case 2014:
-                    MarketPrice = 7000; break;
+                    MarketPrice = 6600; break;
                 case 2015:
-                    MarketPrice = 7150; break;
+                    MarketPrice = 6800; break;
                 case 2016:
                     MarketPrice = 7500; break;
                 case 2017:
@@ -40,11 +42,11 @@ namespace TwoWheelTrader.Models.Motocross
                 case 2019:
                     MarketPrice = 9500; break;
                 case 2020:
-                    MarketPrice = 10300; break;
+                    MarketPrice = 10000; break;
                 case 2021:
-                    MarketPrice = 10800; break;
+                    MarketPrice = 10500; break;
                 case 2022:
-                    MarketPrice = 11200; break;
+                    MarketPrice = 11000; break;
                 case 2023:
                     MarketPrice = 12000; break;
             }
