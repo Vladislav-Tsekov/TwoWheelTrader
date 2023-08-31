@@ -76,4 +76,4 @@ namespace TwoWheelTrader.Models.Enduro
         public string Link { get; set; }
     }
 }
-}
+
