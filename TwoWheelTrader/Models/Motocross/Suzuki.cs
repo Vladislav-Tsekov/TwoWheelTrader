@@ -16,39 +16,39 @@ namespace TwoWheelTrader.Models.Motocross
             switch (Year)
             {
                 case 2007:
-                    MarketPrice = ; break;
+                    MarketPrice = 4400; break;
                 case 2008:
-                    MarketPrice = ; break;
+                    MarketPrice = 4600; break;
                 case 2009:
-                    MarketPrice = ; break;
+                    MarketPrice = 4800; break;
                 case 2010:
-                    MarketPrice = ; break;
+                    MarketPrice = 5200; break;
                 case 2011:
-                    MarketPrice = ; break;
+                    MarketPrice = 5600; break;
                 case 2012:
-                    MarketPrice = ; break;
+                    MarketPrice = 6000; break;
                 case 2013:
-                    MarketPrice = ; break;
+                    MarketPrice = 6300; break;
                 case 2014:
-                    MarketPrice = ; break;
+                    MarketPrice = 6500; break;
                 case 2015:
-                    MarketPrice = ; break;
+                    MarketPrice = 6700; break;
                 case 2016:
-                    MarketPrice = ; break;
+                    MarketPrice = 7300; break;
                 case 2017:
-                    MarketPrice = ; break;
+                    MarketPrice = 7700; break;
                 case 2018:
-                    MarketPrice = ; break;
+                    MarketPrice = 8300; break;
                 case 2019:
-                    MarketPrice = ; break;
+                    MarketPrice = 8900; break;
                 case 2020:
-                    MarketPrice = ; break;
+                    MarketPrice = 9400; break;
                 case 2021:
-                    MarketPrice = ; break;
+                    MarketPrice = 9800; break;
                 case 2022:
-                    MarketPrice = ; break;
+                    MarketPrice = 10000; break;
                 case 2023:
-                    MarketPrice = ; break;
+                    MarketPrice = 11000; break;
             }
         }
         public string Make { get; set; }
