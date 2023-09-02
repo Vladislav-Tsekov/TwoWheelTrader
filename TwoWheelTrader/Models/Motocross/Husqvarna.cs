@@ -4,6 +4,62 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Husqvarna : IMotocross
     {
+        public Husqvarna(string model, int cc, int year, int priceForeign, int priceBGN)
+        {
+            Make = "Husqvarna";
+            Model = model;
+            CC = cc;
+            Year = year;
+            PriceForeign = priceForeign;
+            PriceBGN = priceBGN;
 
+            switch (Year)
+            {
+                case 2014:
+                    MarketPrice = 7200; break;
+                case 2015:
+                    MarketPrice = 7500; break;
+                case 2016:
+                    MarketPrice = 7900; break;
+                case 2017:
+                    MarketPrice = 8100; break;
+                case 2018:
+                    MarketPrice = 9200; break;
+                case 2019:
+                    MarketPrice = 9500; break;
+                case 2020:
+                    MarketPrice = 9700; break;
+                case 2021:
+                    MarketPrice = 11000; break;
+                case 2022:
+                    MarketPrice = 11500; break;
+                case 2023:
+                    MarketPrice = 12500; break;
+            }
+        }
+        public string Make { get; set; }
+
+        public string Model { get; set; }
+
+        public int CC { get; set; }
+
+        public int Year { get; set; }
+
+        public int PriceForeign { get; set; }
+
+        public int PriceBGN { get; set; }
+
+        public int MarketPrice { get; set; }
+
+        public int DistanceToPickUp { get; set; }
+
+        public int FuelCost { get; set; }
+
+        public int TotalCost { get; set; }
+
+        public int Profit { get; set; }
+
+        public string Link { get; set; }
     }
 }
+
