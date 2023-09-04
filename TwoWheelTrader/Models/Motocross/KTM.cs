@@ -34,13 +34,13 @@ namespace TwoWheelTrader.Models.Motocross
                 case 2015:
                     MarketPrice = 7500; break;
                 case 2016:
-                    MarketPrice = 7900; break;
+                    MarketPrice = 7800; break;
                 case 2017:
                     MarketPrice = 8300; break;
                 case 2018:
                     MarketPrice = 9200; break;
                 case 2019:
-                    MarketPrice = 9500; break;
+                    MarketPrice = 9600; break;
                 case 2020:
                     MarketPrice = 10300; break;
                 case 2021:

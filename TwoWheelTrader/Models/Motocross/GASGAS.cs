@@ -16,11 +16,11 @@ namespace TwoWheelTrader.Models.Motocross
             switch (Year)
             {
                 case 2021:
-                    MarketPrice = 10000; break;
+                    MarketPrice = 10500; break;
                 case 2022:
-                    MarketPrice = 11000; break;
+                    MarketPrice = 11250; break;
                 case 2023:
-                    MarketPrice = 12000; break;
+                    MarketPrice = 12300; break;
             }
         }
         public string Make { get; set; }
