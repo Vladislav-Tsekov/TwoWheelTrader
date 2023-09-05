@@ -6,11 +6,11 @@
 
         void AddMotorcycle(T motorcycle); // Adds a given motorcycle to the collection
 
-        void TopThreeByProfit(IRepository<T> motorcycles); 
-        // Returns the three highest ranked motorcycles, sorted by profit in a descending order
+        void TopFiveByProfit(IRepository<T> motorcycles); 
+        // Returns the five highest ranked motorcycles, sorted by profit in a descending order
 
-        void TopThreeROI(IRepository<T> motorcycles); 
-        // Returns the three highest ranked motorcycles, sorted by Profit % Price
+        void TopFiveROI(IRepository<T> motorcycles); 
+        // Returns the five highest ranked motorcycles, sorted by Profit % Price
 
         //void RemoveMotorcycle(string motorcycle); -- Not yet implemented, signature unknown, probably an ID
 
