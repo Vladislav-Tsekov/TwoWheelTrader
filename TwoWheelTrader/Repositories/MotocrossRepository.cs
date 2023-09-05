@@ -18,12 +18,12 @@ namespace TwoWheelTrader.Repositories
             motorcycles.Add(motorcycle);
         }
 
-        public void TopFiveByProfit(IRepository<IEnduro> motorcycles)
+        public void TopFiveByProfit(IRepository<IMotocross> motorcycles)
         {
             var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(3);
         }
 
-        public void TopFiveROI(IRepository<IEnduro> motorcycles)
+        public void TopFiveROI(IRepository<IMotocross> motorcycles)
         {
             var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.ROI).Take(5);
         }
