@@ -4,6 +4,8 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Kawasaki : IMotocross
     {
+        private double roi;
+
         public Kawasaki(string model, int cc, int year, int priceForeign, int priceBGN)
         {
             Make = "Kawasaki";
@@ -72,6 +74,14 @@ namespace TwoWheelTrader.Models.Motocross
         public int TotalCost { get; set; }
 
         public int Profit { get; set; }
+
+        public double ROI
+        {
+            get => roi; set
+            {
+                roi = (this.Profit / this.TotalCost) * 100;
+            }
+        }
 
         public string Link { get; set; }
     }
