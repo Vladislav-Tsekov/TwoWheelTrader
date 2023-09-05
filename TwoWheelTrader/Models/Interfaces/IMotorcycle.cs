@@ -13,6 +13,7 @@
         int FuelCost { get; }
         int TotalCost { get; }
         int Profit { get; }
+        double ROI { get; }
         string Link { get; }
     }
 }

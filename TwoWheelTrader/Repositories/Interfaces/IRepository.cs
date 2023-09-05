@@ -2,13 +2,15 @@
 {
     public interface IRepository<T>
     {
-        public IReadOnlyCollection<T> Motorcycles { get; }
+        public IReadOnlyCollection<T> Motorcycles { get; } // Read-only collection that will store all motorcycles of a given category
 
-        void AddMotorcycle(T motorcycle);
+        void AddMotorcycle(T motorcycle); // Adds a given motorcycle to the collection
 
-        void TopThreeByProfit();
+        void TopThreeByProfit(IRepository<T> motorcycles); 
+        // Returns the three highest ranked motorcycles, sorted by profit in a descending order
 
-        void TopThreeROI();
+        void TopThreeROI(IRepository<T> motorcycles); 
+        // Returns the three highest ranked motorcycles, sorted by Profit % Price
 
         //void RemoveMotorcycle(string motorcycle); -- Not yet implemented, signature unknown, probably an ID
 
