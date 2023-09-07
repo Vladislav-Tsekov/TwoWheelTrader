@@ -7,7 +7,7 @@
         int CC { get; }
         int Year { get; }
         int PriceForeign { get; }
-        int PriceBGN { get; }
+        double PriceBGN { get; }
         int MarketPrice { get; }
         int DistanceToPickUp { get; }
         int FuelCost { get; }

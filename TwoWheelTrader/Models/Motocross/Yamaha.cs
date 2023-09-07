@@ -5,15 +5,15 @@ namespace TwoWheelTrader.Models.Motocross
     public class Yamaha : IMotocross
     {
         private double roi;
+        private double priceBGN;
 
-        public Yamaha(string model, int cc, int year, int priceForeign, int priceBGN)
+        public Yamaha(string model, int cc, int year, int priceForeign)
         {
             Make = "Yamaha";
             Model = model;
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;
-            PriceBGN = priceBGN;
 
             switch (Year)
             {
@@ -63,7 +63,13 @@ namespace TwoWheelTrader.Models.Motocross
 
         public int PriceForeign { get; set; }
 
-        public int PriceBGN { get; set; }
+        public double PriceBGN
+        {
+            get => priceBGN; private set
+            {
+                priceBGN = PriceForeign * 0.1642;
+            }
+        }
 
         public int MarketPrice { get; set; }
 
