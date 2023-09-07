@@ -1,4 +1,7 @@
 ﻿using TwoWheelTrader.Core.Interfaces;
+using TwoWheelTrader.Models.Enduro;
+using TwoWheelTrader.Models.Interfaces;
+using TwoWheelTrader.Models.Motocross;
 
 namespace TwoWheelTrader.Core
 {
@@ -24,11 +27,20 @@ namespace TwoWheelTrader.Core
                         else if (command == "add")
                         {
                             // 1 = YAMAHA / 2 = YZF / 3 = 250 / 4 = 2019 / 5 = 33000 (FOREIGN PRICE - PRE-CONVERT)
+
                             string make = input[1];
                             string model = input[2];
                             int cc = int.Parse(input[3]);
                             int year = int.Parse(input[4]);
                             int foreignPrice = int.Parse(input[5]);
+
+                            if (make == "yam")
+                            {
+                                if (model == "yzf")
+                                {
+                                    IMotocross yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice);
+                                }
+                            }
                         }
                         else if (command == "remove")
                         {
