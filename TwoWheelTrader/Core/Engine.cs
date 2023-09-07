@@ -33,10 +33,12 @@ namespace TwoWheelTrader.Core
                         else if (command == "remove")
                         {
                             // Once the program is connected to the MS SQL this command should become a viable option
+                            // I will need primary keys, need to find what hold the bikes apart, besides the primary key, like a web link
                         }
                         else if (command == "update")
                         {
                             // When a change of some property is needed, usually the price - when the motorcycle has had a discount
+                            // Again - must search by link (???), or by primary key if I learn DB until then
                         }
                         else
                         {
