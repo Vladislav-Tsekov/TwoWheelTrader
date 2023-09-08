@@ -47,6 +47,11 @@ namespace TwoWheelTrader.Core
                             // Once the program is connected to the MS SQL this command should become a viable option
                             // I will need primary keys, need to find what hold the bikes apart, besides the primary key, like a web link
                         }
+                        else if (command == "check")
+                        {
+                            // Check if the current model exists
+                            // By primary key or ID
+                        }
                         else if (command == "update")
                         {
                             // When a change of some property is needed, usually the price - when the motorcycle has had a discount
@@ -57,6 +62,7 @@ namespace TwoWheelTrader.Core
                             Console.WriteLine("Invalid command. Try again!");
                         }
                         // TO ADD MORE ELSE IFS BASED ON DIFFERENT SCENARIOS
+                        // 
                     }
                 }
                 catch (Exception ex)
