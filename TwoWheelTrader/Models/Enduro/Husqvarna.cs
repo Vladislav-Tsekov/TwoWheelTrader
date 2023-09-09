@@ -48,7 +48,13 @@ namespace TwoWheelTrader.Models.Enduro
 
         public int PriceForeign { get; set; }
 
-        public int PriceBGN { get; set; }
+        public double PriceBGN
+        {
+            get => priceBGN; private set
+            {
+                priceBGN = PriceForeign * 0.1642;
+            }
+        }
 
         public int MarketPrice { get; set; }
 
