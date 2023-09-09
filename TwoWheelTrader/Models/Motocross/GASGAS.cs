@@ -4,6 +4,7 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class GASGAS : IMotocross
     {
+        private double priceBGN;
         private double roi;
 
         public GASGAS(string model, int cc, int year, int priceForeign, int priceBGN)

@@ -4,8 +4,8 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Yamaha : IMotocross
     {
-        private double roi;
         private double priceBGN;
+        private double roi;
 
         public Yamaha(string model, int cc, int year, int priceForeign)
         {

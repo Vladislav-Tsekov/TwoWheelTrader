@@ -4,6 +4,7 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class Husqvarna : IEnduro
     {
+        private double priceBGN;
         private double roi;
 
         public Husqvarna(string model, int cc, int year, int priceForeign, int priceBGN)

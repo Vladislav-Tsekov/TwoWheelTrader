@@ -4,6 +4,7 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class KTM : IEnduro
     {
+        private double priceBGN;
         private double roi;
 
         public KTM(string model, int cc, int year, int priceForeign, int priceBGN)
