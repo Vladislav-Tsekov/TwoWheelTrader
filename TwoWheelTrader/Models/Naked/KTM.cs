@@ -31,5 +31,7 @@ namespace TwoWheelTrader.Models.Naked
         public double ROI => throw new NotImplementedException();
 
         public string Link => throw new NotImplementedException();
+
+        double IMotorcycle.PriceBGN => throw new NotImplementedException();
     }
 }
