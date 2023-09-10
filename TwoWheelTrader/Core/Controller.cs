@@ -28,9 +28,10 @@ namespace TwoWheelTrader.Core
             var currentClass = motorcycle.GetType();
             Console.WriteLine(currentClass); // ONLY FOR TEST PURPOSES
             Type[] interfaces = currentClass.GetInterfaces();
+
             foreach (var inter in interfaces)
             {
-                Console.WriteLine(inter);
+                Console.WriteLine(inter.Name);
             }
 
             if (true)
