@@ -23,7 +23,22 @@ namespace TwoWheelTrader.Core
 
         public string AddMotorcycle(IMotorcycle motorcycle)
         {
-            throw new NotImplementedException();
+            string output = string.Empty;
+
+            var currentClass = motorcycle.GetType();
+            Console.WriteLine(currentClass); // ONLY FOR TEST PURPOSES
+            Type[] interfaces = currentClass.GetInterfaces();
+            foreach (var inter in interfaces)
+            {
+                Console.WriteLine(inter);
+            }
+
+            if (true)
+            {
+
+            }
+
+            return output;
         }
 
         public string GetMotorcycleInfo(IMotorcycle motorcycle)

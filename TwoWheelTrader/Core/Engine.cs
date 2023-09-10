@@ -7,6 +7,13 @@ namespace TwoWheelTrader.Core
 {
     public class Engine : IEngine
     {
+        private IController controller;
+
+        public Engine()
+        {
+            controller = new Controller();   
+        }
+
         public void RunProgram()
         {
             while (true)
@@ -39,6 +46,7 @@ namespace TwoWheelTrader.Core
                                 if (model == "yzf")
                                 {
                                     IMotocross yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice);
+                                    yamaha.Ad
                                 }
                             }
                         }
