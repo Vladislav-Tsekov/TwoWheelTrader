@@ -26,17 +26,16 @@ namespace TwoWheelTrader.Core
             string output = string.Empty;
 
             var currentClass = motorcycle.GetType();
-            Console.WriteLine(currentClass); // ONLY FOR TEST PURPOSES
-            Type[] interfaces = currentClass.GetInterfaces();
+            Type[] currentInterfaces = currentClass.GetInterfaces();
+            var interfaceName = currentInterfaces[0].Name;
 
-            foreach (var inter in interfaces)
+            if (interfaceName == "IEnduro")
             {
-                Console.WriteLine(inter.Name);
+                //enduro.AddMotorcycle(motorcycle);
             }
-
-            if (true)
+            else if (interfaceName == "IMotocross")
             {
-
+                motocross.AddMotorcycle(motorcycle);
             }
 
             return output;

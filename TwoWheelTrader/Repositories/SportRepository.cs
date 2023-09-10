@@ -3,28 +3,28 @@ using TwoWheelTrader.Repositories.Interfaces;
 
 namespace TwoWheelTrader.Repositories
 {
-    public class SportRepository : IRepository<ISport>
+    public class SportRepository : IRepository<IMotorcycle>
     {
-        private readonly List<ISport> motorcycles;
+        private readonly List<IMotorcycle> motorcycles;
 
         public SportRepository()
         {
-            motorcycles = new List<ISport>();
+            motorcycles = new List<IMotorcycle>();
         }
 
-        public IReadOnlyCollection<ISport> Motorcycles => motorcycles;
+        public IReadOnlyCollection<IMotorcycle> Motorcycles => motorcycles;
 
-        public void AddMotorcycle(ISport motorcycle)
+        public void AddMotorcycle(IMotorcycle motorcycle)
         {
             motorcycles.Add(motorcycle);
         }
 
-        public void TopFiveByProfit(IRepository<ISport> motorcycles)
+        public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
             var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(3);
         }
 
-        public void TopFiveROI(IRepository<ISport> motorcycles)
+        public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
         {
             var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.ROI).Take(5);
         }
