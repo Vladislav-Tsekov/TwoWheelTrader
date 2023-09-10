@@ -21,21 +21,44 @@ namespace TwoWheelTrader.Core
             tourer = new TourerRepository();
         }
 
-        public string AddMotorcycle(IMotorcycle motorcycle)
+        public string Add(IMotorcycle motorcycle)
         {
-            string output = string.Empty;
-
             var currentClass = motorcycle.GetType();
-            Type[] currentInterfaces = currentClass.GetInterfaces();
-            var interfaceName = currentInterfaces[0].Name;
+            var motorcycleMake = currentClass.Name;
+            Console.WriteLine(motorcycleMake);
+            Type[] motorcycleInterface = currentClass.GetInterfaces();
+            var category = motorcycleInterface[0].Name;
 
-            if (interfaceName == "IEnduro")
+            string output;
+
+            if (category == "IEnduro")
             {
-                //enduro.AddMotorcycle(motorcycle);
+                enduro.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
             }
-            else if (interfaceName == "IMotocross")
+            else if (category == "IMotocross")
             {
                 motocross.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "INaked")
+            {
+                naked.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "ISport")
+            {
+                sport.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "ITourer")
+            {
+                tourer.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else
+            {
+                throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again!");
             }
 
             return output;
