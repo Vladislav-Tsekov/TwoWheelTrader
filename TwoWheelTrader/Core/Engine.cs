@@ -31,7 +31,10 @@ namespace TwoWheelTrader.Core
                     }
                     else if (command == "add")
                     {
-                        // 1 = YAMAHA / 2 = YZF / 3 = 250 / 4 = 2019 / 5 = 33000 (FOREIGN PRICE - PRE-CONVERT)
+                        // EXAMPLE INPUT: [1] = YAMAHA / [2] = YZF / [3] = 250 / [4] = 2019 / [5] = 33000 (FOREIGN PRICE - PRE-CONVERT)
+
+                        // IMPLEMENTED MOTOCROSS MODELS
+                        // IMPLEMENTED ENDURO MODELS
 
                         string make = input[1];
                         string model = input[2];
