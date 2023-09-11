@@ -29,7 +29,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (command == "add")
                     {
-                        // EXAMPLE INPUT: [1] = YAMAHA / [2] = YZF / [3] = 250 / [4] = 2019 / [5] = 33000 (FOREIGN PRICE - PRE-CONVERT)
+                        // EXAMPLE INPUT: [1] = YAMAHA / [2] = YZF / [3] = 250 / [4] = 2019 / [5] = 33000 (FOREIGN PRICE - PRE-CONVERT) / [6] = www.blocket.com/...
 
                         // IMPLEMENTED MOTOCROSS MODELS
                         // IMPLEMENTED ENDURO MODELS
@@ -39,6 +39,7 @@ namespace TwoWheelTrader.Core
                         int cc = int.Parse(input[3]);
                         int year = int.Parse(input[4]);
                         int foreignPrice = int.Parse(input[5]);
+                        string link = input[6]; //ADD TO CONSTRUCTORS - MX/ENDURO MODELS / INTERFACES AS WELL
 
                         if (make == "yam" || make == "yamaha")
                         {

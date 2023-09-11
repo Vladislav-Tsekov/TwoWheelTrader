@@ -1,4 +1,5 @@
-﻿using TwoWheelTrader.Core.Interfaces;
+﻿using System.Text;
+using TwoWheelTrader.Core.Interfaces;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories;
 
@@ -66,15 +67,29 @@ namespace TwoWheelTrader.Core
 
         public string GetMotorcycleInfo(string link, string targetRepo)
         {
-            string output;
-            IMotorcycle currentMotorcycle;
+            IMotorcycle currMoto;
 
             if (targetRepo == "mx")
             {
-                currentMotorcycle = motocross.
+                currMoto = motocross.MotorcycleInfo(link);
+
+                if (currMoto is null)
+                {
+                    return $"This motorcycle does not exists in the Motocross repository!";
+                }
+                else
+                {
+                    StringBuilder sb = new();
+
+                    sb.AppendLine($"Information requested about motorcycle: {currMoto.Make} {currMoto.Model}, CC: {currMoto.CC}, Year: {currMoto.Year}");
+                    sb.AppendLine($"The price in BGN is: {currMoto.PriceBGN}. The current market price in Bulgaria is: {currMoto.MarketPrice}");
+                    sb.AppendLine($"The estimated profit is: {currMoto.Profit}, ROI %: {currMoto.ROI}.");
+
+                    return sb.ToString().TrimEnd();
+                }
             }
 
-            return output;
+            return $"Wrong input format. Try again!";
         }
 
         public string GetMotorcycleList()
