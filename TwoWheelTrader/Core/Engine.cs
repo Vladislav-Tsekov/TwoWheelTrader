@@ -46,6 +46,11 @@ namespace TwoWheelTrader.Core
                                 IMotorcycle yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice);
                                 controller.Add(yamaha);
                             }
+                            else if (model == "wrf")
+                            {
+                                IMotorcycle yamaha = new Models.Enduro.Yamaha(model, cc, year, foreignPrice);
+                                controller.Add(yamaha);
+                            }
                         }
                         else if (make == "hon" || make == "honda")
                         {
@@ -70,12 +75,22 @@ namespace TwoWheelTrader.Core
                                 IMotorcycle ktm = new Models.Motocross.KTM(model, cc, year, foreignPrice);
                                 controller.Add(ktm);
                             }
+                            else if (model == "exc")
+                            {
+                                IMotorcycle ktm = new Models.Enduro.KTM(model, cc, year, foreignPrice);
+                                controller.Add(ktm);
+                            }
                         }
                         else if (make == "hus" || make == "husqvarna")
                         {
                             if (model == "fc")
                             {
                                 IMotorcycle husqvarna = new Models.Motocross.Husqvarna(model, cc, year, foreignPrice);
+                                controller.Add(husqvarna);
+                            }
+                            else if (model == "fe")
+                            {
+                                IMotorcycle husqvarna = new Models.Enduro.Husqvarna(model, cc, year, foreignPrice);
                                 controller.Add(husqvarna);
                             }
                         }
