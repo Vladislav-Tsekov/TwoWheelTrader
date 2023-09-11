@@ -39,12 +39,20 @@ namespace TwoWheelTrader.Core
                         int year = int.Parse(input[4]);
                         int foreignPrice = int.Parse(input[5]);
 
-                        if (make == "yam")
+                        if (make == "yam" || make == "yamaha")
                         {
                             if (model == "yzf")
                             {
                                 IMotorcycle yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice);
                                 controller.Add(yamaha);
+                            }
+                        }
+                        else if (make == "hon" || make == "honda")
+                        {
+                            if (model == "crf")
+                            {
+                                IMotorcycle honda = new Models.Motocross.Honda(model, cc, year, foreignPrice);
+                                controller.Add(honda);
                             }
                         }
                     }

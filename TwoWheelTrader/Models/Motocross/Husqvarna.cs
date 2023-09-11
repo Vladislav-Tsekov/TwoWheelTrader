@@ -14,7 +14,6 @@ namespace TwoWheelTrader.Models.Motocross
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;
-            PriceBGN = priceBGN;
 
             switch (Year)
             {

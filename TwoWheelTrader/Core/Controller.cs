@@ -58,7 +58,7 @@ namespace TwoWheelTrader.Core
             }
             else
             {
-                throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again!");
+                throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again! Class: Controller / Method: Add");
             }
 
             return output;
