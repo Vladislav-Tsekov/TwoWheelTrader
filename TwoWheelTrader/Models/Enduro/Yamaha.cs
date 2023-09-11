@@ -7,7 +7,7 @@ namespace TwoWheelTrader.Models.Enduro
         private double priceBGN;
         private double roi;
 
-        public Yamaha(string model, int cc, int year, int priceForeign, int priceBGN)
+        public Yamaha(string model, int cc, int year, int priceForeign)
         {
             Make = "Yamaha";
             Model = model;

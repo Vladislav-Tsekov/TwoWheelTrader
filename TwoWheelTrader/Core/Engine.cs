@@ -63,6 +63,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (command == "check")
                     {
+
                         // Check if the current model exists
                         // By primary key or ID
                     }

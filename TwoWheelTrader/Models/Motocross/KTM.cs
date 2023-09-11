@@ -7,7 +7,7 @@ namespace TwoWheelTrader.Models.Motocross
         private double priceBGN;
         private double roi;
 
-        public KTM(string model, int cc, int year, int priceForeign, int priceBGN)
+        public KTM(string model, int cc, int year, int priceForeign)
         {
             Make = "KTM";
             Model = model;

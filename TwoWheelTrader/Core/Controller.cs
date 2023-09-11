@@ -66,7 +66,7 @@ namespace TwoWheelTrader.Core
 
         public string GetMotorcycleInfo(IMotorcycle motorcycle)
         {
-            throw new NotImplementedException();
+            var motorcycleFound = 
         }
 
         public string GetMotorcycleList()
