@@ -6,7 +6,7 @@ namespace TwoWheelTrader.Core.Interfaces
     {
         string Add(IMotorcycle motorcycle);
         string RemoveMotorcycle(IMotorcycle motorcycle);
-        string GetMotorcycleInfo(IMotorcycle motorcycle);
+        string GetMotorcycleInfo(string link, string targetRepo);
         string GetMotorcycleList();
     }
 }

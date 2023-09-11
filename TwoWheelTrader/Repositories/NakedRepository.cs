@@ -19,6 +19,12 @@ namespace TwoWheelTrader.Repositories
             motorcycles.Add(motorcycle);
         }
 
+        public IMotorcycle MotorcycleInfo(string link)
+        {
+            var findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
+            return findMotorcycleByLink;
+        }
+
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
             var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(5);

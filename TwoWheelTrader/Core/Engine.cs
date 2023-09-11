@@ -1,7 +1,5 @@
 ﻿using TwoWheelTrader.Core.Interfaces;
-using TwoWheelTrader.Models.Enduro;
 using TwoWheelTrader.Models.Interfaces;
-using TwoWheelTrader.Models.Motocross;
 
 namespace TwoWheelTrader.Core
 {
@@ -113,9 +111,10 @@ namespace TwoWheelTrader.Core
                     }
                     else if (command == "check")
                     {
+                        // EXAMPLE INPUT: [1] "https://www.../ktm_350_exc_f_sixdays/110994476" / [2] MX (mx), ENDURO (enduro)
 
-                        // Check if the current model exists
-                        // By primary key or ID
+                        string link = input[1];
+                        string targetRepo = input[2];
                     }
                     else if (command == "update")
                     {

@@ -64,9 +64,17 @@ namespace TwoWheelTrader.Core
             return output;
         }
 
-        public string GetMotorcycleInfo(IMotorcycle motorcycle)
+        public string GetMotorcycleInfo(string link, string targetRepo)
         {
+            string output;
+            IMotorcycle currentMotorcycle;
 
+            if (targetRepo == "mx")
+            {
+                currentMotorcycle = motocross.
+            }
+
+            return output;
         }
 
         public string GetMotorcycleList()
