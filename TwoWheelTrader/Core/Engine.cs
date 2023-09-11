@@ -55,6 +55,38 @@ namespace TwoWheelTrader.Core
                                 controller.Add(honda);
                             }
                         }
+                        else if (make == "kaw" || make == "kawasaki")
+                        {
+                            if (model == "kxf")
+                            {
+                                IMotorcycle kawasaki = new Models.Motocross.Kawasaki(model, cc, year, foreignPrice);
+                                controller.Add(kawasaki);
+                            }
+                        }
+                        else if (make == "ktm")
+                        {
+                            if (model == "sxf")
+                            {
+                                IMotorcycle ktm = new Models.Motocross.KTM(model, cc, year, foreignPrice);
+                                controller.Add(ktm);
+                            }
+                        }
+                        else if (make == "hus" || make == "husqvarna")
+                        {
+                            if (model == "fc")
+                            {
+                                IMotorcycle husqvarna = new Models.Motocross.Husqvarna(model, cc, year, foreignPrice);
+                                controller.Add(husqvarna);
+                            }
+                        }
+                        else if (make == "gas" || make == "gasgas")
+                        {
+                            if (model == "mcf")
+                            {
+                                IMotorcycle gasgas = new Models.Motocross.GASGAS(model, cc, year, foreignPrice);
+                                controller.Add(gasgas);
+                            }
+                        }
                     }
                     else if (command == "remove")
                     {

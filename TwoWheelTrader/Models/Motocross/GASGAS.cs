@@ -7,7 +7,7 @@ namespace TwoWheelTrader.Models.Motocross
         private double priceBGN;
         private double roi;
 
-        public GASGAS(string model, int cc, int year, int priceForeign, int priceBGN)
+        public GASGAS(string model, int cc, int year, int priceForeign)
         {
             Make = "GASGAS";
             Model = model;

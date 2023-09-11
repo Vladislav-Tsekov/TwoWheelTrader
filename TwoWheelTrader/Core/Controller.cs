@@ -66,7 +66,7 @@ namespace TwoWheelTrader.Core
 
         public string GetMotorcycleInfo(IMotorcycle motorcycle)
         {
-            var motorcycleFound = 
+
         }
 
         public string GetMotorcycleList()
