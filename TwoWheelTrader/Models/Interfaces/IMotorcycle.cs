@@ -2,7 +2,7 @@
 {
     public interface IMotorcycle
     {
-        const double exchangeRateSEK = 1.642;
+        const double exchangeRateSEK = 0.1639;
         string Make { get; }
         string Model { get; }
         int CC { get; }
