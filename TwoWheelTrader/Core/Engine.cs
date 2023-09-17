@@ -16,7 +16,9 @@ namespace TwoWheelTrader.Core
         {
             while (true)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 string[] input = Console.ReadLine().ToLower().Split();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
                 try
                 {
