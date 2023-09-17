@@ -26,7 +26,7 @@ namespace TwoWheelTrader.Repositories
 
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(3);
+            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(5);
         }
 
         public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
