@@ -48,7 +48,7 @@ namespace TwoWheelTrader.Core
                             if (model == "yzf")
                             {
                                 IMotorcycle yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice, link);
-                                controller.Add(yamaha);
+                                Console.WriteLine(controller.Add(yamaha)); 
                             }
                             else if (model == "wrf")
                             {
