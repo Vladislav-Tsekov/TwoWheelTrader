@@ -7,13 +7,14 @@ namespace TwoWheelTrader.Models.Enduro
         private double priceBGN;
         private double roi;
 
-        public Husqvarna(string model, int cc, int year, int priceForeign)
+        public Husqvarna(string model, int cc, int year, int priceForeign, string link)
         {
             Make = "Husqvarna";
             Model = model;
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;
+            Link = link; 
 
             switch (Year)
             {
