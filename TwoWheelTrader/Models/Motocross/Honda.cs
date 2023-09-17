@@ -7,13 +7,14 @@ namespace TwoWheelTrader.Models.Motocross
         private double priceBGN;
         private double roi;
 
-        public Honda(string model, int cc, int year, int priceForeign)
+        public Honda(string model, int cc, int year, int priceForeign, string link)
         {
             Make = "Honda";
             Model = model;
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;
+            Link = link;
 
             switch (Year)
             {

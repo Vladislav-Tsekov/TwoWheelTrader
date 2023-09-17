@@ -7,13 +7,14 @@ namespace TwoWheelTrader.Models.Motocross
         private double priceBGN;
         private double roi;
 
-        public Suzuki(string model, int cc, int year, int priceForeign)
+        public Suzuki(string model, int cc, int year, int priceForeign  )
         {
             Make = "Suzuki";
             Model = model;
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;
+            Link = link;
 
             switch (Year)
             {
