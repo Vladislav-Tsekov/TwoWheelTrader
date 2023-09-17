@@ -45,12 +45,12 @@ namespace TwoWheelTrader.Core
                         {
                             if (model == "yzf")
                             {
-                                IMotorcycle yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice);
+                                IMotorcycle yamaha = new Models.Motocross.Yamaha(model, cc, year, foreignPrice, link);
                                 controller.Add(yamaha);
                             }
                             else if (model == "wrf")
                             {
-                                IMotorcycle yamaha = new Models.Enduro.Yamaha(model, cc, year, foreignPrice);
+                                IMotorcycle yamaha = new Models.Enduro.Yamaha(model, cc, year, foreignPrice, link);
                                 controller.Add(yamaha);
                             }
                         }
@@ -58,7 +58,7 @@ namespace TwoWheelTrader.Core
                         {
                             if (model == "crf")
                             {
-                                IMotorcycle honda = new Models.Motocross.Honda(model, cc, year, foreignPrice);
+                                IMotorcycle honda = new Models.Motocross.Honda(model, cc, year, foreignPrice, link);
                                 controller.Add(honda);
                             }
                         }
@@ -66,7 +66,7 @@ namespace TwoWheelTrader.Core
                         {
                             if (model == "kxf")
                             {
-                                IMotorcycle kawasaki = new Models.Motocross.Kawasaki(model, cc, year, foreignPrice);
+                                IMotorcycle kawasaki = new Models.Motocross.Kawasaki(model, cc, year, foreignPrice, link);
                                 controller.Add(kawasaki);
                             }
                         }
@@ -74,12 +74,12 @@ namespace TwoWheelTrader.Core
                         {
                             if (model == "sxf")
                             {
-                                IMotorcycle ktm = new Models.Motocross.KTM(model, cc, year, foreignPrice);
+                                IMotorcycle ktm = new Models.Motocross.KTM(model, cc, year, foreignPrice, link);
                                 controller.Add(ktm);
                             }
                             else if (model == "exc")
                             {
-                                IMotorcycle ktm = new Models.Enduro.KTM(model, cc, year, foreignPrice);
+                                IMotorcycle ktm = new Models.Enduro.KTM(model, cc, year, foreignPrice, link);
                                 controller.Add(ktm);
                             }
                         }
@@ -87,12 +87,12 @@ namespace TwoWheelTrader.Core
                         {
                             if (model == "fc")
                             {
-                                IMotorcycle husqvarna = new Models.Motocross.Husqvarna(model, cc, year, foreignPrice);
+                                IMotorcycle husqvarna = new Models.Motocross.Husqvarna(model, cc, year, foreignPrice, link);
                                 controller.Add(husqvarna);
                             }
                             else if (model == "fe")
                             {
-                                IMotorcycle husqvarna = new Models.Enduro.Husqvarna(model, cc, year, foreignPrice);
+                                IMotorcycle husqvarna = new Models.Enduro.Husqvarna(model, cc, year, foreignPrice, link);
                                 controller.Add(husqvarna);
                             }
                         }
@@ -100,7 +100,7 @@ namespace TwoWheelTrader.Core
                         {
                             if (model == "mcf")
                             {
-                                IMotorcycle gasgas = new Models.Motocross.GASGAS(model, cc, year, foreignPrice);
+                                IMotorcycle gasgas = new Models.Motocross.GASGAS(model, cc, year, foreignPrice, link);
                                 controller.Add(gasgas);
                             }
                         }
