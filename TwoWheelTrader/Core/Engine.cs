@@ -105,6 +105,8 @@ namespace TwoWheelTrader.Core
                                 IMotorcycle gasgas = new Models.Motocross.GASGAS(model, cc, year, foreignPrice, link);
                                 controller.Add(gasgas);
                             }
+
+                            // MUST IMPLEMENT THE GASGAS ENDURO MODEL AT SOME POINT
                         }
                     }
                     else if (command == "remove")
@@ -118,6 +120,7 @@ namespace TwoWheelTrader.Core
 
                         string link = input[1];
                         string targetRepo = input[2];
+                        Console.WriteLine(controller.GetMotorcycleInfo(link, targetRepo));
                     }
                     else if (command == "update")
                     {

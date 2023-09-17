@@ -26,9 +26,13 @@ namespace TwoWheelTrader.Core
         {
             var currentClass = motorcycle.GetType();
             var motorcycleMake = currentClass.Name;
-            Console.WriteLine(motorcycleMake);
+
+            Console.WriteLine(motorcycleMake); //TESTING PURPOSES
+
             Type[] motorcycleInterface = currentClass.GetInterfaces();
             var category = motorcycleInterface[0].Name;
+
+            Console.WriteLine(category); // TESTING PURPOSES
 
             string output;
 
