@@ -5,7 +5,7 @@ namespace TwoWheelTrader.Core
 {
     public class Engine : IEngine
     {
-        private IController controller;
+        private readonly IController controller;
 
         public Engine()
         {
@@ -127,7 +127,7 @@ namespace TwoWheelTrader.Core
                         Console.WriteLine("Invalid command. Try again!");
                     }
                     // TO ADD MORE ELSE IFS BASED ON DIFFERENT SCENARIOS
-                    // 
+                    // ARE FORMS A VIABLE OPTION OR I SHOULD LEARN F.E. FIRST AND APPLY IT DIRECTLY?
                     
                 }
                 catch (Exception ex)
