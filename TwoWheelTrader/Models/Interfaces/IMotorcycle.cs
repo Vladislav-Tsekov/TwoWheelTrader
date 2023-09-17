@@ -2,17 +2,18 @@
 {
     public interface IMotorcycle
     {
+        const double exchangeRateSEK = 1.642;
         string Make { get; }
         string Model { get; }
         int CC { get; }
         int Year { get; }
-        int PriceForeign { get; }
+        double PriceForeign { get; }
         double PriceBGN { get; }
-        int MarketPrice { get; }
+        double MarketPrice { get; }
         int DistanceToPickUp { get; }
-        int FuelCost { get; }
-        int TotalCost { get; }
-        int Profit { get; }
+        double FuelCost { get; }
+        double TotalCost { get; }
+        double Profit { get; }
         double ROI { get; }
         string Link { get; }
     }

@@ -4,9 +4,6 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Husqvarna : IMotocross
     {
-        private double priceBGN;
-        private double roi;
-
         public Husqvarna(string model, int cc, int year, int priceForeign, string link)
         {
             Make = "Husqvarna";
@@ -15,6 +12,8 @@ namespace TwoWheelTrader.Models.Motocross
             Year = year;
             PriceForeign = priceForeign;
             Link = link;
+            PriceBGN = PriceForeign * IMotorcycle.exchangeRateSEK;
+            TotalCost = FuelCost + PriceBGN;
 
             switch (Year)
             {
@@ -39,7 +38,11 @@ namespace TwoWheelTrader.Models.Motocross
                 case 2023:
                     MarketPrice = 11500; break;
             }
+
+            Profit = MarketPrice - PriceBGN;
+            ROI = (this.Profit / this.TotalCost) * 100.0;
         }
+
         public string Make { get; set; }
 
         public string Model { get; set; }
@@ -48,33 +51,21 @@ namespace TwoWheelTrader.Models.Motocross
 
         public int Year { get; set; }
 
-        public int PriceForeign { get; set; }
+        public double PriceForeign { get; set; }
 
-        public double PriceBGN
-        {
-            get => priceBGN; private set
-            {
-                priceBGN = PriceForeign * 0.1642;
-            }
-        }
+        public double PriceBGN { get; set; }
 
-        public int MarketPrice { get; set; }
+        public double MarketPrice { get; set; }
 
         public int DistanceToPickUp { get; set; }
 
-        public int FuelCost { get; set; }
+        public double FuelCost { get; set; }
 
-        public int TotalCost { get; set; }
+        public double TotalCost { get; set; }
 
-        public int Profit { get; set; }
+        public double Profit { get; set; }
 
-        public double ROI
-        {
-            get => roi; set
-            {
-                roi = (this.Profit / this.TotalCost) * 100;
-            }
-        }
+        public double ROI { get; set; }
 
         public string Link { get; set; }
     }
