@@ -33,5 +33,15 @@ namespace TwoWheelTrader.Models.Naked
         public string Link => throw new NotImplementedException();
 
         double IMotorcycle.PriceBGN => throw new NotImplementedException();
+
+        double IMotorcycle.PriceForeign => throw new NotImplementedException();
+
+        double IMotorcycle.MarketPrice => throw new NotImplementedException();
+
+        double IMotorcycle.FuelCost => throw new NotImplementedException();
+
+        double IMotorcycle.TotalCost => throw new NotImplementedException();
+
+        double IMotorcycle.Profit => throw new NotImplementedException();
     }
 }
