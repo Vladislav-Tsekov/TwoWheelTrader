@@ -1,4 +1,5 @@
-﻿using TwoWheelTrader.Models.Interfaces;
+﻿using System.Text;
+using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
 
 namespace TwoWheelTrader.Repositories
@@ -11,6 +12,7 @@ namespace TwoWheelTrader.Repositories
         {
             motorcycles = new List<IMotorcycle>();
         }
+
         public IReadOnlyCollection<IMotorcycle> Motorcycles => motorcycles;
 
         public void AddMotorcycle(IMotorcycle motorcycle)
@@ -22,6 +24,25 @@ namespace TwoWheelTrader.Repositories
         {
             var findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
             return findMotorcycleByLink;
+        }
+
+        public string RepositoryStatus() // NEEDS TESTING
+        {
+            if (this.motorcycles.Count > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (var moto in motorcycles)
+                {
+                    sb.AppendLine($"{moto.Make} {moto.Model} {moto.Year} - MP: {moto.MarketPrice} / TC: {moto.TotalCost} = Profit: {moto.Profit} / % {moto.ROI}");
+                }
+
+                return sb.ToString().TrimEnd();
+            }
+            else
+            {
+                return $"{this.GetType().Name} is empty!"; // CHECK THE OUTPUT
+            }
         }
 
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)

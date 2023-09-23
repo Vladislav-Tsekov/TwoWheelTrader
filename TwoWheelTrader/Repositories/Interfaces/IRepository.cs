@@ -13,8 +13,10 @@ namespace TwoWheelTrader.Repositories.Interfaces
         void TopFiveByProfit(IRepository<T> motorcycles); 
         // Returns the five highest ranked motorcycles, sorted by profit in a descending order
 
-        void TopFiveROI(IRepository<T> motorcycles); 
+        void TopFiveROI(IRepository<T> motorcycles);
         // Returns the five highest ranked motorcycles, sorted by Profit % Price
+
+        string RepositoryStatus();
 
         //void RemoveMotorcycle(string motorcycle); -- Not yet implemented, signature unknown, probably an ID
 
