@@ -122,6 +122,10 @@ namespace TwoWheelTrader.Core
                         string targetRepo = input[2];
                         Console.WriteLine(controller.GetMotorcycleInfo(link, targetRepo));
                     }
+                    else if (command == "status")
+                    {
+                        // Returns the status of all repositories.
+                    }
                     else if (command == "update")
                     {
                         // When a change of some property is needed, usually the price - when the motorcycle has had a discount
