@@ -124,7 +124,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (command == "status")
                     {
-                        // Returns the status of all repositories.
+                        controller.GetRepositoriesStatus();
                     }
                     else if (command == "update")
                     {

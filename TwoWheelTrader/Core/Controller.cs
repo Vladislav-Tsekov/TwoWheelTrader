@@ -100,7 +100,7 @@ namespace TwoWheelTrader.Core
             return $"Wrong input format. Try again!";
         }
 
-        public string GetStatus()
+        public string GetRepositoriesStatus()
         {
             throw new NotImplementedException();
         }
