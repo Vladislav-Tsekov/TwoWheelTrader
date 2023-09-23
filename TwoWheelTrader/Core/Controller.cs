@@ -92,11 +92,15 @@ namespace TwoWheelTrader.Core
                     return sb.ToString().TrimEnd();
                 }
             }
+            else if (targetRepo == "enduro")
+            {
+                // LOGIC, AVOID REPEATING THE CODE FROM THE ROWS ABOVE
+            }
 
             return $"Wrong input format. Try again!";
         }
 
-        public string GetMotorcycleList()
+        public string GetStatus()
         {
             throw new NotImplementedException();
         }

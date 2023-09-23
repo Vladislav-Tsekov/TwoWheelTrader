@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\TwoWheelTrader.csproj",
-      "projectName": "TwoWheelTrader",
-      "projectPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\TwoWheelTrader.csproj",
+      "projectUniqueName": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\VehEvalu8.csproj",
+      "projectName": "VehEvalu8",
+      "projectPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\VehEvalu8.csproj",
       "packagesPath": "C:\\Users\\tseko\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\obj\\",
       "projectStyle": "PackageReference",
