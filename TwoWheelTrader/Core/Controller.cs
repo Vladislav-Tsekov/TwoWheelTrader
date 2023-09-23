@@ -100,9 +100,12 @@ namespace TwoWheelTrader.Core
             return $"Wrong input format. Try again!";
         }
 
-        public string GetRepositoriesStatus()
+        public void GetRepositoriesStatus()
         {
-            throw new NotImplementedException();
+            enduro.RepositoryStatus();
+            motocross.RepositoryStatus();
+
+            //TO IMPLEMENT THE REST AS WELL
         }
 
         public string RemoveMotorcycle(IMotorcycle motorcycle)
