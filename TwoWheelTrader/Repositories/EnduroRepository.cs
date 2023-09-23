@@ -34,7 +34,7 @@ namespace TwoWheelTrader.Repositories
 
                 foreach (var moto in motorcycles)
                 {
-                    sb.AppendLine($"{moto.Make} {moto.Model} {moto.Year} - MP: {moto.MarketPrice} / TC: {moto.TotalCost} = Profit: {moto.Profit} / % {moto.ROI}");
+                    sb.AppendLine($"{moto.Make} {moto.Model} {moto.Year} - MP: {moto.MarketPrice} / TC: {moto.TotalCost} = Profit: {moto.Profit} / % {moto.ROI} --- {moto.Link}");
                 }
 
                 return sb.ToString().TrimEnd();
