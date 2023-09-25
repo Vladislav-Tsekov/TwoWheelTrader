@@ -69,12 +69,38 @@ namespace TwoWheelTrader.Core
             return output;
         }
 
-        public int DestinationExistsOrNot(string pickUpDestination)
+        public int DestinationExists(string pickUpDestination)
         {
-            throw new NotImplementedException();
-        }
+            string filePath = "Routes.csv";
 
-        public string GetMotorcycleInfo(string link, string targetRepo)
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine($"File not found.");
+            }
+
+            try
+            {
+                using var reader = new StreamReader(filePath);
+                reader.ReadLine(); // SKIPPING THE COLUMN TITLES
+
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    string[] data = line.Split(',');
+
+                    string townName = data[0].Trim();
+                    int distance = int.Parse(data[1].Trim());
+
+                    Console.WriteLine($"City: {townName} / Distance: {distance}"); // TEST THE OUTPUT
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error reading the file: " + ex.Message);
+            }
+    }
+
+    public string GetMotorcycleInfo(string link, string targetRepo)
         {
             IMotorcycle currMoto;
 
