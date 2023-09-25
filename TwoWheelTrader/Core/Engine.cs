@@ -45,6 +45,7 @@ namespace TwoWheelTrader.Core
 
                         Console.WriteLine($"Please input the pick-up location of the vehicle:");
                         string pickUpDestination = Console.ReadLine();
+                        controller.DestinationExistsOrNot(pickUpDestination);
 
                         if (make == "yam" || make == "yamaha")
                         {

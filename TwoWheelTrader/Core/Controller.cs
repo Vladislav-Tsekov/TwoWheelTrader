@@ -69,6 +69,11 @@ namespace TwoWheelTrader.Core
             return output;
         }
 
+        public int DestinationExistsOrNot(string pickUpDestination)
+        {
+            throw new NotImplementedException();
+        }
+
         public string GetMotorcycleInfo(string link, string targetRepo)
         {
             IMotorcycle currMoto;
@@ -106,6 +111,11 @@ namespace TwoWheelTrader.Core
             motocross.RepositoryStatus();
 
             //TO IMPLEMENT THE REST AS WELL
+        }
+
+        public void GetTransportationCost()
+        {
+            throw new NotImplementedException();
         }
 
         public string RemoveMotorcycle(IMotorcycle motorcycle)
