@@ -43,6 +43,9 @@ namespace TwoWheelTrader.Core
                         int foreignPrice = int.Parse(input[5]);
                         string link = input[6]; //ADD TO CONSTRUCTORS - MX/ENDURO MODELS / INTERFACES AS WELL
 
+                        Console.WriteLine($"Please input the pick-up location of the vehicle:");
+                        string pickUpDestination = Console.ReadLine();
+
                         if (make == "yam" || make == "yamaha")
                         {
                             if (model == "yzf")
