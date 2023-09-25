@@ -71,7 +71,7 @@ namespace TwoWheelTrader.Core
 
         public int DestinationExists(string pickUpDestination)
         {
-            string filePath = "Routes.csv";
+            string filePath = @"../../../Routes.csv";
             int distance = 0;
 
             if (!File.Exists(filePath))
@@ -83,7 +83,7 @@ namespace TwoWheelTrader.Core
             try
             {
                 using var reader = new StreamReader(filePath);
-                reader.ReadLine(); // SKIPPING THE COLUMN TITLES
+                reader.ReadLine(); // SKIPPING THE COLUMN TITLES?
 
                 string townName = string.Empty;
 
@@ -97,14 +97,21 @@ namespace TwoWheelTrader.Core
                         townName = data[0].Trim();
                         distance = int.Parse(data[1].Trim());
 
-                        Console.WriteLine($"City: {townName} / Distance: {distance}"); // TEST THE OUTPUT
+                        Console.WriteLine($"City: {townName} / Distance: {distance}."); // TEST IF READING OCCURS OR NOT
+
+                        if (townName == pickUpDestination)
+                        {
+                            break;
+                        }
                     }
+
                     else
                     {
+                        Console.WriteLine($"No matching cities found. Please write down the distance from Linkoping to {pickUpDestination}");
                         try
                         {
                             // Create a StreamWriter to write to the CSV file
-                            using (var writer = new StreamWriter(filePath))
+                            using (var writer = new StreamWriter(filePath, append: true))
                             {
                                 writer.WriteLine($"");    
                             }
@@ -124,7 +131,6 @@ namespace TwoWheelTrader.Core
             }
         }
     
-
         public string GetMotorcycleInfo(string link, string targetRepo)
         {
             IMotorcycle currMoto;
