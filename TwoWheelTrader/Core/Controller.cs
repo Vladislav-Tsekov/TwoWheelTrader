@@ -72,10 +72,12 @@ namespace TwoWheelTrader.Core
         public int DestinationExists(string pickUpDestination)
         {
             string filePath = "Routes.csv";
+            int distance = 0;
 
             if (!File.Exists(filePath))
             {
-                Console.WriteLine($"File not found.");
+                Console.WriteLine($"File not found. Distance will be 0.");
+                return distance;
             }
 
             try
@@ -83,24 +85,47 @@ namespace TwoWheelTrader.Core
                 using var reader = new StreamReader(filePath);
                 reader.ReadLine(); // SKIPPING THE COLUMN TITLES
 
+                string townName = string.Empty;
+
                 while (!reader.EndOfStream)
                 {
-                    string line = reader.ReadLine();
-                    string[] data = line.Split(',');
+                    if (pickUpDestination != townName)
+                    {
+                        string line = reader.ReadLine();
+                        string[] data = line.Split(',');
 
-                    string townName = data[0].Trim();
-                    int distance = int.Parse(data[1].Trim());
+                        townName = data[0].Trim();
+                        distance = int.Parse(data[1].Trim());
 
-                    Console.WriteLine($"City: {townName} / Distance: {distance}"); // TEST THE OUTPUT
+                        Console.WriteLine($"City: {townName} / Distance: {distance}"); // TEST THE OUTPUT
+                    }
+                    else
+                    {
+                        try
+                        {
+                            // Create a StreamWriter to write to the CSV file
+                            using (var writer = new StreamWriter(filePath))
+                            {
+                                writer.WriteLine($"");    
+                            }
+
+                            Console.WriteLine("Data has been written to " + filePath);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Failed to generate output: " + ex.Message);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error reading the file: " + ex.Message);
+                Console.WriteLine("Could not read/open the file: " + ex.Message);
             }
-    }
+        }
+    
 
-    public string GetMotorcycleInfo(string link, string targetRepo)
+        public string GetMotorcycleInfo(string link, string targetRepo)
         {
             IMotorcycle currMoto;
 
