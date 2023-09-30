@@ -71,64 +71,44 @@ namespace TwoWheelTrader.Core
 
         public int DestinationExists(string pickUpDestination)
         {
-            string filePath = @"../../../Routes.csv";
+            string filePath = @"C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\Routes\Routes.csv";
             int distance = 0;
 
-            if (!File.Exists(filePath))
+            using var reader = new StreamReader(filePath);
+            reader.ReadLine(); // SKIPPING THE COLUMN TITLES?
+
+            string townName = string.Empty;
+
+            while (!reader.EndOfStream)
             {
-                Console.WriteLine($"File not found. Distance will be set to 0.");
-                return distance;
-            }
+                string line = reader.ReadLine();
+                string[] data = line.Split(',');
 
-            try
-            {
-                using var reader = new StreamReader(filePath);
-                reader.ReadLine(); // SKIPPING THE COLUMN TITLES?
+                townName = data[0].Trim();
+                distance = int.Parse(data[1].Trim());
 
-                string townName = string.Empty;
+                Console.WriteLine($"City: {townName} / Distance: {distance}."); // TEST IF READING OCCURS OR NOT
 
-                while (!reader.EndOfStream)
+                if (townName == pickUpDestination)
                 {
-                    if (pickUpDestination != townName)
-                    {
-                        string line = reader.ReadLine();
-                        string[] data = line.Split(',');
-
-                        townName = data[0].Trim();
-                        distance = int.Parse(data[1].Trim());
-
-                        Console.WriteLine($"City: {townName} / Distance: {distance}."); // TEST IF READING OCCURS OR NOT
-
-                        if (townName == pickUpDestination)
-                        {
-                            break;
-                        }
-                    }
-
-                    else
-                    {
-                        Console.WriteLine($"No matching cities found. Please write down the distance from Linkoping to {pickUpDestination}");
-                        try
-                        {
-                            // Create a StreamWriter to write to the CSV file
-                            using (var writer = new StreamWriter(filePath, append: true))
-                            {
-                                writer.WriteLine($"");    
-                            }
-
-                            Console.WriteLine("Data has been written to " + filePath);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Failed to generate output: " + ex.Message);
-                        }
-                    }
+                    return distance;
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Could not read/open the file: " + ex.Message);
-            }
+
+            reader.Dispose();
+
+            // Create a StreamWriter to write to the CSV file
+            Console.WriteLine($"No matching cities found. Please write down the distance from Linkoping to {pickUpDestination}");
+            
+            using var writer = new StreamWriter(filePath, append: true);
+
+            int newDistance = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"New location added: {pickUpDestination}. Distance from Linkoping: {newDistance}");
+            writer.WriteLine($"{pickUpDestination}, {newDistance}");
+            writer.Dispose();
+
+            return newDistance;
         }
     
         public string GetMotorcycleInfo(string link, string targetRepo)
