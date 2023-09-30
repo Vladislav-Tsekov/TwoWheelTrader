@@ -76,7 +76,7 @@ namespace TwoWheelTrader.Core
 
             if (!File.Exists(filePath))
             {
-                Console.WriteLine($"File not found. Distance will be 0.");
+                Console.WriteLine($"File not found. Distance will be set to 0.");
                 return distance;
             }
 
