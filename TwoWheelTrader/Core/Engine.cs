@@ -67,6 +67,10 @@ namespace TwoWheelTrader.Core
                                 IMotorcycle honda = new Models.Motocross.Honda(model, cc, year, foreignPrice, link);
                                 controller.Add(honda);
                             }
+                            else if (model == "crx")
+                            {
+                                // To research possible Enduro addition
+                            }
                         }
                         else if (make == "kaw" || make == "kawasaki")
                         {
@@ -74,6 +78,10 @@ namespace TwoWheelTrader.Core
                             {
                                 IMotorcycle kawasaki = new Models.Motocross.Kawasaki(model, cc, year, foreignPrice, link);
                                 controller.Add(kawasaki);
+                            }
+                            else if (model == "klx")
+                            {
+                                // To research possible Enduro addition
                             }
                         }
                         else if (make == "ktm")
@@ -139,13 +147,12 @@ namespace TwoWheelTrader.Core
                     {
                         Console.WriteLine("Invalid command. Try again!");
                     }
+
                     // TO ADD MORE ELSE IFS BASED ON DIFFERENT SCENARIOS
                     // ARE FORMS A VIABLE OPTION OR I SHOULD LEARN F.E. FIRST AND APPLY IT DIRECTLY?
-                    
                 }
                 catch (Exception ex)
                 {
-
                     Console.WriteLine(ex.Message);
                 }
             }
