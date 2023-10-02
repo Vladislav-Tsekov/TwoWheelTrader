@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 using TwoWheelTrader.Core.Interfaces;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories;
@@ -20,6 +21,83 @@ namespace TwoWheelTrader.Core
             naked = new NakedRepository();
             sport = new SportRepository();
             tourer = new TourerRepository();
+        }
+
+        public IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance) 
+        {
+            switch (make.ToLower())
+            {
+                case "yam":
+                case "yamaha":
+                    if (model == "yzf")
+                    {
+                        return new Models.Motocross.Yamaha(model, cc, year, foreignPrice, link, distance);
+                    }
+                    else if (model == "wrf")
+                    {
+                        return new Models.Enduro.Yamaha(model, cc, year, foreignPrice, link, distance);
+                    }
+                    break;
+
+                case "hon":
+                case "honda":
+                    if (model == "crf")
+                    {
+                        return new Models.Motocross.Honda(model, cc, year, foreignPrice, link, distance);
+                    }
+                    else if (model == "crx")
+                    {
+                        // To research possible Enduro addition
+                    }
+                    break;
+
+                case "kaw":
+                case "kawasaki":
+                    if (model == "kxf")
+                    {
+                        return new Models.Motocross.Kawasaki(model, cc, year, foreignPrice, link, distance);
+                    }
+                    else if (model == "klx")
+                    {
+                        // To research possible Enduro addition
+                    }
+                    break;
+
+                case "ktm":
+                    if (model == "sxf")
+                    {
+                        return new Models.Motocross.KTM(model, cc, year, foreignPrice, link, distance);
+                    }
+                    else if (model == "exc")
+                    {
+                        return new Models.Enduro.KTM(model, cc, year, foreignPrice, link, distance);
+                    }
+                    break;
+
+                case "hus":
+                case "husqvarna":
+                    if (model == "fc")
+                    {
+                        return new Models.Motocross.Husqvarna(model, cc, year, foreignPrice, link, distance);
+                    }
+                    else if (model == "fe")
+                    {
+                        return new Models.Enduro.Husqvarna(model, cc, year, foreignPrice, link, distance);
+                    }
+                    break;
+
+                case "gas":
+                case "gasgas":
+                    if (model == "mcf")
+                    {
+                        return new Models.Motocross.GASGAS(model, cc, year, foreignPrice, link, distance);
+                    }
+
+                    // MUST IMPLEMENT THE GASGAS ENDURO MODEL AT SOME POINT
+                    break;
+            }
+
+            return null; // Returns null for unsupported make/model combinations     
         }
 
         public string Add(IMotorcycle motorcycle)
