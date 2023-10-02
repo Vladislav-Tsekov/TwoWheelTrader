@@ -4,7 +4,7 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Honda : IMotocross
     {
-        public Honda(string model, int cc, int year, int priceForeign, string link)
+        public Honda(string model, int cc, int year, int priceForeign, string link, int distance)
         {
             Make = "Honda";
             Model = model;
@@ -12,6 +12,8 @@ namespace TwoWheelTrader.Models.Motocross
             Year = year;
             PriceForeign = priceForeign;
             Link = link;
+            DistanceToPickUp = distance;
+            FuelCost = ((DistanceToPickUp * 2) / 100) * (IMotorcycle.dieselPriceBGN * 11);
             PriceBGN = PriceForeign * IMotorcycle.exchangeRateSEK;
             TotalCost = FuelCost + PriceBGN;
 
