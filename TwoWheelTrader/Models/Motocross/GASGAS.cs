@@ -13,7 +13,7 @@ namespace TwoWheelTrader.Models.Motocross
             PriceForeign = priceForeign;
             Link = link;
             DistanceToPickUp = distance;
-            FuelCost = ((DistanceToPickUp * 2) / 100) * (IMotorcycle.dieselPriceBGN * 11);
+            FuelCost = (double)(DistanceToPickUp * 2 / 100.0) * (IMotorcycle.dieselPriceBGN * 11);
             PriceBGN = PriceForeign * IMotorcycle.exchangeRateSEK;
             TotalCost = FuelCost + PriceBGN;
 
