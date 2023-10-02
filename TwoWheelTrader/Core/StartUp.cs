@@ -6,7 +6,8 @@ namespace TwoWheelTrader.Core
     {
         static void Main()
         {
-            IEngine engine = new Engine();
+            IController controller = new Controller();  
+            IEngine engine = new Engine(controller);
             engine.RunProgram();
         }
     }
