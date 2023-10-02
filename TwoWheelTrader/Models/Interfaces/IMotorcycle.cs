@@ -2,7 +2,8 @@
 {
     public interface IMotorcycle
     {
-        const double exchangeRateSEK = 0.1639;
+        const double exchangeRateSEK = 0.1688; // LAST UPDATE - 02.10.2023
+        const double dieselPriceBGN = 4.32; // LAST UPDATE - 02.10.2023
         string Make { get; }
         string Model { get; }
         int CC { get; }
