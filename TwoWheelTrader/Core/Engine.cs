@@ -7,9 +7,9 @@ namespace TwoWheelTrader.Core
     {
         private readonly IController controller;
 
-        public Engine()
+        public Engine(IController controller)
         {
-            controller = new Controller();   
+            this.controller = controller;   
         }
 
         public void RunProgram()
