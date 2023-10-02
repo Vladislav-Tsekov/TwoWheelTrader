@@ -41,7 +41,7 @@ namespace TwoWheelTrader.Core
                         int cc = int.Parse(input[3]);
                         int year = int.Parse(input[4]);
                         int foreignPrice = int.Parse(input[5]);
-                        string link = input[6]; //ADD TO CONSTRUCTORS - MX/ENDURO MODELS / INTERFACES AS WELL
+                        string link = input[6]; 
 
                         Console.WriteLine($"Please input the pick-up location of the vehicle:");
                         string pickUpDestination = Console.ReadLine();
