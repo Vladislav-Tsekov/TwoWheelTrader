@@ -4,7 +4,7 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class Husqvarna : IEnduro
     {
-        public Husqvarna(string model, int cc, int year, double priceForeign, string link)
+        public Husqvarna(string model, int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "Husqvarna";
             Model = model;
@@ -12,6 +12,8 @@ namespace TwoWheelTrader.Models.Enduro
             Year = year;
             PriceForeign = priceForeign;
             Link = link;
+            DistanceToPickUp = distance;
+            FuelCost = ((DistanceToPickUp * 2) / 100) * (IMotorcycle.dieselPriceBGN * 11);
             PriceBGN = PriceForeign * IMotorcycle.exchangeRateSEK;
             TotalCost = FuelCost + PriceBGN;
 

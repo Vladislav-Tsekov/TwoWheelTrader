@@ -4,7 +4,7 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class KTM : IEnduro
     {
-        public KTM(string model, int cc, int year, int priceForeign, string link)
+        public KTM(string model, int cc, int year, int priceForeign, string link, int distance)
         {
             Make = "KTM";
             Model = model;
@@ -12,6 +12,8 @@ namespace TwoWheelTrader.Models.Enduro
             Year = year;
             PriceForeign = priceForeign;
             Link = link;
+            DistanceToPickUp = distance;
+            FuelCost = ((DistanceToPickUp * 2) / 100) * (IMotorcycle.dieselPriceBGN * 11);
             PriceBGN = PriceForeign * IMotorcycle.exchangeRateSEK;
             TotalCost = FuelCost + PriceBGN;
 
