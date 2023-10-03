@@ -242,7 +242,7 @@ namespace TwoWheelTrader.Core
 
         public void PrintResult()
         {
-            throw new NotImplementedException();
+            motocross.Repos
         }
     }
 }

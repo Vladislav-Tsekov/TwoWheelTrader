@@ -31,6 +31,8 @@ namespace TwoWheelTrader.Repositories
             {
                 StringBuilder sb = new StringBuilder();
 
+                sb.AppendLine($"{this.GetType().Name} has the following motorcycles.");
+
                 foreach (var moto in motorcycles)
                 {
                     sb.AppendLine($"{moto.Make}, {moto.Model}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {moto.TotalCost}, {moto.Profit}, {moto.Link}, {moto.ROI}");
