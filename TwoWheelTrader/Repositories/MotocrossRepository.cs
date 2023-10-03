@@ -35,7 +35,7 @@ namespace TwoWheelTrader.Repositories
 
                 foreach (var moto in motorcycles)
                 {
-                    sb.AppendLine($"{moto.Make}, {moto.Model}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {moto.TotalCost:f2}, {moto.Profit:f2}, {moto.Link}, {moto.ROI:f2}");
+                    sb.Append($"{moto.Make}, {moto.Model}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {(int)moto.TotalCost}, {(int)moto.Profit}, {moto.Link}, {moto.ROI:f2}{Environment.NewLine}");
                 }
 
                 return sb.ToString().TrimEnd();
