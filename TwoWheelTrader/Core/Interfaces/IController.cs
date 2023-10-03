@@ -12,5 +12,6 @@ namespace TwoWheelTrader.Core.Interfaces
         void GetRepositoriesStatus();
         int DestinationExists(string pickUpDestination);
         void GetTransportationCost();
+        void PrintResult();
     }
 }

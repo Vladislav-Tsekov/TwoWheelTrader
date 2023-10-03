@@ -92,8 +92,10 @@ namespace TwoWheelTrader.Core
                     {
                         return new Models.Motocross.GASGAS(model, cc, year, foreignPrice, link, distance);
                     }
-
-                    // MUST IMPLEMENT THE GASGAS ENDURO MODEL AT SOME POINT
+                    else if (model == "ecf")
+                    {
+                        // To research possible Enduro addition
+                    }
                     break;
             }
 
@@ -234,6 +236,11 @@ namespace TwoWheelTrader.Core
         }
 
         public string RemoveMotorcycle(IMotorcycle motorcycle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PrintResult()
         {
             throw new NotImplementedException();
         }

@@ -1,4 +1,6 @@
-﻿namespace TwoWheelTrader.Models.Interfaces
+﻿using System.Runtime.CompilerServices;
+
+namespace TwoWheelTrader.Models.Interfaces
 {
     public interface IMotorcycle
     {
