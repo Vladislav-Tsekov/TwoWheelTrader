@@ -16,9 +16,10 @@ namespace TwoWheelTrader.Core
         {
             while (true)
             {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
+                Console.WriteLine($"Please input motorcycle's --| Make, Model, CC, Year, Price, Link |--.");
+                Console.WriteLine($"Available commands: 'Add', 'Check', 'Status' or 'Done'.");
+
                 string[] input = Console.ReadLine().ToLower().Split();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
                 try
                 {
@@ -27,6 +28,7 @@ namespace TwoWheelTrader.Core
 
                     if (command == "done")
                     {
+                        controller.PrintResult();
                         Environment.Exit(0);
                     }
                     else if (command == "add")

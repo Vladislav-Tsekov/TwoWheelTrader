@@ -242,11 +242,11 @@ namespace TwoWheelTrader.Core
 
         public void PrintResult()
         {
-            motocross.RepositoryStatus();
-            enduro.RepositoryStatus();
-            naked.RepositoryStatus();
-            sport.RepositoryStatus();
-            tourer.RepositoryStatus();
+            Console.WriteLine(motocross.RepositoryStatus()); 
+            Console.WriteLine(enduro.RepositoryStatus()); 
+            Console.WriteLine(naked.RepositoryStatus()); 
+            Console.WriteLine(sport.RepositoryStatus()); 
+            Console.WriteLine(tourer.RepositoryStatus()); 
         }
     }
 }
