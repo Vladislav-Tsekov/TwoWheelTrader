@@ -102,52 +102,52 @@ namespace TwoWheelTrader.Core
             return null; // Returns null for unsupported make/model combinations     
         }
 
-        public string Add(IMotorcycle motorcycle)
-        {
-            var currentClass = motorcycle.GetType();
-            var motorcycleMake = currentClass.Name;
+        //public string Add(IMotorcycle motorcycle)
+        //{
+        //    var currentClass = motorcycle.GetType();
+        //    var motorcycleMake = currentClass.Name;
 
-            Console.WriteLine(motorcycleMake); //TESTING PURPOSES
+        //    Console.WriteLine(motorcycleMake); //TESTING PURPOSES
 
-            Type[] motorcycleInterface = currentClass.GetInterfaces();
-            var category = motorcycleInterface[0].Name;
+        //    Type[] motorcycleInterface = currentClass.GetInterfaces();
+        //    var category = motorcycleInterface[0].Name;
 
-            Console.WriteLine(category); // TESTING PURPOSES
+        //    Console.WriteLine(category); // TESTING PURPOSES
 
-            string output;
+        //    string output;
 
-            if (category == "IEnduro")
-            {
-                enduro.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "IMotocross")
-            {
-                motocross.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "INaked")
-            {
-                naked.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "ISport")
-            {
-                sport.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "ITourer")
-            {
-                tourer.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else
-            {
-                throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again! Class: Controller / Method: Add");
-            }
+        //    if (category == "IEnduro")
+        //    {
+        //        enduro.AddMotorcycle(motorcycle);
+        //        output = $"{motorcycleMake} added successfully!";
+        //    }
+        //    else if (category == "IMotocross")
+        //    {
+        //        motocross.AddMotorcycle(motorcycle);
+        //        output = $"{motorcycleMake} added successfully!";
+        //    }
+        //    else if (category == "INaked")
+        //    {
+        //        naked.AddMotorcycle(motorcycle);
+        //        output = $"{motorcycleMake} added successfully!";
+        //    }
+        //    else if (category == "ISport")
+        //    {
+        //        sport.AddMotorcycle(motorcycle);
+        //        output = $"{motorcycleMake} added successfully!";
+        //    }
+        //    else if (category == "ITourer")
+        //    {
+        //        tourer.AddMotorcycle(motorcycle);
+        //        output = $"{motorcycleMake} added successfully!";
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again! Class: Controller / Method: Add");
+        //    }
 
-            return output;
-        }
+        //    return output;
+        //} 
 
         public int DestinationExists(string pickUpDestination)
         {

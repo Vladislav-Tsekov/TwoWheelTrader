@@ -6,7 +6,8 @@ namespace TwoWheelTrader.Core.Interfaces
     public interface IController
     {
         IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance);
-        string Add(IMotorcycle motorcycle);
+
+        //string Add(IMotorcycle motorcycle); //DEPRECATED
         string RemoveMotorcycle(IMotorcycle motorcycle);
         string GetMotorcycleInfo(string link, string targetRepo);
         void GetRepositoriesStatus();
