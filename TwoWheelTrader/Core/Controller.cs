@@ -250,11 +250,11 @@ namespace TwoWheelTrader.Core
 
         public void GetRepositoriesStatus()
         {
-            //CW
-            enduro.RepositoryStatus();
-            motocross.RepositoryStatus();
-
-            //TO IMPLEMENT THE REST AS WELL
+            Console.WriteLine(motocross.RepositoryStatus());
+            Console.WriteLine(enduro.RepositoryStatus());
+            Console.WriteLine(naked.RepositoryStatus());
+            Console.WriteLine(sport.RepositoryStatus());
+            Console.WriteLine(tourer.RepositoryStatus());
         }
 
         public void GetTransportationCost()
@@ -267,13 +267,13 @@ namespace TwoWheelTrader.Core
             throw new NotImplementedException();
         }
 
-        public void PrintResult()
-        {
-            Console.WriteLine(motocross.RepositoryStatus()); 
-            Console.WriteLine(enduro.RepositoryStatus()); 
-            Console.WriteLine(naked.RepositoryStatus()); 
-            Console.WriteLine(sport.RepositoryStatus()); 
-            Console.WriteLine(tourer.RepositoryStatus()); 
-        }
+        //public void PrintResult()
+        //{
+        //    Console.WriteLine(motocross.RepositoryStatus()); 
+        //    Console.WriteLine(enduro.RepositoryStatus()); 
+        //    Console.WriteLine(naked.RepositoryStatus()); 
+        //    Console.WriteLine(sport.RepositoryStatus()); 
+        //    Console.WriteLine(tourer.RepositoryStatus()); 
+        //}
     }
 }

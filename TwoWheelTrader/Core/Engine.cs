@@ -28,7 +28,7 @@ namespace TwoWheelTrader.Core
 
                     if (command == "done")
                     {
-                        controller.PrintResult();
+                        controller.GetRepositoriesStatus();
                         Environment.Exit(0);
                     }
                     else if (command == "add")
