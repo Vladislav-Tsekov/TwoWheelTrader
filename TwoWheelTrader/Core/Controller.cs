@@ -96,6 +96,15 @@ namespace TwoWheelTrader.Core
                     }
                     break;
 
+                case "suz":
+                case "suzuki":
+                    if (model == "rmz")
+                    {
+                        motorcycle = new Models.Motocross.Suzuki(model, cc, year, foreignPrice, link, distance);
+                        motocross.AddMotorcycle(motorcycle);
+                    }
+                    break;
+
                 case "gas":
                 case "gasgas":
                     if (model == "mcf")
@@ -241,6 +250,7 @@ namespace TwoWheelTrader.Core
 
         public void GetRepositoriesStatus()
         {
+            //CW
             enduro.RepositoryStatus();
             motocross.RepositoryStatus();
 
