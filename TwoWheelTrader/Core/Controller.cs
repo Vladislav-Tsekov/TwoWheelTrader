@@ -128,53 +128,6 @@ namespace TwoWheelTrader.Core
             return motorcycle;
         }
 
-        //public string Add(IMotorcycle motorcycle)
-        //{
-        //    var currentClass = motorcycle.GetType();
-        //    var motorcycleMake = currentClass.Name;
-
-        //    Console.WriteLine(motorcycleMake); //TESTING PURPOSES
-
-        //    Type[] motorcycleInterface = currentClass.GetInterfaces();
-        //    var category = motorcycleInterface[0].Name;
-
-        //    Console.WriteLine(category); // TESTING PURPOSES
-
-        //    string output;
-
-        //    if (category == "IEnduro")
-        //    {
-        //        enduro.AddMotorcycle(motorcycle);
-        //        output = $"{motorcycleMake} added successfully!";
-        //    }
-        //    else if (category == "IMotocross")
-        //    {
-        //        motocross.AddMotorcycle(motorcycle);
-        //        output = $"{motorcycleMake} added successfully!";
-        //    }
-        //    else if (category == "INaked")
-        //    {
-        //        naked.AddMotorcycle(motorcycle);
-        //        output = $"{motorcycleMake} added successfully!";
-        //    }
-        //    else if (category == "ISport")
-        //    {
-        //        sport.AddMotorcycle(motorcycle);
-        //        output = $"{motorcycleMake} added successfully!";
-        //    }
-        //    else if (category == "ITourer")
-        //    {
-        //        tourer.AddMotorcycle(motorcycle);
-        //        output = $"{motorcycleMake} added successfully!";
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again! Class: Controller / Method: Add");
-        //    }
-
-        //    return output;
-        //} 
-
         public int DestinationExists(string pickUpDestination)
         {
             string filePath = @"C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\Routes\Routes.csv";
@@ -267,13 +220,62 @@ namespace TwoWheelTrader.Core
             throw new NotImplementedException();
         }
 
-        //public void PrintResult()
-        //{
-        //    Console.WriteLine(motocross.RepositoryStatus()); 
-        //    Console.WriteLine(enduro.RepositoryStatus()); 
-        //    Console.WriteLine(naked.RepositoryStatus()); 
-        //    Console.WriteLine(sport.RepositoryStatus()); 
-        //    Console.WriteLine(tourer.RepositoryStatus()); 
-        //}
+        //DEPRECATED
+
+        /*public string Add(IMotorcycle motorcycle)
+        {
+            var currentClass = motorcycle.GetType();
+            var motorcycleMake = currentClass.Name;
+
+            Console.WriteLine(motorcycleMake); //TESTING PURPOSES
+
+            Type[] motorcycleInterface = currentClass.GetInterfaces();
+            var category = motorcycleInterface[0].Name;
+
+            Console.WriteLine(category); // TESTING PURPOSES
+
+            string output;
+
+            if (category == "IEnduro")
+            {
+                enduro.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "IMotocross")
+            {
+                motocross.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "INaked")
+            {
+                naked.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "ISport")
+            {
+                sport.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else if (category == "ITourer")
+            {
+                tourer.AddMotorcycle(motorcycle);
+                output = $"{motorcycleMake} added successfully!";
+            }
+            else
+            {
+                throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again! Class: Controller / Method: Add");
+            }
+
+            return output;
+        }*/
+
+        /* public void PrintResult()
+        {
+            Console.WriteLine(motocross.RepositoryStatus());
+            Console.WriteLine(enduro.RepositoryStatus());
+            Console.WriteLine(naked.RepositoryStatus());
+            Console.WriteLine(sport.RepositoryStatus());
+            Console.WriteLine(tourer.RepositoryStatus());
+        }*/
     }
 }
