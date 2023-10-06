@@ -55,7 +55,7 @@ namespace TwoWheelTrader.Models.Enduro
                     MarketPrice = 17000; break;
             }
 
-            Profit = MarketPrice - PriceBGN;
+            Profit = MarketPrice - TotalCost;
             ROI = (this.Profit / this.TotalCost) * 100.0;
         }
 
