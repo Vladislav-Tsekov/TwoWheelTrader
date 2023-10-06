@@ -39,7 +39,7 @@ namespace TwoWheelTrader.Repositories
                     sb.Append($"{moto.Make}, {moto.Model.ToUpper()}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {(int)moto.TotalCost}, {(int)moto.Profit}, {moto.Link}, {moto.ROI:f2}{Environment.NewLine}");
                 }
 
-                return sb.ToString().TrimEnd();
+                return sb.ToString().Trim();
             }
             else
             {
