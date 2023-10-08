@@ -125,7 +125,7 @@ namespace TwoWheelTrader.Core
                 return motorcycle;
             }
 
-            Console.WriteLine($"The potential profit for this {GetType().Name} is: {motorcycle.Profit}");
+            Console.WriteLine($"The potential profit for this {motorcycle.GetType().Name} is: {motorcycle.Profit:F2}");
             return motorcycle;
         }
 
