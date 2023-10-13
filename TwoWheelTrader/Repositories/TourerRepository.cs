@@ -30,9 +30,9 @@ namespace TwoWheelTrader.Repositories
         {
             if (this.motorcycles.Count > 0)
             {
-                StringBuilder sb = new StringBuilder();
+                StringBuilder sb = new();
 
-                sb.AppendLine($"{this.GetType().Name} has the following motorcycles.");
+                sb.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
 
                 foreach (var moto in motorcycles)
                 {
