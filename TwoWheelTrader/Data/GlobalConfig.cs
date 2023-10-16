@@ -14,12 +14,14 @@ namespace VehEvalu8.Data
         {
             if (SQL)
             {
-                // TODO - CREATE SQL CONNECTION
+                SqlConnector sql = new();
+                Connections.Add(sql);
             }
 
             if (CSV)
             {
-                // TODO - CREATE CSV CONNECTION
+                CsvConnector csv = new();
+                Connections.Add(csv);
             }
         }
     }
