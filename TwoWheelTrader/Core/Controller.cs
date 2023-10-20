@@ -52,7 +52,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "crx")
                     {
-                        // To research possible Enduro addition
+                        //TODO - RESEARCH DOMESTIC MARKET INTEREST IN THE MODEL
                     }
                     break;
 
@@ -65,7 +65,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "klx")
                     {
-                        // To research possible Enduro addition
+                        //TODO - RESEARCH DOMESTIC MARKET INTEREST IN THE MODEL
                     }
                     break;
 
@@ -102,6 +102,10 @@ namespace TwoWheelTrader.Core
                     {
                         motorcycle = new Models.Motocross.Suzuki(model, cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
+                    }
+                    else if (model == "drz")
+                    {
+                        //TODO - RESEARCH DOMESTIC MARKET INTEREST IN THE MODEL
                     }
                     break;
 

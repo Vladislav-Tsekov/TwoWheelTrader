@@ -4,6 +4,8 @@ namespace TwoWheelTrader.Models.Interfaces
 {
     public interface IMotorcycle
     {
+        //TODO - HOW CAN I HAVE A REAL-TIME CURRENCY CONVERSION AND DIESEL PRICE UPDATES? HTMLAGILITYPACK / SCRAPE-PARSE?
+
         const double exchangeRateSEK = 0.1688; // LAST UPDATE - 02.10.2023
         const double dieselPriceBGN = 4.32; // LAST UPDATE - 02.10.2023
         const int commission = 800;
