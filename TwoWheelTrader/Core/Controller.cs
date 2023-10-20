@@ -114,7 +114,8 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "ecf")
                     {
-                        // To research possible Enduro addition
+                        motorcycle = new Models.Enduro.GASGAS(model, cc, year, foreignPrice, link, distance);
+                        motocross.AddMotorcycle(motorcycle);
                     }
                     break;
             }
