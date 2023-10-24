@@ -52,7 +52,8 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "crx")
                     {
-                        //TODO - RESEARCH DOMESTIC MARKET INTEREST IN THE MODEL
+                        motorcycle = new Models.Enduro.Honda(model, cc, year, foreignPrice, link, distance);
+                        motocross.AddMotorcycle(motorcycle);
                     }
                     break;
 
@@ -65,7 +66,8 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "klx")
                     {
-                        //TODO - RESEARCH DOMESTIC MARKET INTEREST IN THE MODEL
+                        motorcycle = new Models.Enduro.Kawasaki(model, cc, year, foreignPrice, link, distance);
+                        motocross.AddMotorcycle(motorcycle);
                     }
                     break;
 
@@ -105,7 +107,8 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "drz")
                     {
-                        //TODO - RESEARCH DOMESTIC MARKET INTEREST IN THE MODEL
+                        motorcycle = new Models.Enduro.Suzuki(model, cc, year, foreignPrice, link, distance);
+                        motocross.AddMotorcycle(motorcycle);
                     }
                     break;
 
