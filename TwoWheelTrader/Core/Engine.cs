@@ -23,7 +23,6 @@ namespace TwoWheelTrader.Core
 
                 try
                 {
-                    string output = string.Empty;
                     string command = input[0];
 
                     if (command == "done")
