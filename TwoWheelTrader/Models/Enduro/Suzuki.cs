@@ -17,6 +17,8 @@ namespace TwoWheelTrader.Models.Enduro
             PriceBGN = PriceForeign * IMotorcycle.exchangeRateSEK;
             TotalCost = FuelCost + PriceBGN + IMotorcycle.commission;
 
+            //TODO - UPDATE PRICES.
+
             switch (Year)
             {
                 case 2007:
