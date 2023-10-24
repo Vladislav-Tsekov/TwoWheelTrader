@@ -1,4 +1,5 @@
 ﻿namespace UnitTests.CoreTests;
+
 using NUnit.Framework;
 using TwoWheelTrader.Core;
 using TwoWheelTrader.Core.Interfaces;
