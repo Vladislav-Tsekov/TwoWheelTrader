@@ -31,6 +31,18 @@ namespace xUnitTests.ModelsTests
             Assert.Equal(link, testYamaha.Link);
             Assert.Equal(distance, testYamaha.DistanceToPickUp);
         }
+
+        [Fact]
+        public void GetExpectedMotocrossMarketPrice()
+        {
+            var testYamaha0 = new Yamaha("YZF", 250, 2023, 45000, "www.yamaha.com", 25);
+            var testYamaha1 = new Yamaha("YZF", 250, 2016, 45000, "www.yamaha.com", 25);
+            var testYamaha2 = new Yamaha("YZF", 250, 2011, 45000, "www.yamaha.com", 25);
+
+            Assert.Equal(12000, testYamaha0.MarketPrice);
+            Assert.Equal(7300, testYamaha1.MarketPrice);
+            Assert.Equal(5600, testYamaha2.MarketPrice);
+        }
     }
 }
 

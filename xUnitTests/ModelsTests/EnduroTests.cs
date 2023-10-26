@@ -14,7 +14,7 @@ namespace xUnitTests.ModelsTests
         [Fact]
         public void EnduroModelShouldInitializeCorrectly()
         {
-            string model = "YZF";
+            string model = "WRF";
             int cc = 250;
             int year = 2023;
             double priceForeign = 45000;
