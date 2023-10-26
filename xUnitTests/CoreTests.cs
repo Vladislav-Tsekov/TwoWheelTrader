@@ -83,7 +83,9 @@ namespace UnitTests.CoreTests
             Controller controller = new();
             MotocrossRepository motocross = new();
 
-            //TODO - IMPLEMENT TEST
+            string result = motocross.RepositoryStatus();
+
+            Assert.Equal($"{motocross.GetType().Name} is empty!", result);
         }
     }
 }
