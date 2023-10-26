@@ -1,4 +1,7 @@
+using System.Reflection;
 using TwoWheelTrader.Core;
+using TwoWheelTrader.Models.Interfaces;
+using TwoWheelTrader.Repositories;
 using Xunit;
 
 namespace UnitTests.CoreTests
@@ -21,7 +24,7 @@ namespace UnitTests.CoreTests
         }
 
         [Fact]
-        public void DestinationExists_ExistingDestination_ReturnsDistance()
+        public void DestinationExists()
         {
             // Arrange
             var controller = new Controller();
@@ -34,7 +37,7 @@ namespace UnitTests.CoreTests
         }
 
         [Fact]
-        public void CreateMotorcycle_ValidInput_CreatesMotorcycle()
+        public void CreateMotorcycle()
         {
             // Arrange
             string make = "yam";
@@ -52,6 +55,35 @@ namespace UnitTests.CoreTests
 
             // Assert
             Assert.NotNull(motorcycle);
+        }
+
+        [Fact]
+        public void GetMotorcycleInfo()
+        {
+            // Arrange
+            Controller controller = new Controller();
+            MotocrossRepository motocross = new();
+            IMotorcycle motorcycle = new TwoWheelTrader.Models.Motocross.Kawasaki("KXF", 250, 2019, 35000, "www.kawa250.com", 15);
+            motocross.AddMotorcycle(motorcycle);
+            string link = "www.kawa250.com";
+            string targetRepo = "mx";
+
+            // Act
+            string info = controller.GetMotorcycleInfo(link, targetRepo);
+
+            // Assert
+
+            //TODO - RUN THE TEST
+        }
+
+        [Fact]
+        public void GetRepositoriesStatus()
+        {
+            // Arrange
+            Controller controller = new();
+            MotocrossRepository motocross = new();
+
+            //TODO - IMPLEMENT TEST
         }
     }
 }
