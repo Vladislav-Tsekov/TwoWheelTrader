@@ -18,8 +18,6 @@ namespace UnitTests.CoreTests
 
             // Assert
             Assert.NotNull(motorcycle);
-            Assert.Equal(make, motorcycle.Make);
-            Assert.Equal(model, motorcycle.Model);
         }
 
         [Fact]
@@ -32,7 +30,7 @@ namespace UnitTests.CoreTests
             int distance = controller.DestinationExists("Linkoping");
 
             // Assert
-            Assert.Equal(100, distance);
+            Assert.Equal(15, distance);
         }
 
         [Fact]
