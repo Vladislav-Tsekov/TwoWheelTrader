@@ -17,7 +17,7 @@ namespace UnitTests.CoreTests
             string model = "yzf";
 
             // Act
-            var motorcycle = controller.CreateMotorcycle(make, model, 250, 2023, 8000, "https://example.com", 100);
+            var motorcycle = controller.CreateMotorcycle(make, model, 250, 2023, 8000, "www.yamaha.com", 100);
 
             // Assert
             Assert.NotNull(motorcycle);
