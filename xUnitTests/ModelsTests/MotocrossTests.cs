@@ -7,12 +7,12 @@ using TwoWheelTrader.Models.Motocross;
 using TwoWheelTrader.Models.Interfaces;
 using Xunit;
 
-namespace xUnitTests
+namespace xUnitTests.ModelsTests
 {
-    public class ModelsTests
+    public class MotocrossTests
     {
         [Fact]
-        public void MxYamahaModel()
+        public void MotocrossModelShouldInitializeCorrectly()
         {
             string model = "YZF";
             int cc = 250;
@@ -32,6 +32,5 @@ namespace xUnitTests
             Assert.Equal(distance, testYamaha.DistanceToPickUp);
         }
     }
-
 }
 

@@ -4,7 +4,7 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class Yamaha : IEnduro
     {
-        public Yamaha(string model, int cc, int year, int priceForeign, string link, int distance)
+        public Yamaha(string model, int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "Yamaha";
             Model = model;
