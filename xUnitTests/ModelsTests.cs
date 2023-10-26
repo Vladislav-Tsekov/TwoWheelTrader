@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace xUnitTests
 {
-    internal class ModelsTests
+    public class ModelsTests
     {
+
     }
 }

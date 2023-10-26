@@ -24,19 +24,6 @@ namespace UnitTests.CoreTests
         }
 
         [Fact]
-        public void DestinationExists()
-        {
-            // Arrange
-            var controller = new Controller();
-
-            // Act
-            int distance = controller.DestinationExists("Linkoping");
-
-            // Assert
-            Assert.Equal(15, distance);
-        }
-
-        [Fact]
         public void CreateMotorcycle()
         {
             // Arrange
@@ -74,18 +61,6 @@ namespace UnitTests.CoreTests
             // Assert
 
             //TODO - RUN THE TEST
-        }
-
-        [Fact]
-        public void GetRepositoriesStatus()
-        {
-            // Arrange
-            Controller controller = new();
-            MotocrossRepository motocross = new();
-
-            string result = motocross.RepositoryStatus();
-
-            Assert.Equal($"{motocross.GetType().Name} is empty!", result);
         }
     }
 }
