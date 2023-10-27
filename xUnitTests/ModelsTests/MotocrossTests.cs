@@ -39,9 +39,9 @@ namespace xUnitTests.ModelsTests
             var testYamaha1 = new Yamaha("YZF", 250, 2016, 45000, "www.yamaha.com", 25);
             var testYamaha2 = new Yamaha("YZF", 250, 2011, 45000, "www.yamaha.com", 25);
 
-            Assert.Equal(12000, testYamaha0.MarketPrice);
-            Assert.Equal(7300, testYamaha1.MarketPrice);
-            Assert.Equal(5600, testYamaha2.MarketPrice);
+            Assert.Equal(GetExpectedMarketPrice(testYamaha0.Year), testYamaha0.MarketPrice);
+            Assert.Equal(GetExpectedMarketPrice(testYamaha1.Year), testYamaha1.MarketPrice);
+            Assert.Equal(GetExpectedMarketPrice(testYamaha2.Year), testYamaha2.MarketPrice);
         }
 
         [Fact]
