@@ -143,7 +143,7 @@ namespace TwoWheelTrader.Core
             int distance = 0;
 
             using var reader = new StreamReader(filePath);
-            reader.ReadLine(); // SKIPPING THE COLUMN TITLES?
+            reader.ReadLine(); // Used to skip the column titles.
 
             string townName = string.Empty;
 
@@ -155,7 +155,7 @@ namespace TwoWheelTrader.Core
                 townName = data[0].Trim();
                 distance = int.Parse(data[1].Trim());
 
-                Console.WriteLine($"City: {townName} / Distance: {distance}."); // TEST IF READING OCCURS OR NOT
+                Console.WriteLine($"City: {townName} / Distance: {distance}.");
 
                 if (townName == pickUpDestination)
                 {
@@ -164,8 +164,6 @@ namespace TwoWheelTrader.Core
             }
 
             reader.Dispose();
-
-            // Create a StreamWriter to write to the CSV file
             Console.WriteLine($"No matching cities found. Please write down the distance from Linkoping to {pickUpDestination}");
             
             using var writer = new StreamWriter(filePath, append: true);
