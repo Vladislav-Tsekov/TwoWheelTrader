@@ -7,12 +7,12 @@ using TwoWheelTrader.Models.Enduro;
 using TwoWheelTrader.Models.Interfaces;
 using Xunit;
 
-namespace xUnitTests.ModelsTests
+namespace xUnitTests.ModelsTests.EnduroTests
 {
     public class EnduroTests
     {
         [Fact]
-        public void EnduroModelShouldInitializeCorrectly()
+        public void ModelsShouldInitializeCorrectly()
         {
             string model = "WRF";
             int cc = 250;

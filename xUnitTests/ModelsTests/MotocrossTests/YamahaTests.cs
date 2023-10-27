@@ -7,12 +7,12 @@ using TwoWheelTrader.Models.Motocross;
 using TwoWheelTrader.Models.Interfaces;
 using Xunit;
 
-namespace xUnitTests.ModelsTests
+namespace xUnitTests.ModelsTests.MotocrossTests
 {
-    public class MotocrossTests
+    public class YamahaTests
     {
         [Fact]
-        public void MotocrossModelShouldInitializeCorrectly()
+        public void ModelsShouldInitializeCorrectly()
         {
             string model = "YZF";
             int cc = 250;
@@ -33,15 +33,20 @@ namespace xUnitTests.ModelsTests
         }
 
         [Fact]
-        public void GetExpectedMotocrossMarketPrice()
+        public void GetExpectedMarketPrice()
         {
+            for (int year = 2006; year < 2024; year++)
+            {
+
+            }
+
             var testYamaha0 = new Yamaha("YZF", 250, 2023, 45000, "www.yamaha.com", 25);
             var testYamaha1 = new Yamaha("YZF", 250, 2016, 45000, "www.yamaha.com", 25);
             var testYamaha2 = new Yamaha("YZF", 250, 2011, 45000, "www.yamaha.com", 25);
 
-            Assert.Equal(GetExpectedMarketPrice(testYamaha0.Year), testYamaha0.MarketPrice);
-            Assert.Equal(GetExpectedMarketPrice(testYamaha1.Year), testYamaha1.MarketPrice);
-            Assert.Equal(GetExpectedMarketPrice(testYamaha2.Year), testYamaha2.MarketPrice);
+            Assert.Equal(MarketPricesByYear(testYamaha0.Year), testYamaha0.MarketPrice);
+            Assert.Equal(MarketPricesByYear(testYamaha1.Year), testYamaha1.MarketPrice);
+            Assert.Equal(MarketPricesByYear(testYamaha2.Year), testYamaha2.MarketPrice);
         }
 
         [Fact]
@@ -59,7 +64,7 @@ namespace xUnitTests.ModelsTests
             var testYamaha = new Yamaha(model, cc, year, priceForeign, link, distance);
 
             // Assert
-            double expectedMarketPrice = GetExpectedMarketPrice(year);
+            double expectedMarketPrice = MarketPricesByYear(year);
             Assert.Equal(expectedMarketPrice, testYamaha.MarketPrice);
             double expectedPriceBGN = priceForeign * IMotorcycle.exchangeRateSEK;
             double expectedFuelCost = (double)(distance * 2 / 100.0) * (IMotorcycle.dieselPriceBGN * 11);
@@ -69,11 +74,11 @@ namespace xUnitTests.ModelsTests
             Assert.Equal(expectedTotalCost, testYamaha.TotalCost);
             double expectedProfit = expectedMarketPrice - expectedTotalCost;
             Assert.Equal(expectedProfit, testYamaha.Profit);
-            double expectedROI = (expectedProfit / expectedTotalCost) * 100.0;
+            double expectedROI = expectedProfit / expectedTotalCost * 100.0;
             Assert.Equal(expectedROI, testYamaha.ROI);
         }
 
-        private static double GetExpectedMarketPrice(int year)
+        private static double MarketPricesByYear(int year)
         {
             switch (year)
             {
