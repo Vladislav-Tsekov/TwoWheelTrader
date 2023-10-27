@@ -36,7 +36,7 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         [Fact]
         public void GetExpectedMarketPrice()
         {
-            for (int year = 2006; year < 2024; year++)
+            for (int year = 2007; year < 2024; year++)
             {
                 //TODO - TRY FOR LOOP FOR EACH YEAR AVAILABLE
             }

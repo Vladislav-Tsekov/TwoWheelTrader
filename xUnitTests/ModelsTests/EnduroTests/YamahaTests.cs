@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using TwoWheelTrader.Models.Enduro;
 using TwoWheelTrader.Models.Interfaces;
 using Xunit;
+using xUnitTests.ModelsTests.Interfaces;
 
 namespace xUnitTests.ModelsTests.EnduroTests
 {
-    public class EnduroTests
+    public class YamahaTests : IModelsTests
     {
         [Fact]
         public void ModelsShouldInitializeCorrectly()
@@ -31,6 +32,18 @@ namespace xUnitTests.ModelsTests.EnduroTests
             Assert.Equal(link, testYamaha.Link);
             Assert.Equal(distance, testYamaha.DistanceToPickUp);
         }
+
+        public void GetExpectedMarketPrice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ModelsPropertiesMustHaveCorrectValues()
+        {
+            throw new NotImplementedException();
+        }
+
+        //TODO - LIST OF PRICES
     }
 }
 
