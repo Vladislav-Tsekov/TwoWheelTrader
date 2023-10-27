@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using TwoWheelTrader.Models.Motocross;
 using TwoWheelTrader.Models.Interfaces;
 using Xunit;
+using xUnitTests.ModelsTests.Interfaces;
 
 namespace xUnitTests.ModelsTests.MotocrossTests
 {
-    public class YamahaTests
+    public class YamahaTests : IModelsTests
     {
         [Fact]
         public void ModelsShouldInitializeCorrectly()
@@ -37,7 +38,7 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         {
             for (int year = 2006; year < 2024; year++)
             {
-
+                //TODO - TRY FOR LOOP FOR EACH YEAR AVAILABLE
             }
 
             var testYamaha0 = new Yamaha("YZF", 250, 2023, 45000, "www.yamaha.com", 25);
@@ -50,7 +51,7 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         }
 
         [Fact]
-        public void InternalMotocrossModelsPropertiesMustHaveCorrectValues()
+        public void ModelsPropertiesMustHaveCorrectValues()
         {
             // Arrange
             string model = "YZF";
