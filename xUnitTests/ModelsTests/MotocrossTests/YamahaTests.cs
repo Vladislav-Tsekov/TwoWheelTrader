@@ -38,16 +38,9 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         {
             for (int year = 2007; year < 2024; year++)
             {
-                //TODO - TRY FOR LOOP FOR EACH YEAR AVAILABLE
+                var testYamaha = new Yamaha("YZF", 250, year, 45000, "www.yamaha.com", 15);
+                Assert.Equal(MarketPricesByYear(testYamaha.Year), testYamaha.MarketPrice);
             }
-
-            var testYamaha0 = new Yamaha("YZF", 250, 2023, 45000, "www.yamaha.com", 25);
-            var testYamaha1 = new Yamaha("YZF", 250, 2016, 45000, "www.yamaha.com", 25);
-            var testYamaha2 = new Yamaha("YZF", 250, 2011, 45000, "www.yamaha.com", 25);
-
-            Assert.Equal(MarketPricesByYear(testYamaha0.Year), testYamaha0.MarketPrice);
-            Assert.Equal(MarketPricesByYear(testYamaha1.Year), testYamaha1.MarketPrice);
-            Assert.Equal(MarketPricesByYear(testYamaha2.Year), testYamaha2.MarketPrice);
         }
 
         [Fact]
