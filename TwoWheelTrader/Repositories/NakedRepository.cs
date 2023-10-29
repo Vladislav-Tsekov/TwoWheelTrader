@@ -26,7 +26,7 @@ namespace TwoWheelTrader.Repositories
             return findMotorcycleByLink;
         }
 
-        public string RepositoryStatus() // NEEDS TESTING
+        public string RepositoryStatus()
         {
             if (this.motorcycles.Count > 0)
             {
@@ -43,7 +43,7 @@ namespace TwoWheelTrader.Repositories
             }
             else
             {
-                return $"{this.GetType().Name} is empty!"; // CHECK THE OUTPUT
+                return $"{this.GetType().Name} is empty!";
             }
         }
 
