@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TwoWheelTrader.Core;
+using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories;
+using TwoWheelTrader.Repositories.Interfaces;
 using Xunit;
 
 namespace xUnitTests
@@ -14,13 +16,19 @@ namespace xUnitTests
         [Fact]
         public void GetRepositoriesStatus()
         {
-            // Arrange
-            Controller controller = new();
             MotocrossRepository motocross = new();
+            EnduroRepository enduro = new();
+            NakedRepository naked = new();
+            SportRepository sport = new();
+            TourerRepository tourer = new();
 
-            string result = motocross.RepositoryStatus();
+            HashSet<IRepository<IMotorcycle>> repos = new() { motocross, enduro, naked, sport, tourer };
 
-            Assert.Equal($"{motocross.GetType().Name} is empty!", result);
+            foreach (var repo in repos)
+            {
+                string result = repo.RepositoryStatus();
+                Assert.Equal($"{repo.GetType().Name} is empty!", result);
+            }
         }
     }
 }
