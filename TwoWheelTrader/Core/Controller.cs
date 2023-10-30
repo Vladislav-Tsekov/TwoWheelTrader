@@ -141,6 +141,8 @@ namespace TwoWheelTrader.Core
                 return motorcycle;
             }
 
+            Motorcycle testDBMoto = new(make, model, year, foreignPrice, link);
+
             Console.WriteLine($"The potential profit for this {motorcycle.GetType().Name} is: {motorcycle.Profit:F2}");
             return motorcycle;
         }
