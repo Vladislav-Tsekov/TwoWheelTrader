@@ -3,6 +3,7 @@ using System.Text;
 using TwoWheelTrader.Core.Interfaces;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories;
+using VehEvalu8.Data;
 
 namespace TwoWheelTrader.Core
 {
@@ -13,6 +14,13 @@ namespace TwoWheelTrader.Core
         private NakedRepository naked;
         private SportRepository sport;
         private TourerRepository tourer;
+
+        private readonly MotoDbContext motoContext;
+
+        public Controller(MotoDbContext context)
+        {
+            motoContext = context;
+        }
 
         public Controller()
         {
