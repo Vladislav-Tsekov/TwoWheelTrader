@@ -18,12 +18,12 @@ namespace VehEvalu8.Data
             Link = link;
         }
 
-        [Key]
-        public int Id { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
         public double PriceForeign { get; set; }
+
+        [Key]
         public string Link { get; set; }
     }
 }
