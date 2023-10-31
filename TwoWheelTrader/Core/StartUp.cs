@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using TwoWheelTrader.Core.Interfaces;
 using VehEvalu8.Data;
 
@@ -8,21 +9,18 @@ namespace TwoWheelTrader.Core
     {
         static void Main()
         {
-            var options = SetupDbContextOptions();
+            string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=motoTEST;Trusted_Connection=True;";
 
-            using var context = new MotoDbContext(options);
+            var services = new ServiceCollection()
+                .AddDbContext<MotoDbContext>(options =>
+                    options.UseSqlServer(connectionString)
+                )
+                .AddScoped<IController, Controller>()
+                .AddScoped<IEngine, Engine>()
+                .BuildServiceProvider();
 
-            IController controller = new Controller();
-            IEngine engine = new Engine(controller);
+            var engine = services.GetService<IEngine>();
             engine.RunProgram();
-        }
-
-        static DbContextOptions<MotoDbContext> SetupDbContextOptions()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<MotoDbContext>();
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=MotoTEST;Trusted_Connection=True;");
-
-            return optionsBuilder.Options;
         }
     }
 }

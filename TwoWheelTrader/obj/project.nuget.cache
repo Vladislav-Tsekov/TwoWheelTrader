@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T496oSnOCU7gXGifs3B/oYs5Mojv5MPp4nay/ZQ53LIA3hEoTRy7dQ1EarH33QmTA0RLf+iYW7WBrIukppzq/g==",
+  "dgSpecHash": "Z4dI4rS9aQax50BmfpzXqWnu45BnezP+wyjN8BaHj10MBp5vQLBWzHnm/ZIMXYRuPB1BTIoiG/tMjCQCGYUDcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\VehEvalu8.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\tseko\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.13\\microsoft.entityframeworkcore.tools.7.0.13.nupkg.sha512",
     "C:\\Users\\tseko\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\tseko\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\tseko\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\tseko\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\tseko\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\tseko\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",

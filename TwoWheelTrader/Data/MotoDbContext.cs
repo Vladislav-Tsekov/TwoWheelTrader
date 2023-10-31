@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VehEvalu8.Data
 {
@@ -14,6 +9,11 @@ namespace VehEvalu8.Data
         public MotoDbContext(DbContextOptions<MotoDbContext> options)
             : base(options)
         {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=motoTEST;Trusted_Connection=True;");
         }
     }
 }
