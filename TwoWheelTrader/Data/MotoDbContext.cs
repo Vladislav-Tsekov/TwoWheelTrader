@@ -11,11 +11,6 @@ namespace VehEvalu8.Data
     {
         public DbSet<Motorcycle> Motorcycles { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=MotoTEST;Trusted_Connection=True;");
-        }
-
         public MotoDbContext(DbContextOptions<MotoDbContext> options)
             : base(options)
         {
