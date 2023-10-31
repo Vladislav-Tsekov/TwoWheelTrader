@@ -20,7 +20,7 @@ namespace TwoWheelTrader.Core
         static DbContextOptions<MotoDbContext> SetupDbContextOptions()
         {
             var optionsBuilder = new DbContextOptionsBuilder<MotoDbContext>();
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=YourDatabaseName;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=MotoTEST;Trusted_Connection=True;");
 
             return optionsBuilder.Options;
         }
