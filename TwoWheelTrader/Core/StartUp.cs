@@ -9,7 +9,7 @@ namespace TwoWheelTrader.Core
     {
         static void Main()
         {
-            string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=motoTEST;Trusted_Connection=True;";
+            string connectionString = @"Server=.;Database=motoTEST;Integrated Security=True;";
 
             var services = new ServiceCollection()
                 .AddDbContext<MotoDbContext>(options =>

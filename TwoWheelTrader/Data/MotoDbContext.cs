@@ -13,7 +13,7 @@ namespace VehEvalu8.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=motoTEST;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=.;Database=motoTEST;Integrated Security=True;");
         }
     }
 }
