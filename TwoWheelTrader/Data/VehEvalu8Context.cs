@@ -52,7 +52,6 @@ public partial class VehEvalu8Context : DbContext
         modelBuilder.Entity<Motocross>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Motocros__3214EC072EA21A42");
-
             entity.ToTable("Motocross");
 
             entity.Property(e => e.Ccid).HasColumnName("CCId");
@@ -87,9 +86,7 @@ public partial class VehEvalu8Context : DbContext
         modelBuilder.Entity<Year>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Year__3214EC07943E10C2");
-
             entity.ToTable("Year");
-
             entity.Property(e => e.Year1).HasColumnName("Year");
         });
 
