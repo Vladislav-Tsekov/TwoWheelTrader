@@ -26,7 +26,7 @@ namespace TwoWheelTrader.Core
 
         public IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance) 
         {
-            IMotorcycle motorcycle = null;
+            IMotorcycle? motorcycle = null;
 
             switch (make.ToLower())
             {
@@ -150,7 +150,7 @@ namespace TwoWheelTrader.Core
 
             while (!reader.EndOfStream)
             {
-                string line = reader.ReadLine();
+                string? line = reader.ReadLine();
                 string[] data = line.Split(',');
 
                 townName = data[0].Trim();

@@ -2,13 +2,12 @@
 {
     public class Route
     {
-        public string townName { get; set; }
+        public string? TownName { get; set; }
 
-        public int distanceToTown { get; set; }
+        public int DistanceToTown { get; set; }
 
-        public int FuelConsumption() 
+        public static int FuelConsumption() 
         {
-
             return 1;
         }
     }

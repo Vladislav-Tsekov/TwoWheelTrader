@@ -21,7 +21,7 @@ namespace TwoWheelTrader.Repositories
 
         public IMotorcycle MotorcycleInfo(string link)
         {
-            var findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
+            IMotorcycle? findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
             return findMotorcycleByLink;
         }
 

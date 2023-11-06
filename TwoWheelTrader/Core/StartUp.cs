@@ -19,8 +19,8 @@ namespace TwoWheelTrader.Core
                 .AddScoped<IEngine, Engine>()
                 .BuildServiceProvider();
 
-                IEngine engine = serviceProvider.GetService<IEngine>();
-                engine.RunProgram();
+                IEngine? engine = serviceProvider.GetService<IEngine>();
+                engine?.RunProgram();
             }
             catch (Exception exception)
             {
