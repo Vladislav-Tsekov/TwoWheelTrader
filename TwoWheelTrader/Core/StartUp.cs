@@ -9,18 +9,23 @@ namespace TwoWheelTrader.Core
     {
         static void Main()
         {
-            string connectionString = @"Server=.;Database=motoTEST;Integrated Security=True;";
+            string connectionString = @"Server=(localDB)\MSSQLLocalDB;Database=VehEvalu8;Integrated Security=True;";
 
-            var services = new ServiceCollection()
-                .AddDbContext<MotoDbContext>(options =>
-                    options.UseSqlServer(connectionString)
-                )
+            try
+            {
+                var serviceProvider = new ServiceCollection()
+                .AddDbContext<VehEvalu8Context>(options => options.UseSqlServer(connectionString))
                 .AddScoped<IController, Controller>()
                 .AddScoped<IEngine, Engine>()
                 .BuildServiceProvider();
 
-            var engine = services.GetService<IEngine>();
-            engine.RunProgram();
+                IEngine engine = serviceProvider.GetService<IEngine>();
+                engine.RunProgram();
+            }
+            catch (Exception exception)
+            {
+                throw new Exception (exception.Message);
+            }
         }
     }
 }
