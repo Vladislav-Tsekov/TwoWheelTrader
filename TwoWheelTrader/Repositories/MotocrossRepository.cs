@@ -1,12 +1,16 @@
-﻿using System.Text;
+﻿using Microsoft.EntityFrameworkCore.Storage;
+using System.Text;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
+using VehEvalu8.Data;
+using VehEvalu8.Data.DBModels;
 
 namespace TwoWheelTrader.Repositories
 {
     public class MotocrossRepository : IRepository<IMotorcycle>
     {
         private readonly List<IMotorcycle> motorcycles;
+
         public MotocrossRepository()
         {
             motorcycles = new List<IMotorcycle>();

@@ -218,16 +218,20 @@ namespace TwoWheelTrader.Core
             Console.WriteLine(naked.RepositoryStatus());
             Console.WriteLine(sport.RepositoryStatus());
             Console.WriteLine(tourer.RepositoryStatus());
+
+            //TODO - MOTOCONTEXT ROLE IN THE METHOD?
         }
 
         public void GetTransportationCost()
         {
             throw new NotImplementedException();
+            //TODO - SEPARATE LOGIC, CALCULATING THE FUEL COST FOR EACH MOTORCYCLE?
         }
 
         public string RemoveMotorcycle(IMotorcycle motorcycle)
         {
             throw new NotImplementedException();
+            //TODO - REMOVE FUNCTION, NOT YET DECIDED
         }
     }
 }
