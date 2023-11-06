@@ -40,7 +40,7 @@ namespace TwoWheelTrader.Core
                         string link = input[6]; 
 
                         Console.WriteLine($"Please input the pick-up location of the vehicle:");
-                        string pickUpDestination = Console.ReadLine();
+                        string? pickUpDestination = Console.ReadLine();
                         int distance = controller.DestinationExists(pickUpDestination);
 
                         controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
