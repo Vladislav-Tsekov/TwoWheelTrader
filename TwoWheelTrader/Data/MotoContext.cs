@@ -5,13 +5,13 @@ using VehEvalu8.Data.DBModels;
 
 namespace VehEvalu8.Data;
 
-public partial class VehEvalu8Context : DbContext
+public partial class MotoContext : DbContext
 {
-    public VehEvalu8Context()
+    public MotoContext()
     {
     }
 
-    public VehEvalu8Context(DbContextOptions<VehEvalu8Context> options)
+    public MotoContext(DbContextOptions<DbContext> options)
         : base(options)
     {
     }

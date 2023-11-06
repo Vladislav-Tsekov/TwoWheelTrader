@@ -14,7 +14,7 @@ namespace TwoWheelTrader.Core
             try
             {
                 var serviceProvider = new ServiceCollection()
-                .AddDbContext<VehEvalu8Context>(options => options.UseSqlServer(connectionString))
+                .AddDbContext<DbContext>(options => options.UseSqlServer(connectionString))
                 .AddScoped<IController, Controller>()
                 .AddScoped<IEngine, Engine>()
                 .BuildServiceProvider();
