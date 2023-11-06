@@ -34,21 +34,18 @@ public partial class VehEvalu8Context : DbContext
         modelBuilder.Entity<Cc>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__CC__3214EC07249B8CBA");
-
             entity.ToTable("CC");
         });
 
         modelBuilder.Entity<Make>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Makes__3214EC07DB6B7174");
-
             entity.Property(e => e.MakeName).HasMaxLength(70);
         });
 
         modelBuilder.Entity<Model>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Models__3214EC076FE5C533");
-
             entity.Property(e => e.ModelName).HasMaxLength(70);
         });
 
