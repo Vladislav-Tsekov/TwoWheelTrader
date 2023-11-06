@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using VehEvalu8.Data.DBModels;
 
-namespace VehEvalu8.Data.DBModels;
+namespace VehEvalu8.Data;
 
 public partial class VehEvalu8Context : DbContext
 {
@@ -26,7 +27,6 @@ public partial class VehEvalu8Context : DbContext
     public virtual DbSet<Year> Years { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=VehEvalu8;Integrated Security=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

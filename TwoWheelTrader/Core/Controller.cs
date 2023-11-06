@@ -15,13 +15,6 @@ namespace TwoWheelTrader.Core
         private SportRepository sport;
         private TourerRepository tourer;
 
-        private readonly MotoDbContext motoContext;
-
-        public Controller(MotoDbContext context)
-        {
-            motoContext = context;
-        }
-
         public Controller()
         {
             enduro = new EnduroRepository();
@@ -141,8 +134,6 @@ namespace TwoWheelTrader.Core
                 return motorcycle;
             }
 
-            Motorcycle testDBMoto = new(make, model, year, foreignPrice, link);
-
             Console.WriteLine($"The potential profit for this {motorcycle.GetType().Name} is: {motorcycle.Profit:F2}");
             return motorcycle;
         }
@@ -236,63 +227,5 @@ namespace TwoWheelTrader.Core
         {
             throw new NotImplementedException();
         }
-
-        //DEPRECATED
-
-        /*public string Add(IMotorcycle motorcycle)
-        {
-            var currentClass = motorcycle.GetType();
-            var motorcycleMake = currentClass.Name;
-
-            Console.WriteLine(motorcycleMake); //TESTING PURPOSES
-
-            Type[] motorcycleInterface = currentClass.GetInterfaces();
-            var category = motorcycleInterface[0].Name;
-
-            Console.WriteLine(category); // TESTING PURPOSES
-
-            string output;
-
-            if (category == "IEnduro")
-            {
-                enduro.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "IMotocross")
-            {
-                motocross.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "INaked")
-            {
-                naked.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "ISport")
-            {
-                sport.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else if (category == "ITourer")
-            {
-                tourer.AddMotorcycle(motorcycle);
-                output = $"{motorcycleMake} added successfully!";
-            }
-            else
-            {
-                throw new ArgumentException($"Could not add the motorcycle! Please check for errors and try again! Class: Controller / Method: Add");
-            }
-
-            return output;
-        }*/
-
-        /* public void PrintResult()
-        {
-            Console.WriteLine(motocross.RepositoryStatus());
-            Console.WriteLine(enduro.RepositoryStatus());
-            Console.WriteLine(naked.RepositoryStatus());
-            Console.WriteLine(sport.RepositoryStatus());
-            Console.WriteLine(tourer.RepositoryStatus());
-        }*/
     }
 }
