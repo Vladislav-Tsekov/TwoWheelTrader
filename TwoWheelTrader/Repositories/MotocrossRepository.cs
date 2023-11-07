@@ -25,7 +25,7 @@ namespace TwoWheelTrader.Repositories
 
             try
             {
-                var motocross = new Motocross
+                var moto = new Motocross
                 {
                     FuelCost = (decimal)motorcycle.FuelCost,
                     PriceBgn = (decimal)motorcycle.PriceBGN,
@@ -42,15 +42,15 @@ namespace TwoWheelTrader.Repositories
                 Year? year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
                 Cc? cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
 
-                motocross.Make = make;
-                motocross.Model = model;
-                motocross.Year = year;
-                motocross.Cc = cc;
+                moto.Make = make;
+                moto.Model = model;
+                moto.Year = year;
+                moto.Cc = cc;
 
-                context.Motocrosses.Add(motocross);
+                context.Motocrosses.Add(moto);
                 context.SaveChanges();
 
-                Console.WriteLine("Motorcycle entity added to the database.");
+                Console.WriteLine($"{moto.GetType().Name} motorcycle added successfully to database.");
 
                 context.Dispose();
             }
@@ -58,7 +58,6 @@ namespace TwoWheelTrader.Repositories
             {
                 throw new Exception(ex.Message); 
             }
-
         }
 
         public IMotorcycle MotorcycleInfo(string link)

@@ -1,6 +1,8 @@
 ﻿using System.Text;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
+using VehEvalu8.Data.DBModels;
+using VehEvalu8.Data;
 
 namespace TwoWheelTrader.Repositories
 {
@@ -18,6 +20,44 @@ namespace TwoWheelTrader.Repositories
         public void AddMotorcycle(IMotorcycle motorcycle)
         {
             motorcycles.Add(motorcycle);
+
+            using var context = new MotoContext();
+
+            try
+            {
+                var moto = new Enduro
+                {
+                    FuelCost = (decimal)motorcycle.FuelCost,
+                    PriceBgn = (decimal)motorcycle.PriceBGN,
+                    Distance = motorcycle.DistanceToPickUp,
+                    PriceForeign = (decimal)motorcycle.PriceForeign,
+                    Profit = (decimal)motorcycle.Profit,
+                    Roi = (decimal)motorcycle.ROI,
+                    TotalCost = (decimal)motorcycle.TotalCost,
+                    Link = motorcycle.Link
+                };
+
+                Make? make = context.Makes.FirstOrDefault(m => m.MakeName == motorcycle.Make);
+                Model? model = context.Models.FirstOrDefault(m => m.ModelName == motorcycle.Model);
+                Year? year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
+                Cc? cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
+
+                moto.Make = make;
+                moto.Model = model;
+                moto.Year = year;
+                moto.Cc = cc;
+
+                context.Enduroes.Add(moto);
+                context.SaveChanges();
+
+                Console.WriteLine($"{moto.GetType().Name} motorcycle added successfully to database.");
+
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public IMotorcycle MotorcycleInfo(string link)
