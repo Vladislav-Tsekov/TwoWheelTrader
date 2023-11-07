@@ -21,18 +21,36 @@ namespace TwoWheelTrader.Repositories
 
         public void AddMotorcycle(IMotorcycle motorcycle)
         {
-            using (var context = new MotoContext())
+            motorcycles.Add(motorcycle);
+
+            using var context = new MotoContext();
+
+            var motocross = new Motocross
             {
-                var motocross = new Motocross
-                {
-                    FuelCost = (decimal)motorcycle.FuelCost,
-                    PriceBgn = (decimal)motorcycle.PriceBGN,
-                    PriceForeign = (decimal)motorcycle.PriceForeign,
-                    Profit = (decimal)motorcycle.Profit,
-                    Roi = (decimal)motorcycle.ROI,
-                    TotalCost = (decimal)motorcycle.TotalCost,
-                };
-            }
+                FuelCost = (decimal)motorcycle.FuelCost,
+                PriceBgn = (decimal)motorcycle.PriceBGN,
+                PriceForeign = (decimal)motorcycle.PriceForeign,
+                Profit = (decimal)motorcycle.Profit,
+                Roi = (decimal)motorcycle.ROI,
+                TotalCost = (decimal)motorcycle.TotalCost,
+            };
+
+            var make = context.Makes.FirstOrDefault(m => m.MakeName == motorcycle.Make);
+            var model = context.Models.FirstOrDefault(m => m.ModelName == motorcycle.Model);
+            var year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
+            var cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
+
+            motocross.Make = make;
+            motocross.Model = model;
+            motocross.Year = year;
+            motocross.Cc = cc;
+
+            context.Motocrosses.Add(motocross);
+            context.SaveChanges();
+
+            Console.WriteLine("Motorcycle entity added to the database.");
+
+            context.Dispose();
         }
 
         public IMotorcycle MotorcycleInfo(string link)
