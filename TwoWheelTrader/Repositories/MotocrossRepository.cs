@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.Options;
 using System.Text;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
@@ -20,7 +21,18 @@ namespace TwoWheelTrader.Repositories
 
         public void AddMotorcycle(IMotorcycle motorcycle)
         {
-            motorcycles.Add(motorcycle);
+            using (var context = new MotoContext())
+            {
+                var motocross = new Motocross
+                {
+                    FuelCost = (decimal)motorcycle.FuelCost,
+                    PriceBgn = (decimal)motorcycle.PriceBGN,
+                    PriceForeign = (decimal)motorcycle.PriceForeign,
+                    Profit = (decimal)motorcycle.Profit,
+                    Roi = (decimal)motorcycle.ROI,
+                    TotalCost = (decimal)motorcycle.TotalCost,
+                };
+            }
         }
 
         public IMotorcycle MotorcycleInfo(string link)

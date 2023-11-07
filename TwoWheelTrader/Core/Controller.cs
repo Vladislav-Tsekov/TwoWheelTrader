@@ -22,8 +22,6 @@ namespace TwoWheelTrader.Core
             naked = new NakedRepository();
             sport = new SportRepository();
             tourer = new TourerRepository();
-
-            MotoContext database = new();
         }
 
         public IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance) 
