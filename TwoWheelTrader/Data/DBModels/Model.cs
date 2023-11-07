@@ -10,4 +10,6 @@ public partial class Model
     public string ModelName { get; set; } = null!;
 
     public virtual ICollection<Motocross> Motocrosses { get; set; } = new List<Motocross>();
+
+    public virtual ICollection<Enduro> Enduroes { get; set; } = new List<Enduro>();
 }
