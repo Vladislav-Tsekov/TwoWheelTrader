@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Options;
 using System.Text;
+using System.Threading.Channels;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
 using VehEvalu8.Data;
@@ -25,32 +26,42 @@ namespace TwoWheelTrader.Repositories
 
             using var context = new MotoContext();
 
-            var motocross = new Motocross
+            try
             {
-                FuelCost = (decimal)motorcycle.FuelCost,
-                PriceBgn = (decimal)motorcycle.PriceBGN,
-                PriceForeign = (decimal)motorcycle.PriceForeign,
-                Profit = (decimal)motorcycle.Profit,
-                Roi = (decimal)motorcycle.ROI,
-                TotalCost = (decimal)motorcycle.TotalCost,
-            };
+                var motocross = new Motocross
+                {
+                    FuelCost = (decimal)motorcycle.FuelCost,
+                    PriceBgn = (decimal)motorcycle.PriceBGN,
+                    Distance = motorcycle.DistanceToPickUp,
+                    PriceForeign = (decimal)motorcycle.PriceForeign,
+                    Profit = (decimal)motorcycle.Profit,
+                    Roi = (decimal)motorcycle.ROI,
+                    TotalCost = (decimal)motorcycle.TotalCost,
+                    Link = motorcycle.Link
+                };
 
-            var make = context.Makes.FirstOrDefault(m => m.MakeName == motorcycle.Make);
-            var model = context.Models.FirstOrDefault(m => m.ModelName == motorcycle.Model);
-            var year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
-            var cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
+                Make? make = context.Makes.FirstOrDefault(m => m.MakeName == motorcycle.Make);
+                Model? model = context.Models.FirstOrDefault(m => m.ModelName == motorcycle.Model);
+                Year? year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
+                Cc? cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
 
-            motocross.Make = make;
-            motocross.Model = model;
-            motocross.Year = year;
-            motocross.Cc = cc;
+                motocross.Make = make;
+                motocross.Model = model;
+                motocross.Year = year;
+                motocross.Cc = cc;
 
-            context.Motocrosses.Add(motocross);
-            context.SaveChanges();
+                context.Motocrosses.Add(motocross);
+                context.SaveChanges();
 
-            Console.WriteLine("Motorcycle entity added to the database.");
+                Console.WriteLine("Motorcycle entity added to the database.");
 
-            context.Dispose();
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message); 
+            }
+
         }
 
         public IMotorcycle MotorcycleInfo(string link)

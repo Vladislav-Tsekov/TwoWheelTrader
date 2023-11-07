@@ -86,7 +86,7 @@ public partial class MotoContext : DbContext
         modelBuilder.Entity<Year>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Year__3214EC07943E10C2");
-            entity.ToTable("Year");
+            entity.ToTable("Years");
             entity.Property(e => e.Year1).HasColumnName("Year");
         });
 
