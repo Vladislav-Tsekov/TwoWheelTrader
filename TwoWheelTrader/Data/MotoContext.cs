@@ -7,14 +7,11 @@ namespace VehEvalu8.Data;
 
 public partial class MotoContext : DbContext
 {
-    public MotoContext()
-    {
-    }
+    private readonly string connectionString = "Server=(localDB)\\MSSQLLocalDB;Database=VehEvalu8;Integrated Security=True;";
 
-    public MotoContext(DbContextOptions<DbContext> options)
-        : base(options)
-    {
-    }
+    public MotoContext(){}
+
+    public MotoContext(DbContextOptions<DbContext> options) : base(options){}
 
     public virtual DbSet<Cc> Ccs { get; set; }
 
@@ -28,9 +25,7 @@ public partial class MotoContext : DbContext
 
     public virtual DbSet<Enduro> Enduroes { get; set; }
 
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=(localDB)\\MSSQLLocalDB;Database=VehEvalu8;Integrated Security=True;");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(connectionString);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
