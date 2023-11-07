@@ -4,8 +4,10 @@
 
 namespace VehEvalu8.Migrations
 {
+    /// <inheritdoc />
     public partial class InitialCreate : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -61,6 +63,50 @@ namespace VehEvalu8.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Enduro",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MakeId = table.Column<int>(type: "int", nullable: true),
+                    ModelId = table.Column<int>(type: "int", nullable: true),
+                    CCId = table.Column<int>(type: "int", nullable: true),
+                    YearId = table.Column<int>(type: "int", nullable: true),
+                    PriceForeign = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    PriceBGN = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    Distance = table.Column<int>(type: "int", nullable: true),
+                    FuelCost = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    TotalCost = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    Profit = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    ROI = table.Column<decimal>(type: "decimal(10,2)", nullable: true),
+                    Link = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Enduro", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Enduro_CC_CCId",
+                        column: x => x.CCId,
+                        principalTable: "CC",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Enduro_Makes_MakeId",
+                        column: x => x.MakeId,
+                        principalTable: "Makes",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Enduro_Models_ModelId",
+                        column: x => x.ModelId,
+                        principalTable: "Models",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Enduro_Years_YearId",
+                        column: x => x.YearId,
+                        principalTable: "Years",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Motocross",
                 columns: table => new
                 {
@@ -105,6 +151,26 @@ namespace VehEvalu8.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Enduro_CCId",
+                table: "Enduro",
+                column: "CCId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enduro_MakeId",
+                table: "Enduro",
+                column: "MakeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enduro_ModelId",
+                table: "Enduro",
+                column: "ModelId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enduro_YearId",
+                table: "Enduro",
+                column: "YearId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Motocross_CCId",
                 table: "Motocross",
                 column: "CCId");
@@ -128,6 +194,9 @@ namespace VehEvalu8.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Enduro");
+
             migrationBuilder.DropTable(
                 name: "Motocross");
 

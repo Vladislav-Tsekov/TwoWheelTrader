@@ -12,7 +12,7 @@ using VehEvalu8.Data;
 namespace VehEvalu8.Migrations
 {
     [DbContext(typeof(MotoContext))]
-    [Migration("20231107204520_InitialCreate")]
+    [Migration("20231107205128_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
