@@ -1,4 +1,5 @@
-﻿using TwoWheelTrader.Core.Interfaces;
+﻿using Microsoft.EntityFrameworkCore.Update.Internal;
+using TwoWheelTrader.Core.Interfaces;
 using TwoWheelTrader.Models.Interfaces;
 
 namespace TwoWheelTrader.Core
@@ -16,7 +17,7 @@ namespace TwoWheelTrader.Core
         {
             while (true)
             {
-                Console.WriteLine($"Please input motorcycle's --| Make, Model, CC, Year, Price, Link |--." +
+                Console.WriteLine($"Please select a command and input motorcycle's --| Make, Model, CC, Year, Price, Link |--." +
                                   $"{Environment.NewLine}Available commands: 'Add', 'Check', 'Status' or 'Done'." +
                                   $"{Environment.NewLine}");
 
@@ -40,14 +41,15 @@ namespace TwoWheelTrader.Core
                         int foreignPrice = int.Parse(input[5]);
                         string link = input[6]; 
 
-                        Console.WriteLine($"Please input the pick-up location of the vehicle:");
-                        string? pickUpDestination = Console.ReadLine();
-                        int distance = controller.DestinationExists(pickUpDestination);
+                        Console.WriteLine($"Please input the current location of the vehicle:");
+                        string? location = Console.ReadLine();
+                        int distance = controller.DestinationExists(location);
 
                         controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
                     }
                     else if (command == "remove")
                     {
+
                         // Once the program is connected to the MS SQL this command should become a viable option
                         // I will need primary keys, need to find what hold the bikes apart, besides the primary key, like a web link
                     }
@@ -72,9 +74,6 @@ namespace TwoWheelTrader.Core
                     {
                         Console.WriteLine("Invalid command. Try again!");
                     }
-
-                    // TO ADD MORE ELSE IFS BASED ON DIFFERENT SCENARIOS
-                    // ARE FORMS A VIABLE OPTION OR I SHOULD LEARN F.E. FIRST AND APPLY IT DIRECTLY?
                 }
                 catch (Exception ex)
                 {
