@@ -115,7 +115,18 @@ namespace TwoWheelTrader.Repositories
                 })
                 .ToList();
 
+            StringBuilder top5Builder = new();
+
+            foreach (var m in topFiveByProfit)
+            {
+                top5Builder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}) - Profit: {m.Profit} / ROI: {m.Roi}.");
+            }
+
             context.Dispose();
+
+            Console.WriteLine(top5Builder.ToString().TrimEnd());
+
+            //TODO - TROUBLESHOOT
         }
     }
 }

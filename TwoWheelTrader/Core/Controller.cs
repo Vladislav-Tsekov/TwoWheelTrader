@@ -204,6 +204,12 @@ namespace TwoWheelTrader.Core
             Console.WriteLine(tourer.RepositoryStatus());
         }
 
+        public void TopFiveByProfit() 
+        {
+            motocross.TopFiveByProfit();
+            enduro.TopFiveByProfit();
+        }
+
         public void GetTransportationCost()
         {
             throw new NotImplementedException();

@@ -10,6 +10,7 @@ namespace TwoWheelTrader.Core.Interfaces
         string GetMotorcycleInfo(string link);
         void GetRepositoriesStatus();
         int DestinationExists(string pickUpDestination);
+        public void TopFiveByProfit();
         void GetTransportationCost();
 
         //string Add(IMotorcycle motorcycle); //DEPRECATED
