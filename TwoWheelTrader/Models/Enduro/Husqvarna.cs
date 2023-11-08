@@ -4,10 +4,10 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class Husqvarna : IEnduro
     {
-        public Husqvarna(string model, int cc, int year, double priceForeign, string link, int distance)
+        public Husqvarna(int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "Husqvarna";
-            Model = model;
+            Model = "FE";
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;

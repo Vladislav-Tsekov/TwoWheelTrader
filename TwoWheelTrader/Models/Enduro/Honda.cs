@@ -4,10 +4,10 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class Honda : IEnduro
     {
-        public Honda(string model, int cc, int year, double priceForeign, string link, int distance)
+        public Honda(int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "Honda";
-            Model = model;
+            Model = "CRX";
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;

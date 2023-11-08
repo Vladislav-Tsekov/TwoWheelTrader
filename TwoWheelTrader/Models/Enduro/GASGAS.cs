@@ -4,10 +4,10 @@ namespace TwoWheelTrader.Models.Enduro
 {
     public class GASGAS : IEnduro
     {
-        public GASGAS(string model, int cc, int year, double priceForeign, string link, int distance)
+        public GASGAS(int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "GASGAS";
-            Model = model;
+            Model = "EC-F";
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;

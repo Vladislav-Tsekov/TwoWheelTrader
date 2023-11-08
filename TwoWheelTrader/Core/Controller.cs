@@ -37,7 +37,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "wrf")
                     {
-                        motorcycle = new Models.Enduro.Yamaha(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.Yamaha(cc, year, foreignPrice, link, distance);
                         enduro.AddMotorcycle(motorcycle);
                     }
                     break;
@@ -51,7 +51,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "crx")
                     {
-                        motorcycle = new Models.Enduro.Honda(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.Honda(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     break;
@@ -65,7 +65,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "klx")
                     {
-                        motorcycle = new Models.Enduro.Kawasaki(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.Kawasaki(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     break;
@@ -78,7 +78,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "exc")
                     {
-                        motorcycle = new Models.Enduro.KTM(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.KTM(cc, year, foreignPrice, link, distance);
                         enduro.AddMotorcycle(motorcycle);
                     }
                     break;
@@ -92,7 +92,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "fe")
                     {
-                        motorcycle = new Models.Enduro.Husqvarna(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.Husqvarna(cc, year, foreignPrice, link, distance);
                         enduro.AddMotorcycle(motorcycle);
                     }
                     break;
@@ -106,7 +106,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "drz")
                     {
-                        motorcycle = new Models.Enduro.Suzuki(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.Suzuki(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     break;
@@ -120,7 +120,7 @@ namespace TwoWheelTrader.Core
                     }
                     else if (model == "ecf")
                     {
-                        motorcycle = new Models.Enduro.GASGAS(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Enduro.GASGAS(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     break;
