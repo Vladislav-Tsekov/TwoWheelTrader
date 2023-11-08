@@ -1,9 +1,7 @@
-﻿using System.Reflection;
-using System.Text;
+﻿using System.Text;
 using TwoWheelTrader.Core.Interfaces;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories;
-using VehEvalu8.Data;
 
 namespace TwoWheelTrader.Core
 {
@@ -34,7 +32,7 @@ namespace TwoWheelTrader.Core
                 case "yamaha":
                     if (model == "yzf")
                     {
-                        motorcycle = new Models.Motocross.Yamaha(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.Yamaha(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "wrf")
@@ -48,7 +46,7 @@ namespace TwoWheelTrader.Core
                 case "honda":
                     if (model == "crf")
                     {
-                        motorcycle = new Models.Motocross.Honda(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.Honda(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "crx")
@@ -62,7 +60,7 @@ namespace TwoWheelTrader.Core
                 case "kawasaki":
                     if (model == "kxf")
                     {
-                        motorcycle = new Models.Motocross.Kawasaki(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.Kawasaki(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "klx")
@@ -75,7 +73,7 @@ namespace TwoWheelTrader.Core
                 case "ktm":
                     if (model == "sxf")
                     {
-                        motorcycle = new Models.Motocross.KTM(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.KTM(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "exc")
@@ -89,7 +87,7 @@ namespace TwoWheelTrader.Core
                 case "husqvarna":
                     if (model == "fc")
                     {
-                        motorcycle = new Models.Motocross.Husqvarna(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.Husqvarna(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "fe")
@@ -103,7 +101,7 @@ namespace TwoWheelTrader.Core
                 case "suzuki":
                     if (model == "rmz")
                     {
-                        motorcycle = new Models.Motocross.Suzuki(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.Suzuki(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "drz")
@@ -117,7 +115,7 @@ namespace TwoWheelTrader.Core
                 case "gasgas":
                     if (model == "mcf")
                     {
-                        motorcycle = new Models.Motocross.GASGAS(model, cc, year, foreignPrice, link, distance);
+                        motorcycle = new Models.Motocross.GASGAS(cc, year, foreignPrice, link, distance);
                         motocross.AddMotorcycle(motorcycle);
                     }
                     else if (model == "ecf")

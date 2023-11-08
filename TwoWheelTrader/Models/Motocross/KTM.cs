@@ -4,10 +4,10 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class KTM : IMotocross
     {
-        public KTM(string model, int cc, int year, int priceForeign, string link, int distance)
+        public KTM(int cc, int year, int priceForeign, string link, int distance)
         {
             Make = "KTM";
-            Model = model;
+            Model = "SX-F";
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;

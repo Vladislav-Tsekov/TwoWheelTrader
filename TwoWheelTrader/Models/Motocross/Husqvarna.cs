@@ -4,10 +4,10 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Husqvarna : IMotocross
     {
-        public Husqvarna(string model, int cc, int year, int priceForeign, string link, int distance)
+        public Husqvarna(int cc, int year, int priceForeign, string link, int distance)
         {
             Make = "Husqvarna";
-            Model = model;
+            Model = "FC";
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;

@@ -4,10 +4,10 @@ namespace TwoWheelTrader.Models.Motocross
 {
     public class Yamaha : IMotocross
     {
-        public Yamaha(string model, int cc, int year, double priceForeign, string link, int distance)
+        public Yamaha(int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "Yamaha";
-            Model = model;
+            Model = "YZ-F";
             CC = cc;
             Year = year;
             PriceForeign = priceForeign;
