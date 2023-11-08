@@ -16,8 +16,9 @@ namespace TwoWheelTrader.Core
         {
             while (true)
             {
-                Console.WriteLine($"Please input motorcycle's --| Make, Model, CC, Year, Price, Link |--.");
-                Console.WriteLine($"Available commands: 'Add', 'Check', 'Status' or 'Done'.");
+                Console.WriteLine($"Please input motorcycle's --| Make, Model, CC, Year, Price, Link |--." +
+                                  $"{Environment.NewLine}Available commands: 'Add', 'Check', 'Status' or 'Done'." +
+                                  $"{Environment.NewLine}");
 
                 string[] input = Console.ReadLine().ToLower().Split();
 

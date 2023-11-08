@@ -163,6 +163,7 @@ namespace TwoWheelTrader.Core
             }
 
             reader.Dispose();
+
             Console.WriteLine($"No matching cities found. Please write down the distance from Linkoping to {pickUpDestination}");
             
             using var writer = new StreamWriter(filePath, append: true);
