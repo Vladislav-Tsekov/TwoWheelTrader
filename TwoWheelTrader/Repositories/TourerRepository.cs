@@ -47,12 +47,7 @@ namespace TwoWheelTrader.Repositories
             }
         }
 
-        public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
-        {
-
-        }
-
-        public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
+        public void TopFiveByProfit()
         {
 
         }
