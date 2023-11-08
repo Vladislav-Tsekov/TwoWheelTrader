@@ -56,8 +56,6 @@ namespace TwoWheelTrader.Core
                     }
                     else if (command == "check")
                     {
-                        // EXAMPLE INPUT: [1] "https://www.../ktm_350_exc_f_sixdays/110994476"
-
                         string link = input[1];
                         Console.WriteLine(controller.GetMotorcycleInfo(link));
                     }

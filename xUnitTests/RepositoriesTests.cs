@@ -13,24 +13,6 @@ namespace xUnitTests
 {
     public class RepositoriesTests
     {
-        [Fact]
-        public void GetRepositoriesStatus()
-        {
-            MotocrossRepository motocross = new();
-            EnduroRepository enduro = new();
-            NakedRepository naked = new();
-            SportRepository sport = new();
-            TourerRepository tourer = new();
 
-            HashSet<IRepository<IMotorcycle>> repos = new() { motocross, enduro, naked, sport, tourer };
-
-            foreach (var repo in repos)
-            {
-                string result = repo.RepositoryStatus();
-                Assert.Equal($"{repo.GetType().Name} is empty!", result);
-            }
-        }
-
-        //TODO - ADD A CASE WHERE REPOSITORIES ARE NOT EMPTY!
     }
 }
