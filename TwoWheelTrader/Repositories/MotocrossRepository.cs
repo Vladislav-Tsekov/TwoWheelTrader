@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Text;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
 using VehEvalu8.Data;
@@ -68,8 +69,42 @@ namespace TwoWheelTrader.Repositories
 
         public string RepositoryStatus()
         {
+            // DATABASE REPRESENTATION - STORED
+            MotoContext? database = new();
+
+            if (database.Motocrosses.Any())
+            {
+                var motoTable = database.Motocrosses
+                    .Include(m => m.Make).Include(m => m.Model)
+                    .Include(m => m.Cc).Include(m => m.Year)
+                    .AsNoTracking()
+                    .Select(m => new
+                    {
+                        m.Make.MakeName,
+                        m.Model.ModelName,
+                        m.Cc.EngineSize,
+                        m.Year.Year1,
+                        m.TotalCost,
+                        m.Profit,
+                        m.Roi,
+                    })
+                    .ToList();
+
+                StringBuilder dbRepoBuilder = new();
+
+                dbRepoBuilder.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
+
+                foreach (var m in motoTable)
+                {
+                    dbRepoBuilder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}). Cost: {m.TotalCost}, Profit: {m.Profit}, ROI: {m.Roi}.");
+                }
+            }
+
+
+
             if (this.motorcycles.Count > 0)
             {
+                // CONSOLE REPRESENTATION - NOT STORED, ONLY CURRENT OPERATIONS
                 StringBuilder sb = new();
 
                 sb.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
