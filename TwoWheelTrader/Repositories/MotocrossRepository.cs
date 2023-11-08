@@ -98,23 +98,8 @@ namespace TwoWheelTrader.Repositories
                 {
                     dbRepoBuilder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}). Cost: {m.TotalCost}, Profit: {m.Profit}, ROI: {m.Roi}.");
                 }
-            }
 
-
-
-            if (this.motorcycles.Count > 0)
-            {
-                // CONSOLE REPRESENTATION - NOT STORED, ONLY CURRENT OPERATIONS
-                StringBuilder sb = new();
-
-                sb.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
-
-                foreach (var moto in motorcycles)
-                {
-                    sb.Append($"{moto.Make}, {moto.Model.ToUpper()}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {(int)moto.TotalCost}, {(int)moto.Profit}, {moto.Link}, {moto.ROI:f2}{Environment.NewLine}");
-                }
-
-                return sb.ToString().Trim();
+                return dbRepoBuilder.ToString().TrimEnd();
             }
             else
             {
