@@ -9,15 +9,6 @@ namespace TwoWheelTrader.Repositories
 {
     public class MotocrossRepository : IRepository<IMotorcycle>
     {
-        private readonly List<IMotorcycle> motorcycles;
-
-        public MotocrossRepository()
-        {
-            motorcycles = new List<IMotorcycle>();
-        }
-
-        public IReadOnlyCollection<IMotorcycle> Motorcycles => motorcycles;
-
         public void AddMotorcycle(IMotorcycle motorcycle)
         {
             motorcycles.Add(motorcycle);
@@ -69,7 +60,6 @@ namespace TwoWheelTrader.Repositories
 
         public string RepositoryStatus()
         {
-            // DATABASE REPRESENTATION - STORED
             MotoContext? database = new();
 
             if (database.Motocrosses.Any())
@@ -109,7 +99,7 @@ namespace TwoWheelTrader.Repositories
 
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(3);
+            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(5);
         }
 
         public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
