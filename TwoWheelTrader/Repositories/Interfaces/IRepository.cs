@@ -7,9 +7,7 @@ namespace TwoWheelTrader.Repositories.Interfaces
     {
         void AddMotorcycle(T motorcycle);
 
-        void TopFiveByProfit(IRepository<T> motorcycles); 
-
-        void TopFiveROI(IRepository<T> motorcycles);
+        void TopFiveByProfit(); 
 
         string RepositoryStatus();
 

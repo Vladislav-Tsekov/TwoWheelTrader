@@ -38,7 +38,7 @@ namespace TwoWheelTrader.Repositories
                 moto.Cc = cc;
 
                 context.Motocrosses.Add(moto);
-                context.SaveChanges();
+                context.SaveChangesAsync();
 
                 Console.WriteLine($"{moto.GetType().Name} motorcycle added successfully to database.");
 
@@ -96,14 +96,26 @@ namespace TwoWheelTrader.Repositories
             }
         }
 
-        public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
+        public void TopFiveByProfit()
         {
+            using var context = new MotoContext();
 
-        }
+            var topFiveByProfit = context.Motocrosses
+                .AsNoTracking()
+                .OrderByDescending(m => m.Profit)
+                .Take(5)
+                .Select(m => new
+                {
+                    m.Make.MakeName,
+                    m.Model.ModelName,
+                    m.Cc.EngineSize,
+                    m.Year.Year1,
+                    m.Profit,
+                    m.Roi
+                })
+                .ToList();
 
-        public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
-        {
-
+            context.Dispose();
         }
     }
 }

@@ -202,8 +202,6 @@ namespace TwoWheelTrader.Core
             Console.WriteLine(naked.RepositoryStatus());
             Console.WriteLine(sport.RepositoryStatus());
             Console.WriteLine(tourer.RepositoryStatus());
-
-            //TODO - MOTOCONTEXT ROLE IN THE METHOD?
         }
 
         public void GetTransportationCost()
