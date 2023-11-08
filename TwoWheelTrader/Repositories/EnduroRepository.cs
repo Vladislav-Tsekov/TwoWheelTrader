@@ -3,24 +3,14 @@ using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
 using VehEvalu8.Data.DBModels;
 using VehEvalu8.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace TwoWheelTrader.Repositories
 {
     public class EnduroRepository : IRepository<IMotorcycle>
     {
-        private readonly List<IMotorcycle> motorcycles;
-
-        public EnduroRepository()
-        {
-            motorcycles = new List<IMotorcycle>();
-        }
-
-        public IReadOnlyCollection<IMotorcycle> Motorcycles => motorcycles;
-
         public void AddMotorcycle(IMotorcycle motorcycle)
         {
-            motorcycles.Add(motorcycle);
-
             using var context = new MotoContext();
 
             try
@@ -60,26 +50,45 @@ namespace TwoWheelTrader.Repositories
             }
         }
 
-        public IMotorcycle MotorcycleInfo(string link)
+        public Enduro MotorcycleInfo(string link)
         {
-            var findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
-            return findMotorcycleByLink;
+            var context = new MotoContext();
+            Enduro? motoInfo = context.Enduroes.FirstOrDefault(m => m.Link == link);
+            return motoInfo;
         }
 
         public string RepositoryStatus()
         {
-            if (this.motorcycles.Count > 0)
+            MotoContext? context = new();
+
+            if (context.Enduroes.Any())
             {
-                StringBuilder sb = new();
+                var motoTable = context.Enduroes
+                    .Include(m => m.Make).Include(m => m.Model)
+                    .Include(m => m.Cc).Include(m => m.Year)
+                    .AsNoTracking()
+                    .Select(m => new
+                    {
+                        m.Make.MakeName,
+                        m.Model.ModelName,
+                        m.Cc.EngineSize,
+                        m.Year.Year1,
+                        m.TotalCost,
+                        m.Profit,
+                        m.Roi,
+                    })
+                    .ToList();
 
-                sb.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
+                StringBuilder dbRepoBuilder = new();
 
-                foreach (var moto in motorcycles)
+                dbRepoBuilder.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
+
+                foreach (var m in motoTable)
                 {
-                    sb.Append($"{moto.Make}, {moto.Model.ToUpper()}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {(int)moto.TotalCost}, {(int)moto.Profit}, {moto.Link}, {moto.ROI:f2}{Environment.NewLine}");
+                    dbRepoBuilder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}). Cost: {m.TotalCost}, Profit: {m.Profit}, ROI: {m.Roi}.");
                 }
 
-                return sb.ToString().Trim();
+                return dbRepoBuilder.ToString().TrimEnd();
             }
             else
             {
@@ -89,12 +98,12 @@ namespace TwoWheelTrader.Repositories
 
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(5);
+
         }
 
         public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.ROI).Take(5);
+
         }
     }
 }

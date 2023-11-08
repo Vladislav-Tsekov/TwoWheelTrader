@@ -49,12 +49,12 @@ namespace TwoWheelTrader.Repositories
 
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(3);
+
         }
 
         public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.ROI).Take(5);
+
         }
     }
 }
