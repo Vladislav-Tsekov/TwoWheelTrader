@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Text;
+﻿using System.Text;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories.Interfaces;
 using VehEvalu8.Data;
 using VehEvalu8.Data.DBModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace TwoWheelTrader.Repositories
 {

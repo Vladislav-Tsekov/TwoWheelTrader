@@ -181,20 +181,18 @@ namespace TwoWheelTrader.Core
         public string GetMotorcycleInfo(string link)
         {
             Motocross mxExists = motocross.MotorcycleInfo(link);
-            //Enduro enduroExists = enduro.MotorcycleInfo(link);
+            Enduro enduroExists = enduro.MotorcycleInfo(link);
 
-            if (true)
-            {
-                StringBuilder sb = new();
-                return sb.ToString().TrimEnd();
-            }
+            StringBuilder infoBuilder = new();
 
-            else
-            {
-                return $"This motorcycle does not exists in the Motocross repository!";
-            }
+            infoBuilder.AppendLine((mxExists != null) 
+                ? $"The motorcycle exists in the MotocrossRepository. ID: {mxExists.Id}" 
+                : "No such link was found in the MotocrossRepository" );
+            infoBuilder.AppendLine((enduroExists != null)
+                ? $"The motorcycle exists in the EnduroRepository. It's ID: {enduroExists.Id}"
+                : "No such link was found in the EnduroRepository");
 
-            return $"Wrong input format. Try again!";
+            return infoBuilder.ToString().TrimEnd();
         }
 
         public void GetRepositoriesStatus()
