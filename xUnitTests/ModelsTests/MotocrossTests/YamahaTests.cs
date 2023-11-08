@@ -15,14 +15,14 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         [Fact]
         public void ModelsShouldInitializeCorrectly()
         {
-            string model = "YZF";
+            string model = "YZ-F";
             int cc = 250;
             int year = 2023;
             double priceForeign = 45000;
             string link = "www.yamaha.com";
             int distance = 25;
 
-            var testYamaha = new Yamaha(model, cc, year, priceForeign, link, distance);
+            var testYamaha = new Yamaha(cc, year, priceForeign, link, distance);
 
             Assert.Equal("Yamaha", testYamaha.Make);
             Assert.Equal(model, testYamaha.Model);
@@ -38,7 +38,7 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         {
             for (int year = 2007; year < 2024; year++)
             {
-                var testYamaha = new Yamaha("YZF", 250, year, 45000, "www.yamaha.com", 15);
+                var testYamaha = new Yamaha(250, year, 45000, "www.yamaha.com", 15);
                 Assert.Equal(MarketPricesByYear(testYamaha.Year), testYamaha.MarketPrice);
             }
         }
@@ -55,7 +55,7 @@ namespace xUnitTests.ModelsTests.MotocrossTests
             int distance = 25;
 
             // Act
-            var testYamaha = new Yamaha(model, cc, year, priceForeign, link, distance);
+            var testYamaha = new Yamaha(cc, year, priceForeign, link, distance);
 
             // Assert
             double expectedMarketPrice = MarketPricesByYear(year);

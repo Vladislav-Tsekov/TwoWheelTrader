@@ -50,13 +50,12 @@ namespace UnitTests.CoreTests
             // Arrange
             Controller controller = new Controller();
             MotocrossRepository motocross = new();
-            IMotorcycle motorcycle = new TwoWheelTrader.Models.Motocross.Kawasaki("KXF", 250, 2019, 35000, "www.kawa250.com", 15);
+            IMotorcycle motorcycle = new TwoWheelTrader.Models.Motocross.Kawasaki(250, 2019, 35000, "www.kawa250.com", 15);
             motocross.AddMotorcycle(motorcycle);
             string link = "www.kawa250.com";
-            string targetRepo = "mx";
 
             // Act
-            string info = controller.GetMotorcycleInfo(link, targetRepo);
+            string info = controller.GetMotorcycleInfo(link);
 
             // Assert
 

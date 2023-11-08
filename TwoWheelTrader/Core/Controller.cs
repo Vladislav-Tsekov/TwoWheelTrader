@@ -2,6 +2,7 @@
 using TwoWheelTrader.Core.Interfaces;
 using TwoWheelTrader.Models.Interfaces;
 using TwoWheelTrader.Repositories;
+using VehEvalu8.Data.DBModels;
 
 namespace TwoWheelTrader.Core
 {
@@ -178,32 +179,20 @@ namespace TwoWheelTrader.Core
             return newDistance;
         }
     
-        public string GetMotorcycleInfo(string link, string targetRepo)
+        public string GetMotorcycleInfo(string link)
         {
-            IMotorcycle currMoto;
+            Motocross mxExists = motocross.MotorcycleInfo(link);
+            //Enduro enduroExists = enduro.MotorcycleInfo(link);
 
-            if (targetRepo == "mx")
+            if (true)
             {
-                currMoto = motocross.MotorcycleInfo(link);
-
-                if (currMoto is null)
-                {
-                    return $"This motorcycle does not exists in the Motocross repository!";
-                }
-                else
-                {
-                    StringBuilder sb = new();
-
-                    sb.AppendLine($"Information requested about motorcycle: {currMoto.Make} {currMoto.Model}, CC: {currMoto.CC}, Year: {currMoto.Year}");
-                    sb.AppendLine($"The price in BGN is: {currMoto.PriceBGN}. The current market price in Bulgaria is: {currMoto.MarketPrice}");
-                    sb.AppendLine($"The estimated profit is: {currMoto.Profit}, ROI %: {currMoto.ROI}.");
-
-                    return sb.ToString().TrimEnd();
-                }
+                StringBuilder sb = new();
+                return sb.ToString().TrimEnd();
             }
-            else if (targetRepo == "enduro")
+
+            else
             {
-                // LOGIC, AVOID REPEATING THE CODE FROM THE ROWS ABOVE
+                return $"This motorcycle does not exists in the Motocross repository!";
             }
 
             return $"Wrong input format. Try again!";

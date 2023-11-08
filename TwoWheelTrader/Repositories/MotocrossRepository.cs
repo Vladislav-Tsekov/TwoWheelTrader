@@ -11,8 +11,6 @@ namespace TwoWheelTrader.Repositories
     {
         public void AddMotorcycle(IMotorcycle motorcycle)
         {
-            motorcycles.Add(motorcycle);
-
             using var context = new MotoContext();
 
             try
@@ -52,19 +50,20 @@ namespace TwoWheelTrader.Repositories
             }
         }
 
-        public IMotorcycle MotorcycleInfo(string link)
+        public Motocross MotorcycleInfo(string link)
         {
-            IMotorcycle? findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
-            return findMotorcycleByLink;
+            var context = new MotoContext();
+            Motocross? motoInfo = context.Motocrosses.FirstOrDefault(m => m.Link == link);
+            return motoInfo;
         }
 
         public string RepositoryStatus()
         {
-            MotoContext? database = new();
+            MotoContext? context = new();
 
-            if (database.Motocrosses.Any())
+            if (context.Motocrosses.Any())
             {
-                var motoTable = database.Motocrosses
+                var motoTable = context.Motocrosses
                     .Include(m => m.Make).Include(m => m.Model)
                     .Include(m => m.Cc).Include(m => m.Year)
                     .AsNoTracking()
@@ -99,12 +98,12 @@ namespace TwoWheelTrader.Repositories
 
         public void TopFiveByProfit(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.Profit).Take(5);
+
         }
 
         public void TopFiveROI(IRepository<IMotorcycle> motorcycles)
         {
-            var sortedMoto = motorcycles.Motorcycles.OrderByDescending(m => m.ROI).Take(5);
+
         }
     }
 }

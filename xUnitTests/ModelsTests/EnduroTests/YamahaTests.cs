@@ -22,7 +22,7 @@ namespace xUnitTests.ModelsTests.EnduroTests
             string link = "www.yamaha.com";
             int distance = 25;
 
-            var testYamaha = new Yamaha(model, cc, year, priceForeign, link, distance);
+            var testYamaha = new Yamaha(cc, year, priceForeign, link, distance);
 
             Assert.Equal("Yamaha", testYamaha.Make);
             Assert.Equal(model, testYamaha.Model);

@@ -7,7 +7,7 @@ namespace TwoWheelTrader.Core.Interfaces
     {
         IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance);
         string RemoveMotorcycle(IMotorcycle motorcycle);
-        string GetMotorcycleInfo(string link, string targetRepo);
+        string GetMotorcycleInfo(string link);
         void GetRepositoriesStatus();
         int DestinationExists(string pickUpDestination);
         void GetTransportationCost();
