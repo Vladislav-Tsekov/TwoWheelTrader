@@ -38,8 +38,8 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         {
             for (int year = 2007; year < 2024; year++)
             {
-                var testYamaha = new Yamaha(250, year, 45000, "www.yamaha.com", 15);
-                Assert.Equal(MarketPricesByYear(testYamaha.Year), testYamaha.MarketPrice);
+                var testHonda = new Honda(250, year, 45000, "www.honda.com", 15);
+                Assert.Equal(MarketPricesByYear(testHonda.Year), testHonda.MarketPrice);
             }
         }
 
@@ -47,49 +47,49 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         public void ModelsPropertiesMustHaveCorrectValues()
         {
             // Arrange
-            string model = "YZF";
+            string model = "CRF";
             int cc = 250;
             int year = 2023;
             double priceForeign = 45000;
-            string link = "www.yamaha.com";
+            string link = "www.honda.com";
             int distance = 25;
 
             // Act
-            var testYamaha = new Yamaha(cc, year, priceForeign, link, distance);
+            var testHonda = new Honda(cc, year, priceForeign, link, distance);
 
             // Assert
             double expectedMarketPrice = MarketPricesByYear(year);
-            Assert.Equal(expectedMarketPrice, testYamaha.MarketPrice);
+            Assert.Equal(expectedMarketPrice, testHonda.MarketPrice);
             double expectedPriceBGN = priceForeign * IMotorcycle.exchangeRateSEK;
             double expectedFuelCost = (double)(distance * 2 / 100.0) * (IMotorcycle.dieselPriceBGN * 11);
             double expectedTotalCost = expectedPriceBGN + expectedFuelCost + IMotorcycle.commission;
-            Assert.Equal(expectedPriceBGN, testYamaha.PriceBGN);
-            Assert.Equal(expectedFuelCost, testYamaha.FuelCost);
-            Assert.Equal(expectedTotalCost, testYamaha.TotalCost);
+            Assert.Equal(expectedPriceBGN, testHonda.PriceBGN);
+            Assert.Equal(expectedFuelCost, testHonda.FuelCost);
+            Assert.Equal(expectedTotalCost, testHonda.TotalCost);
             double expectedProfit = expectedMarketPrice - expectedTotalCost;
-            Assert.Equal(expectedProfit, testYamaha.Profit);
+            Assert.Equal(expectedProfit, testHonda.Profit);
             double expectedROI = expectedProfit / expectedTotalCost * 100.0;
-            Assert.Equal(expectedROI, testYamaha.ROI);
+            Assert.Equal(expectedROI, testHonda.ROI);
         }
 
         private static double MarketPricesByYear(int year)
         {
             switch (year)
             {
-                case 2007: return 5000;
-                case 2008: return 5100;
-                case 2009: return 5200;
-                case 2010: return 5300;
-                case 2011: return 5600;
-                case 2012: return 5900;
-                case 2013: return 6200;
+                case 2007: return 4500;
+                case 2008: return 4700;
+                case 2009: return 5100;
+                case 2010: return 5400;
+                case 2011: return 5900;
+                case 2012: return 6300;
+                case 2013: return 6500;
                 case 2014: return 6600;
                 case 2015: return 6800;
-                case 2016: return 7300;
-                case 2017: return 7800;
-                case 2018: return 8400;
-                case 2019: return 9100;
-                case 2020: return 9800;
+                case 2016: return 7500;
+                case 2017: return 8200;
+                case 2018: return 8650;
+                case 2019: return 9500;
+                case 2020: return 10000;
                 case 2021: return 10500;
                 case 2022: return 11000;
                 case 2023: return 12000;
