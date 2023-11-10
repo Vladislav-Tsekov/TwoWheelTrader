@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace VehEvalu8.Data.DBModels;
+﻿namespace VehEvalu8.Data.DBModels;
 
 public partial class Make
 {

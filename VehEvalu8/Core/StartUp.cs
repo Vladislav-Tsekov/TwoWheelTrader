@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using VehEvalu8.Core.Interfaces;
-using VehEvalu8.Data;
 
 namespace VehEvalu8.Core
 {

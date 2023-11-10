@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Update.Internal;
-using VehEvalu8.Core.Interfaces;
-using VehEvalu8.Models.Interfaces;
+﻿using VehEvalu8.Core.Interfaces;
 
 namespace VehEvalu8.Core
 {
