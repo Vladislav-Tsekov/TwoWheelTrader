@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4yva/nMOrWexMBJwO8yOuAj6EMkbVfWSMBkbWwyDh0Xu+iR6EdQz10jiVTdv8Z1MX6moeMnFIE8s5Zpsosui/g==",
+  "dgSpecHash": "NYInL4GtFN3464Dj4VWvYvb18PfiTyG3DdY8YL2hvw0DhHkD/4BjxmhGXzArmz5VfvIZlwX+ZA/TJ0d1iKVurg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\xUnitTests\\xUnitTests.csproj",
+  "projectFilePath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\VehEvalu8\\xUnitTests\\xUnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tseko\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\tseko\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

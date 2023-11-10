@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TwoWheelTrader\VehEvalu8.csproj" />
+    <ProjectReference Include="..\VehEvalu8\VehEvalu8.csproj" />
   </ItemGroup>
 
 </Project>

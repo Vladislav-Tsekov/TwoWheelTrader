@@ -7814,8 +7814,8 @@
     },
     "VehEvalu8/1.0.0": {
       "type": "project",
-      "path": "../TwoWheelTrader/VehEvalu8.csproj",
-      "msbuildProject": "../TwoWheelTrader/VehEvalu8.csproj"
+      "path": "../VehEvalu8/VehEvalu8.csproj",
+      "msbuildProject": "../VehEvalu8/VehEvalu8.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7833,11 +7833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\xUnitTests\\xUnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\VehEvalu8\\xUnitTests\\xUnitTests.csproj",
       "projectName": "xUnitTests",
-      "projectPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\xUnitTests\\xUnitTests.csproj",
+      "projectPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\VehEvalu8\\xUnitTests\\xUnitTests.csproj",
       "packagesPath": "C:\\Users\\tseko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\xUnitTests\\obj\\",
+      "outputPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\VehEvalu8\\xUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tseko\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7854,8 +7854,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\VehEvalu8.csproj": {
-              "projectPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\TwoWheelTrader\\TwoWheelTrader\\VehEvalu8.csproj"
+            "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\VehEvalu8\\VehEvalu8\\VehEvalu8.csproj": {
+              "projectPath": "C:\\Users\\tseko\\OneDrive\\Documents\\SoftUni\\C# Personal Projects\\VehEvalu8\\VehEvalu8\\VehEvalu8.csproj"
             }
           }
         }
