@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwoWheelTrader.Models.Enduro;
-using TwoWheelTrader.Models.Interfaces;
+using VehEvalu8.Models.Enduro;
+using VehEvalu8.Models.Interfaces;
 using Xunit;
 using xUnitTests.ModelsTests.Interfaces;
 

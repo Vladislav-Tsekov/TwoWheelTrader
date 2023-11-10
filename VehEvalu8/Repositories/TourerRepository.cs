@@ -1,8 +1,8 @@
 ﻿using System.Text;
-using TwoWheelTrader.Models.Interfaces;
-using TwoWheelTrader.Repositories.Interfaces;
+using VehEvalu8.Models.Interfaces;
+using VehEvalu8.Repositories.Interfaces;
 
-namespace TwoWheelTrader.Repositories
+namespace VehEvalu8.Repositories
 {
     public class TourerRepository : IRepository<IMotorcycle>
     {

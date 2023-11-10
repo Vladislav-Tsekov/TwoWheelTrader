@@ -1,6 +1,6 @@
-﻿using TwoWheelTrader.Models.Interfaces;
+﻿using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Models.Enduro
+namespace VehEvalu8.Models.Enduro
 {
     public class GASGAS : IEnduro
     {

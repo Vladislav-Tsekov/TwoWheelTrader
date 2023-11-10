@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace TwoWheelTrader.Models.Interfaces
+namespace VehEvalu8.Models.Interfaces
 {
     public interface IMotorcycle
     {

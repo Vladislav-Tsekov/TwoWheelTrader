@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TwoWheelTrader.Models.Motocross;
-using TwoWheelTrader.Models.Interfaces;
+using VehEvalu8.Models.Motocross;
+using VehEvalu8.Models.Interfaces;
 using Xunit;
 using xUnitTests.ModelsTests.Interfaces;
 

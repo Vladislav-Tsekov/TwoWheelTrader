@@ -1,10 +1,10 @@
 ﻿using System.Text;
-using TwoWheelTrader.Core.Interfaces;
-using TwoWheelTrader.Models.Interfaces;
-using TwoWheelTrader.Repositories;
+using VehEvalu8.Core.Interfaces;
+using VehEvalu8.Models.Interfaces;
+using VehEvalu8.Repositories;
 using VehEvalu8.Data.DBModels;
 
-namespace TwoWheelTrader.Core
+namespace VehEvalu8.Core
 {
     public class Controller : IController
     {
@@ -139,7 +139,7 @@ namespace TwoWheelTrader.Core
 
         public int DestinationExists(string pickUpDestination)
         {
-            string filePath = @"C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\TwoWheelTrader\TwoWheelTrader\Routes\Routes.csv";
+            string filePath = @"C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEvalu8\Routes\Routes.csv";
             int distance = 0;
 
             using var reader = new StreamReader(filePath);

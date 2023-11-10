@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using TwoWheelTrader.Core.Interfaces;
+using VehEvalu8.Core.Interfaces;
 using VehEvalu8.Data;
 
-namespace TwoWheelTrader.Core
+namespace VehEvalu8.Core
 {
     public class StartUp
     {

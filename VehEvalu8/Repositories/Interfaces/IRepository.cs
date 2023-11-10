@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TwoWheelTrader.Models.Interfaces;
+using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Repositories.Interfaces
+namespace VehEvalu8.Repositories.Interfaces
 {
     public interface IRepository<T>
     {

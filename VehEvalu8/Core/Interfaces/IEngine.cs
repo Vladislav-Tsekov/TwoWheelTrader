@@ -1,4 +1,4 @@
-﻿namespace TwoWheelTrader.Core.Interfaces
+﻿namespace VehEvalu8.Core.Interfaces
 {
     public interface IEngine
     {

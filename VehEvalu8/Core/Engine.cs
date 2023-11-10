@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Update.Internal;
-using TwoWheelTrader.Core.Interfaces;
-using TwoWheelTrader.Models.Interfaces;
+using VehEvalu8.Core.Interfaces;
+using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Core
+namespace VehEvalu8.Core
 {
     public class Engine : IEngine
     {

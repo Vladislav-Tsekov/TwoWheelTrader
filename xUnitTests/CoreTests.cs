@@ -1,7 +1,7 @@
 using System.Reflection;
-using TwoWheelTrader.Core;
-using TwoWheelTrader.Models.Interfaces;
-using TwoWheelTrader.Repositories;
+using VehEvalu8.Core;
+using VehEvalu8.Models.Interfaces;
+using VehEvalu8.Repositories;
 using Xunit;
 
 namespace UnitTests.CoreTests
@@ -50,7 +50,7 @@ namespace UnitTests.CoreTests
             // Arrange
             Controller controller = new Controller();
             MotocrossRepository motocross = new();
-            IMotorcycle motorcycle = new TwoWheelTrader.Models.Motocross.Kawasaki(250, 2019, 35000, "www.kawa250.com", 15);
+            IMotorcycle motorcycle = new VehEvalu8.Models.Motocross.Kawasaki(250, 2019, 35000, "www.kawa250.com", 15);
             motocross.AddMotorcycle(motorcycle);
             string link = "www.kawa250.com";
 

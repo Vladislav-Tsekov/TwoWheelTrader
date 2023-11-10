@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using TwoWheelTrader.Models.Interfaces;
+using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Core.Interfaces
+namespace VehEvalu8.Core.Interfaces
 {
     public interface IController
     {

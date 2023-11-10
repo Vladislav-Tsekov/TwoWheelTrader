@@ -1,6 +1,6 @@
-﻿using TwoWheelTrader.Models.Interfaces;
+﻿using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Models.Naked
+namespace VehEvalu8.Models.Naked
 {
     public class Aprilia : INaked
     {

@@ -1,6 +1,6 @@
-﻿using TwoWheelTrader.Models.Interfaces;
+﻿using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Models.Sport
+namespace VehEvalu8.Models.Sport
 {
     public class BMW : ISport
     {

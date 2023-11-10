@@ -1,6 +1,6 @@
-﻿using TwoWheelTrader.Models.Interfaces;
+﻿using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Models.Tourer
+namespace VehEvalu8.Models.Tourer
 {
     public class Suzuki : ITourer
     {

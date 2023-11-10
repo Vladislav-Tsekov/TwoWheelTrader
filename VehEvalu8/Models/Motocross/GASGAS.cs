@@ -1,6 +1,6 @@
-﻿using TwoWheelTrader.Models.Interfaces;
+﻿using VehEvalu8.Models.Interfaces;
 
-namespace TwoWheelTrader.Models.Motocross
+namespace VehEvalu8.Models.Motocross
 {
     public class GASGAS : IMotocross
     {
