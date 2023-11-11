@@ -4,7 +4,7 @@ namespace VehEvalu8.Models.Motocross
 {
     public class GASGAS : IMotocross
     {
-        public GASGAS(int cc, int year, int priceForeign, string link, int distance)
+        public GASGAS(int cc, int year, double priceForeign, string link, int distance)
         {
             Make = "GASGAS";
             Model = "MC-F";
