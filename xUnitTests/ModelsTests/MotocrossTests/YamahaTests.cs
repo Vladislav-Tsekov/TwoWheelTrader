@@ -42,7 +42,6 @@ namespace xUnitTests.ModelsTests.MotocrossTests
         public void ModelsPropertiesMustHaveCorrectValues()
         {
             // Arrange
-            string model = "YZF";
             int cc = 250;
             int year = 2023;
             double priceForeign = 45000;
