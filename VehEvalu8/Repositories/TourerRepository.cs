@@ -26,6 +26,11 @@ namespace VehEvalu8.Repositories
             return findMotorcycleByLink;
         }
 
+        public string RemoveMotorcycle(string link)
+        {
+            throw new NotImplementedException();
+        }
+
         public string RepositoryStatus() 
         {
             if (this.motorcycles.Count > 0)

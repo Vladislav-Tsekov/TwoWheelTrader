@@ -304,3 +304,4 @@ C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\xUnitTe
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\xUnitTests\obj\Debug\net6.0\xUnitTests.pdb
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\xUnitTests\obj\Debug\net6.0\xUnitTests.genruntimeconfig.cache
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\xUnitTests\obj\Debug\net6.0\ref\xUnitTests.dll
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\xUnitTests\obj\Debug\net6.0\xUnitTests.sourcelink.json

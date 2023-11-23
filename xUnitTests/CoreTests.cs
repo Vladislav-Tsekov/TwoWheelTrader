@@ -42,6 +42,7 @@ namespace UnitTests.CoreTests
 
             // Assert
             Assert.NotNull(motorcycle);
+            controller.RemoveMotorcycle("www.yamaha.com");
         }
 
         [Fact]
@@ -58,8 +59,8 @@ namespace UnitTests.CoreTests
             string info = controller.GetMotorcycleInfo(link);
 
             // Assert
-
             //TODO - RUN THE TEST
+            motocross.RemoveMotorcycle("www.kawa250.com");
         }
     }
 }

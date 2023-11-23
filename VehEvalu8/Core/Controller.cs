@@ -219,10 +219,13 @@ namespace VehEvalu8.Core
             //TODO - SEPARATE LOGIC, CALCULATING THE FUEL COST FOR EACH MOTORCYCLE?
         }
 
-        public string RemoveMotorcycle(IMotorcycle motorcycle)
+        public string RemoveMotorcycle(string link)
         {
-            throw new NotImplementedException();
-            //TODO - REMOVE FUNCTION, NOT YET DECIDED
+            Console.WriteLine(motocross.RemoveMotorcycle(link));
+            Console.WriteLine(enduro.RemoveMotorcycle(link));
+            Console.WriteLine(naked.RemoveMotorcycle(link));
+            Console.WriteLine(sport.RemoveMotorcycle(link));
+            Console.WriteLine(tourer.RemoveMotorcycle(link));
         }
     }
 }

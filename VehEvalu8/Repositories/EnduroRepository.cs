@@ -57,6 +57,11 @@ namespace VehEvalu8.Repositories
             return motoInfo;
         }
 
+        public string RemoveMotorcycle(string link)
+        {
+            throw new NotImplementedException();
+        }
+
         public string RepositoryStatus()
         {
             MotoContext? context = new();

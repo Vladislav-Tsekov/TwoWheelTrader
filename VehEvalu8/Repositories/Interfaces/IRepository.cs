@@ -11,7 +11,7 @@ namespace VehEvalu8.Repositories.Interfaces
 
         string RepositoryStatus();
 
-        //void RemoveMotorcycle(string motorcycle); -- Not yet implemented, signature unknown, probably an ID
+        string RemoveMotorcycle(string link);
 
         //void MotorcycleExists(T motorcycle); -- Not sure if this will be needed for the scope of the program, will just add it for now
 

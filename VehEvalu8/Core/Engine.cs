@@ -48,8 +48,9 @@ namespace VehEvalu8.Core
                     }
                     else if (command == "remove")
                     {
-                        // Once the program is connected to the MS SQL this command should become a viable option
-                        // I will need primary keys, need to find what hold the bikes apart, besides the primary key, like a web link
+                        Console.WriteLine("Please input the link of the vehicle you wish to remove:");
+                        string link = Console.ReadLine();
+                        controller.RemoveMotorcycle(link);
                     }
                     else if (command == "check")
                     {

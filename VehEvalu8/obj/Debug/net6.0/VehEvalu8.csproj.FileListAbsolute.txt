@@ -142,3 +142,4 @@ C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEval
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEvalu8\obj\Debug\net6.0\VehEvalu8.pdb
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEvalu8\obj\Debug\net6.0\VehEvalu8.genruntimeconfig.cache
 C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEvalu8\obj\Debug\net6.0\ref\VehEvalu8.dll
+C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEvalu8\obj\Debug\net6.0\VehEvalu8.sourcelink.json
