@@ -38,10 +38,10 @@ namespace VehEvalu8.Core
                         int cc = int.Parse(input[3]);
                         int year = int.Parse(input[4]);
                         int foreignPrice = int.Parse(input[5]);
-                        string link = input[6]; 
+                        string link = input[6].Trim(); 
 
                         Console.WriteLine($"Please input the current location of the vehicle:");
-                        string location = Console.ReadLine()!;
+                        string location = Console.ReadLine()!.Trim();
                         int distance = controller.DestinationExists(location);
 
                         controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
@@ -49,12 +49,12 @@ namespace VehEvalu8.Core
                     else if (command == "remove")
                     {
                         Console.WriteLine("Please input the link of the vehicle you wish to remove:");
-                        string link = Console.ReadLine()!;
+                        string link = Console.ReadLine()!.Trim();
                         controller.RemoveMotorcycle(link);
                     }
                     else if (command == "check")
                     {
-                        string link = input[1];
+                        string link = input[1].Trim();
                         Console.WriteLine(controller.GetMotorcycleInfo(link));
                     }
                     else if (command == "status")

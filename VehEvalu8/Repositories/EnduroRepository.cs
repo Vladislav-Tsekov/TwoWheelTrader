@@ -59,7 +59,13 @@ namespace VehEvalu8.Repositories
 
         public string RemoveMotorcycle(string link)
         {
-            throw new NotImplementedException();
+            var context = new MotoContext();
+            Enduro? motoInfo = context.Enduroes.FirstOrDefault(m => m.Link == link);
+
+            return
+                motoInfo is null
+                ? $"No such link exists in the {this.GetType().Name}"
+                : $"{motoInfo.Make} {motoInfo.Model} ({motoInfo.Year}) with Profit of ({motoInfo.Profit}) will be removed from the Database.";
         }
 
         public string RepositoryStatus()
