@@ -57,9 +57,19 @@ namespace VehEvalu8.Repositories
             return motoInfo;
         }
 
+        infoBuilder.AppendLine((mxExists != null) 
+                ? $"The motorcycle exists in the MotocrossRepository. ID: {mxExists.Id}" 
+                : "No such link was found in the MotocrossRepository" );
+
         public string RemoveMotorcycle(string link)
         {
-            throw new NotImplementedException();
+            var context = new MotoContext();
+            Motocross? motoInfo = context.Motocrosses.FirstOrDefault(m => m.Link == link);
+
+            return 
+                motoInfo is null 
+                ? $"No such link exists in the {this.GetType().Name}"
+                : $"{motoInfo.Make} {motoInfo.Model} ({motoInfo.Year}) with Profit of ({motoInfo.Profit}) will be removed from the Database.";
         }
 
         public string RepositoryStatus()
