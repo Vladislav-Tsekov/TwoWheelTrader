@@ -70,8 +70,10 @@ namespace VehEvalu8.Repositories
                 context.Remove(motoInfo);
                 context.SaveChanges();
             }
-
-            output = $"No such link exists in the {this.GetType().Name}";
+            else
+            {
+                output = $"No such link exists in the {this.GetType().Name}";
+            }
 
             context.Dispose();
 
