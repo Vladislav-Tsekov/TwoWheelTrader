@@ -23,7 +23,7 @@ namespace VehEvalu8.Repositories
         public IMotorcycle MotorcycleInfo(string link)
         {
             var findMotorcycleByLink = motorcycles.Where(m => m.Link == link).FirstOrDefault();
-            return findMotorcycleByLink;
+            return findMotorcycleByLink!;
         }
 
         public string RemoveMotorcycle(string link)

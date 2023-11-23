@@ -223,9 +223,9 @@ namespace VehEvalu8.Core
         {
             Console.WriteLine(motocross.RemoveMotorcycle(link));
             Console.WriteLine(enduro.RemoveMotorcycle(link));
-            Console.WriteLine(naked.RemoveMotorcycle(link));
-            Console.WriteLine(sport.RemoveMotorcycle(link));
-            Console.WriteLine(tourer.RemoveMotorcycle(link));
+            //Console.WriteLine(naked.RemoveMotorcycle(link));
+            //Console.WriteLine(sport.RemoveMotorcycle(link));
+            //Console.WriteLine(tourer.RemoveMotorcycle(link));
         }
     }
 }

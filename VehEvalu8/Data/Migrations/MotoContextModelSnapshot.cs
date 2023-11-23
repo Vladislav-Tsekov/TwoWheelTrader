@@ -29,7 +29,8 @@ namespace VehEvalu8.Migrations
                     b.HasKey("Id")
                         .HasName("PK__CC__3214EC07249B8CBA");
 
-                    b.ToTable("CC", (string)null);
+                    b.ToTable("CC", (string)null!);
+                    //REMOVE "!" IN CASE OF ERRORS
                 });
 
             modelBuilder.Entity("VehEvalu8.Data.DBModels.Enduro", b =>
