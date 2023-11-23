@@ -123,6 +123,8 @@ namespace VehEvalu8.Repositories
         {
             using var context = new MotoContext();
 
+            //TODO - CHECK IF THERE ARE ANY BEFORE EXECUTING
+
             var topFiveByProfit = context.Motocrosses
                 .AsNoTracking()
                 .OrderByDescending(m => m.Profit)

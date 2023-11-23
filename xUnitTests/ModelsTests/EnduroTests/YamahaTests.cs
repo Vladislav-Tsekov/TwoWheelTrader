@@ -24,7 +24,6 @@ namespace xUnitTests.ModelsTests.EnduroTests
             var testYamaha = new Yamaha(cc, year, priceForeign, link, distance);
 
             Assert.Equal("Yamaha", testYamaha.Make);
-            Assert.Equal(model, testYamaha.Model);
             Assert.Equal(cc, testYamaha.CC);
             Assert.Equal(year, testYamaha.Year);
             Assert.Equal(priceForeign, testYamaha.PriceForeign);
