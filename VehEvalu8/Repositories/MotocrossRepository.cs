@@ -148,7 +148,7 @@ namespace VehEvalu8.Repositories
 
             foreach (var m in topFiveByProfit)
             {
-                top5Builder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year}) - Profit: {m.Profit} / ROI: {m.Roi}.");
+                top5Builder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}) - Profit: {m.Profit} / ROI: {m.Roi}.");
             }
 
             Console.WriteLine(top5Builder.ToString().TrimEnd());

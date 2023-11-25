@@ -206,11 +206,11 @@ namespace VehEvalu8.Core
 
         public void TopFiveByProfit() 
         {
-            motocross.TopFiveByProfit();
-            enduro.TopFiveByProfit();
-            //naked.TopFiveByProfit();
-            //sport.TopFiveByProfit();
-            //tourer.TopFiveByProfit();
+            motocross.TopFiveByProfitAsync();
+            enduro.TopFiveByProfitAsync();
+            //naked.TopFiveByProfitAsync();
+            //sport.TopFiveByProfitAsync();
+            //tourer.TopFiveByProfitAsync();
         }
 
         public void GetTransportationCost()
