@@ -17,7 +17,7 @@ namespace VehEvalu8.Core
             {
                 Console.WriteLine($"{Environment.NewLine}" +
                                   $"Please select a command and input motorcycle's --| Make, Model, CC, Year, Price, Link |--." +
-                                  $"{Environment.NewLine}Available commands: 'Add', 'Check', 'Status' or 'Done'." +
+                                  $"{Environment.NewLine}Available commands: 'Add', 'Remove', 'Check', 'Status', 'Top' or 'Done'." +
                                   $"{Environment.NewLine}");
 
                 string[] input = Console.ReadLine()!.ToLower().Split();
@@ -66,7 +66,7 @@ namespace VehEvalu8.Core
                         // When a change of some property is needed, usually the price - when the motorcycle has had a discount
                         // Again - must search by link (???), or by primary key if I learn DB until then
                     }
-                    else if (command == "top5")
+                    else if (command == "top")
                     {
                         controller.TopFiveByProfitAsync();
                     }
