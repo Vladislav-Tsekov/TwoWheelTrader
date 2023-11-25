@@ -135,10 +135,10 @@ namespace VehEvalu8.Repositories
                 .Take(5)
                 .Select(m => new
                 {
-                    MakeName = m.Make.MakeName,
-                    ModelName = m.Model.ModelName,
-                    EngineSize = m.Cc.EngineSize,
-                    Year = m.Year.Year1,
+                    m.Make.MakeName,
+                    m.Model.ModelName,
+                    m.Cc.EngineSize,
+                    m.Year.Year1,
                     m.Profit,
                     m.Roi
                 })

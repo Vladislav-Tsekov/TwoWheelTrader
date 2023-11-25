@@ -7,7 +7,7 @@ namespace VehEvalu8.Repositories.Interfaces
     {
         void AddMotorcycle(T motorcycle);
 
-        void TopFiveByProfit(); 
+        Task TopFiveByProfitAsync(); 
 
         string RepositoryStatus();
 
