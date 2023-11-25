@@ -52,9 +52,9 @@ namespace VehEvalu8.Repositories
             }
         }
 
-        public void TopFiveByProfit()
+        public Task TopFiveByProfitAsync()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

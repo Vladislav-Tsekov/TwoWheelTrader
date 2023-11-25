@@ -1,9 +1,9 @@
-﻿using System.Text;
-using VehEvalu8.Models.Interfaces;
-using VehEvalu8.Repositories.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Text;
 using VehEvalu8.Data;
 using VehEvalu8.Data.DBModels;
-using Microsoft.EntityFrameworkCore;
+using VehEvalu8.Models.Interfaces;
+using VehEvalu8.Repositories.Interfaces;
 
 namespace VehEvalu8.Repositories
 {
