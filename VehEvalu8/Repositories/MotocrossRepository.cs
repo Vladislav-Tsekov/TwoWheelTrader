@@ -123,7 +123,11 @@ namespace VehEvalu8.Repositories
         {
             using var context = new MotoContext();
 
-            //TODO - CHECK IF THERE ARE ANY BEFORE EXECUTING
+            if (!context.Motocrosses.Any())
+            {
+                string output = $"The {this.GetType().Name} is empty!";
+                return;
+            }
 
             var topFiveByProfit = context.Motocrosses
                 .AsNoTracking()
@@ -150,8 +154,6 @@ namespace VehEvalu8.Repositories
             context.Dispose();
 
             Console.WriteLine(top5Builder.ToString().TrimEnd());
-
-            //TODO - TROUBLESHOOT
         }
     }
 }
