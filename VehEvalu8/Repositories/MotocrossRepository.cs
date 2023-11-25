@@ -119,39 +119,37 @@ namespace VehEvalu8.Repositories
             }
         }
 
-        public void TopFiveByProfit()
+        public async Task TopFiveByProfitAsync()
         {
             using var context = new MotoContext();
 
-            if (!context.Motocrosses.Any())
+            if (!await context.Motocrosses.AnyAsync())
             {
-                string output = $"The {this.GetType().Name} is empty!";
+                Console.WriteLine($"The {GetType().Name} is empty!");
                 return;
             }
 
-            var topFiveByProfit = context.Motocrosses
+            var topFiveByProfit = await context.Motocrosses
                 .AsNoTracking()
                 .OrderByDescending(m => m.Profit)
                 .Take(5)
                 .Select(m => new
                 {
-                    m.Make.MakeName,
-                    m.Model.ModelName,
-                    m.Cc.EngineSize,
-                    m.Year.Year1,
+                    MakeName = m.Make.MakeName,
+                    ModelName = m.Model.ModelName,
+                    EngineSize = m.Cc.EngineSize,
+                    Year = m.Year.Year1,
                     m.Profit,
                     m.Roi
                 })
-                .ToList();
+                .ToListAsync();
 
-            StringBuilder top5Builder = new();
+            var top5Builder = new StringBuilder();
 
             foreach (var m in topFiveByProfit)
             {
-                top5Builder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}) - Profit: {m.Profit} / ROI: {m.Roi}.");
+                top5Builder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year}) - Profit: {m.Profit} / ROI: {m.Roi}.");
             }
-
-            context.Dispose();
 
             Console.WriteLine(top5Builder.ToString().TrimEnd());
         }
