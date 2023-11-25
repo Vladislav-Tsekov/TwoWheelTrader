@@ -121,7 +121,39 @@ namespace VehEvalu8.Repositories
 
         public void TopFiveByProfit()
         {
+            using var context = new MotoContext();
 
+            if (!context.Enduroes.Any())
+            {
+                string output = $"The {this.GetType().Name} is empty!";
+                return;
+            }
+
+            var topFiveByProfit = context.Enduroes
+                .AsNoTracking()
+                .OrderByDescending(m => m.Profit)
+                .Take(5)
+                .Select(m => new
+                {
+                    m.Make.MakeName,
+                    m.Model.ModelName,
+                    m.Cc.EngineSize,
+                    m.Year.Year1,
+                    m.Profit,
+                    m.Roi
+                })
+                .ToList();
+
+            StringBuilder top5Builder = new();
+
+            foreach (var m in topFiveByProfit)
+            {
+                top5Builder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}) - Profit: {m.Profit} / ROI: {m.Roi}.");
+            }
+
+            context.Dispose();
+
+            Console.WriteLine(top5Builder.ToString().TrimEnd());
         }
     }
 }
