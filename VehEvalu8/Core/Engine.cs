@@ -68,7 +68,7 @@ namespace VehEvalu8.Core
                     }
                     else if (command == "top")
                     {
-                        controller.TopFiveByProfitAsync();
+                        Task.Run(async () => await controller.TopFiveByProfitAsync()).Wait();
                     }
                     else
                     {
