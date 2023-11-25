@@ -63,6 +63,7 @@ namespace VehEvalu8.Core
                     }
                     else if (command == "update")
                     {
+                        //TODO - IMPLEMENT "UPDATE" COMMAND
                         // When a change of some property is needed, usually the price - when the motorcycle has had a discount
                         // Again - must search by link (???), or by primary key if I learn DB until then
                     }

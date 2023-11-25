@@ -206,8 +206,6 @@ namespace VehEvalu8.Core
 
         public async Task TopFiveByProfitAsync()
         {
-            //TODO - TEST 
-
             var tasks = new List<Task>
             {
                 motocross.TopFiveByProfitAsync(),
