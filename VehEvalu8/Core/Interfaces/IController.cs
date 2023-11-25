@@ -9,7 +9,7 @@ namespace VehEvalu8.Core.Interfaces
         string GetMotorcycleInfo(string link);
         void GetRepositoriesStatus();
         int DestinationExists(string pickUpDestination);
-        public void TopFiveByProfit();
+        Task TopFiveByProfitAsync();
         void GetTransportationCost();
 
         //string Add(IMotorcycle motorcycle); //DEPRECATED

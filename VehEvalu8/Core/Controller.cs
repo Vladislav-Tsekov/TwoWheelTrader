@@ -204,13 +204,18 @@ namespace VehEvalu8.Core
             Console.WriteLine(tourer.RepositoryStatus());
         }
 
-        public void TopFiveByProfit() 
+        public async Task TopFiveByProfitAsync()
         {
-            motocross.TopFiveByProfitAsync();
-            enduro.TopFiveByProfitAsync();
-            //naked.TopFiveByProfitAsync();
-            //sport.TopFiveByProfitAsync();
-            //tourer.TopFiveByProfitAsync();
+            var tasks = new List<Task>
+            {
+                motocross.TopFiveByProfitAsync(),
+                enduro.TopFiveByProfitAsync(),
+                // naked.TopFiveByProfitAsync(),
+                // sport.TopFiveByProfitAsync(),
+                // tourer.TopFiveByProfitAsync()
+            };
+
+            await Task.WhenAll(tasks);
         }
 
         public void GetTransportationCost()
