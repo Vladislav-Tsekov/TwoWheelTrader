@@ -197,11 +197,11 @@ namespace VehEvalu8.Core
 
         public void GetRepositoriesStatus()
         {
-            Console.WriteLine(motocross.RepositoryStatus());
-            Console.WriteLine(enduro.RepositoryStatus());
-            Console.WriteLine(naked.RepositoryStatus());
-            Console.WriteLine(sport.RepositoryStatus());
-            Console.WriteLine(tourer.RepositoryStatus());
+            Console.WriteLine(motocross.RepositoryStatusAsync());
+            Console.WriteLine(enduro.RepositoryStatusAsync());
+            Console.WriteLine(naked.RepositoryStatusAsync());
+            Console.WriteLine(sport.RepositoryStatusAsync());
+            Console.WriteLine(tourer.RepositoryStatusAsync());
         }
 
         public async Task TopFiveByProfitAsync()
