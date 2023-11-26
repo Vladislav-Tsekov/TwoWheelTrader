@@ -28,7 +28,7 @@ namespace VehEvalu8.Core
 
                     if (command == "done")
                     {
-                        controller.GetRepositoriesStatus();
+                        controller.Ge();
                         Environment.Exit(0);
                     }
                     else if (command == "add")
