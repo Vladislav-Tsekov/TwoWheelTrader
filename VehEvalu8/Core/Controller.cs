@@ -195,13 +195,13 @@ namespace VehEvalu8.Core
             return infoBuilder.ToString().TrimEnd();
         }
 
-        public void GetRepositoriesStatus()
+        public async Task GetRepositoriesStatusAsync()
         {
-            Console.WriteLine(motocross.RepositoryStatusAsync());
-            Console.WriteLine(enduro.RepositoryStatusAsync());
-            Console.WriteLine(naked.RepositoryStatusAsync());
-            Console.WriteLine(sport.RepositoryStatusAsync());
-            Console.WriteLine(tourer.RepositoryStatusAsync());
+            Console.WriteLine(await motocross.RepositoryStatusAsync());
+            Console.WriteLine(await enduro.RepositoryStatusAsync());
+            // Console.WriteLine(await naked.RepositoryStatusAsync());
+            // Console.WriteLine(await sport.RepositoryStatusAsync());
+            // Console.WriteLine(await tourer.RepositoryStatusAsync());
         }
 
         public async Task TopFiveByProfitAsync()
