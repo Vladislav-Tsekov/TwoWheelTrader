@@ -31,25 +31,9 @@ namespace VehEvalu8.Repositories
             throw new NotImplementedException();
         }
 
-        public string RepositoryStatus()
+        public Task<string> RepositoryStatusAsync()
         {
-            if (this.motorcycles.Count > 0)
-            {
-                StringBuilder sb = new();
-
-                sb.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
-
-                foreach (var moto in motorcycles)
-                {
-                    sb.Append($"{moto.Make}, {moto.Model.ToUpper()}, {moto.Year}, {moto.PriceForeign}, {moto.MarketPrice}, {(int)moto.TotalCost}, {(int)moto.Profit}, {moto.Link}, {moto.ROI:f2}{Environment.NewLine}");
-                }
-
-                return sb.ToString().Trim();
-            }
-            else
-            {
-                return $"{this.GetType().Name} is empty!";
-            }
+            throw new NotImplementedException();
         }
 
         public Task TopFiveByProfitAsync()
