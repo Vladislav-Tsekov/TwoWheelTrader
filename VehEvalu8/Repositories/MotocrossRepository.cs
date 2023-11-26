@@ -80,13 +80,13 @@ namespace VehEvalu8.Repositories
             return output;
         }
 
-        public string RepositoryStatus()
+        public async Task<string> RepositoryStatusAsync()
         {
-            MotoContext? context = new();
+            using var context = new MotoContext();
 
-            if (context.Motocrosses.Any())
+            if (await context.Motocrosses.AnyAsync())
             {
-                var motoTable = context.Motocrosses
+                var motoTable = await context.Motocrosses
                     .Include(m => m.Make).Include(m => m.Model)
                     .Include(m => m.Cc).Include(m => m.Year)
                     .AsNoTracking()
@@ -100,22 +100,22 @@ namespace VehEvalu8.Repositories
                         m.Profit,
                         m.Roi,
                     })
-                    .ToList();
+                    .ToListAsync();
 
-                StringBuilder dbRepoBuilder = new();
+                StringBuilder repoBuilder = new();
 
-                dbRepoBuilder.AppendLine($"{Environment.NewLine}{this.GetType().Name} has the following motorcycles.");
+                repoBuilder.AppendLine($"{Environment.NewLine}{GetType().Name} has the following motorcycles.");
 
                 foreach (var m in motoTable)
                 {
-                    dbRepoBuilder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}). Cost: {m.TotalCost}, Profit: {m.Profit}, ROI: {m.Roi}.");
+                    repoBuilder.AppendLine($"{m.MakeName} {m.ModelName} {m.EngineSize} ({m.Year1}). Cost: {m.TotalCost}, Profit: {m.Profit}, ROI: {m.Roi}.");
                 }
 
-                return dbRepoBuilder.ToString().TrimEnd();
+                return repoBuilder.ToString().TrimEnd();
             }
             else
             {
-                return $"{this.GetType().Name} is empty!";
+                return $"{GetType().Name} is empty!";
             }
         }
 
