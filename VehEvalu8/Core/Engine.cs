@@ -28,7 +28,7 @@ namespace VehEvalu8.Core
 
                     if (command == "done")
                     {
-                        controller.Ge();
+                        Task.Run(async () => await controller.GetRepositoriesStatusAsync()).Wait();
                         Environment.Exit(0);
                     }
                     else if (command == "add")
@@ -59,7 +59,7 @@ namespace VehEvalu8.Core
                     }
                     else if (command == "status")
                     {
-                        controller.GetRepositoriesStatus();
+                        Task.Run(async () => await controller.GetRepositoriesStatusAsync()).Wait();
                     }
                     else if (command == "update")
                     {
