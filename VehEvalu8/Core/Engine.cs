@@ -47,7 +47,7 @@ namespace VehEvalu8.Core
 
                         MotoContext context = new();
 
-                        controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance, context);
+                        controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
                     }
                     else if (command == "remove")
                     {

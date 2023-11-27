@@ -1,9 +1,9 @@
 ﻿using System.Text;
 using VehEvalu8.Core.Interfaces;
+using VehEvalu8.Data;
+using VehEvalu8.Data.DBModels;
 using VehEvalu8.Models.Interfaces;
 using VehEvalu8.Repositories;
-using VehEvalu8.Data.DBModels;
-using VehEvalu8.Data;
 
 namespace VehEvalu8.Core
 {

@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using VehEvalu8.Data;
-using VehEvalu8.Models.Interfaces;
+﻿using VehEvalu8.Data;
 
 namespace VehEvalu8.Repositories.Interfaces
 {
