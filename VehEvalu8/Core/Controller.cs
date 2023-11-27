@@ -14,6 +14,7 @@ namespace VehEvalu8.Core
         private NakedRepository naked;
         private SportRepository sport;
         private TourerRepository tourer;
+        private MotoContext context;
 
         public Controller()
         {
@@ -22,12 +23,12 @@ namespace VehEvalu8.Core
             naked = new NakedRepository();
             sport = new SportRepository();
             tourer = new TourerRepository();
+            context = new MotoContext();
         }
 
         public IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance) 
         {
             IMotorcycle? motorcycle = null;
-            MotoContext context = new();
 
             switch (make.ToLower())
             {
