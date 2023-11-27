@@ -1,5 +1,5 @@
-﻿using VehEvalu8.Models.Motocross;
-using VehEvalu8.Models.Interfaces;
+﻿using VehEvalu8.Models.Interfaces;
+using VehEvalu8.Models.Motocross;
 using Xunit;
 using xUnitTests.ModelsTests.Interfaces;
 

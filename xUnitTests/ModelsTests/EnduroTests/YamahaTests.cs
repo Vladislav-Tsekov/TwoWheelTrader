@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VehEvalu8.Models.Enduro;
-using VehEvalu8.Models.Interfaces;
+﻿using VehEvalu8.Models.Enduro;
 using Xunit;
 using xUnitTests.ModelsTests.Interfaces;
 
