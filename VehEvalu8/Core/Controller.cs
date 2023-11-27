@@ -3,6 +3,7 @@ using VehEvalu8.Core.Interfaces;
 using VehEvalu8.Models.Interfaces;
 using VehEvalu8.Repositories;
 using VehEvalu8.Data.DBModels;
+using VehEvalu8.Data;
 
 namespace VehEvalu8.Core
 {
@@ -26,6 +27,7 @@ namespace VehEvalu8.Core
         public IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance) 
         {
             IMotorcycle? motorcycle = null;
+            MotoContext context = new();
 
             switch (make.ToLower())
             {
@@ -34,12 +36,12 @@ namespace VehEvalu8.Core
                     if (model == "yzf" || model == "yz-f")
                     {
                         motorcycle = new Models.Motocross.Yamaha(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "wrf" || model == "wr-f")
                     {
                         motorcycle = new Models.Enduro.Yamaha(cc, year, foreignPrice, link, distance);
-                        enduro.AddMotorcycle(motorcycle);
+                        enduro.AddMotorcycle(motorcycle, context);
                     }
                     break;
 
@@ -48,12 +50,12 @@ namespace VehEvalu8.Core
                     if (model == "crf" || model == "cr-f")
                     {
                         motorcycle = new Models.Motocross.Honda(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "crx" || model == "cr-x")
                     {
                         motorcycle = new Models.Enduro.Honda(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     break;
 
@@ -62,12 +64,12 @@ namespace VehEvalu8.Core
                     if (model == "kxf" || model == "kx-f")
                     {
                         motorcycle = new Models.Motocross.Kawasaki(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "klx")
                     {
                         motorcycle = new Models.Enduro.Kawasaki(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     break;
 
@@ -75,12 +77,12 @@ namespace VehEvalu8.Core
                     if (model == "sxf" || model == "sx-f")
                     {
                         motorcycle = new Models.Motocross.KTM(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "exc")
                     {
                         motorcycle = new Models.Enduro.KTM(cc, year, foreignPrice, link, distance);
-                        enduro.AddMotorcycle(motorcycle);
+                        enduro.AddMotorcycle(motorcycle, context);
                     }
                     break;
 
@@ -89,12 +91,12 @@ namespace VehEvalu8.Core
                     if (model == "fc")
                     {
                         motorcycle = new Models.Motocross.Husqvarna(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "fe")
                     {
                         motorcycle = new Models.Enduro.Husqvarna(cc, year, foreignPrice, link, distance);
-                        enduro.AddMotorcycle(motorcycle);
+                        enduro.AddMotorcycle(motorcycle, context);
                     }
                     break;
 
@@ -103,12 +105,12 @@ namespace VehEvalu8.Core
                     if (model == "rmz" || model == "rm-z")
                     {
                         motorcycle = new Models.Motocross.Suzuki(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "drz" || model == "dr-z")
                     {
                         motorcycle = new Models.Enduro.Suzuki(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     break;
 
@@ -117,12 +119,12 @@ namespace VehEvalu8.Core
                     if (model == "mcf" || model == "mc-f")
                     {
                         motorcycle = new Models.Motocross.GASGAS(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context);
                     }
                     else if (model == "ecf" || model == "ec-f")
                     {
                         motorcycle = new Models.Enduro.GASGAS(cc, year, foreignPrice, link, distance);
-                        motocross.AddMotorcycle(motorcycle);
+                        motocross.AddMotorcycle(motorcycle, context );
                     }
                     break;
             }

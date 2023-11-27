@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VehEvalu8.Data;
 using VehEvalu8.Models.Interfaces;
 
 namespace VehEvalu8.Repositories.Interfaces
 {
     public interface IRepository<T>
     {
-        void AddMotorcycle(T motorcycle);
+        void AddMotorcycle(T motorcycle, MotoContext context);
 
         Task TopFiveByProfitAsync();
 

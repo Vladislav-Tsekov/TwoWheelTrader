@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using VehEvalu8.Data;
 using VehEvalu8.Models.Interfaces;
 using VehEvalu8.Repositories.Interfaces;
 
@@ -15,7 +16,7 @@ namespace VehEvalu8.Repositories
 
         public IReadOnlyCollection<IMotorcycle> Motorcycles => motorcycles;
 
-        public void AddMotorcycle(IMotorcycle motorcycle)
+        public void AddMotorcycle(IMotorcycle motorcycle, MotoContext context)
         {
             motorcycles.Add(motorcycle);
         }

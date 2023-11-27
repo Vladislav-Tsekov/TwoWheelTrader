@@ -9,10 +9,8 @@ namespace VehEvalu8.Repositories
 {
     public class EnduroRepository : IRepository<IMotorcycle>
     {
-        public void AddMotorcycle(IMotorcycle motorcycle)
+        public void AddMotorcycle(IMotorcycle motorcycle, MotoContext context)
         {
-            using var context = new MotoContext();
-
             try
             {
                 var moto = new Enduro
