@@ -1,4 +1,5 @@
 ﻿using VehEvalu8.Core.Interfaces;
+using VehEvalu8.Data;
 
 namespace VehEvalu8.Core
 {
@@ -44,7 +45,9 @@ namespace VehEvalu8.Core
                         string location = Console.ReadLine()!.Trim();
                         int distance = controller.DestinationExists(location);
 
-                        controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
+                        MotoContext context = new();
+
+                        controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance, context);
                     }
                     else if (command == "remove")
                     {

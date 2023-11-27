@@ -1,5 +1,6 @@
 using System.Reflection;
 using VehEvalu8.Core;
+using VehEvalu8.Data;
 using VehEvalu8.Models.Interfaces;
 using VehEvalu8.Repositories;
 using Xunit;
@@ -51,8 +52,9 @@ namespace UnitTests.CoreTests
             // Arrange
             Controller controller = new Controller();
             MotocrossRepository motocross = new();
+            MotoContext context = new();
             IMotorcycle motorcycle = new VehEvalu8.Models.Motocross.Kawasaki(250, 2019, 35000, "www.kawa250.com", 15);
-            motocross.AddMotorcycle(motorcycle);
+            motocross.AddMotorcycle(motorcycle, context);
             string link = "www.kawa250.com";
 
             // Act
