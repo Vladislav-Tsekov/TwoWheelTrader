@@ -45,8 +45,6 @@ namespace VehEvalu8.Core
                         string location = Console.ReadLine()!.Trim();
                         int distance = controller.DestinationExists(location);
 
-                        MotoContext context = new();
-
                         controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
                     }
                     else if (command == "remove")

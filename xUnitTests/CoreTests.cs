@@ -60,8 +60,7 @@ namespace UnitTests.CoreTests
             string info = controller.GetMotorcycleInfo(link);
 
             // Assert
-            //TODO - RUN THE TEST
-            motocross.RemoveMotorcycle("www.kawa250.com");
+            //TODO - IMPLEMENT TEST
         }
     }
 }

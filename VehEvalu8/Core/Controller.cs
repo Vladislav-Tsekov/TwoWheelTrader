@@ -227,7 +227,7 @@ namespace VehEvalu8.Core
             //TODO - SEPARATE LOGIC, CALCULATING THE FUEL COST FOR EACH MOTORCYCLE?
         }
 
-        public void RemoveMotorcycle(string link, MotoContext context)
+        public void RemoveMotorcycle(string link)
         {
             Console.WriteLine(motocross.RemoveMotorcycle(link, context));
             Console.WriteLine(enduro.RemoveMotorcycle(link, context));

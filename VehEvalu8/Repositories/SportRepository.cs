@@ -26,7 +26,7 @@ namespace VehEvalu8.Repositories
             return findMotorcycleByLink!;
         }
 
-        public string RemoveMotorcycle(string link)
+        public string RemoveMotorcycle(string link, MotoContext context)
         {
             throw new NotImplementedException();
         }
