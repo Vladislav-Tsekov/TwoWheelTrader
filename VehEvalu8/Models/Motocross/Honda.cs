@@ -42,13 +42,13 @@ namespace VehEvalu8.Models.Motocross
                 case 2017:
                     MarketPrice = 8200; break;
                 case 2018:
-                    MarketPrice = 8650; break;
+                    MarketPrice = 8400; break;
                 case 2019:
-                    MarketPrice = 9500; break;
+                    MarketPrice = 9300; break;
                 case 2020:
-                    MarketPrice = 10000; break;
+                    MarketPrice = 9700; break;
                 case 2021:
-                    MarketPrice = 10500; break;
+                    MarketPrice = 10000; break;
                 case 2022:
                     MarketPrice = 11000; break;
                 case 2023:

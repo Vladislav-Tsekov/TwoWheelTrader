@@ -48,11 +48,11 @@ namespace VehEvalu8.Models.Motocross
                 case 2020:
                     MarketPrice = 9800; break;
                 case 2021:
-                    MarketPrice = 10500; break;
+                    MarketPrice = 10300; break;
                 case 2022:
-                    MarketPrice = 11000; break;
+                    MarketPrice = 10800; break;
                 case 2023:
-                    MarketPrice = 12000; break;
+                    MarketPrice = 11500; break;
             }
 
             Profit = MarketPrice - TotalCost;
