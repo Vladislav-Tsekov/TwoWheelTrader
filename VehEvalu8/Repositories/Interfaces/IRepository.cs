@@ -10,7 +10,7 @@ namespace VehEvalu8.Repositories.Interfaces
 
         Task<string> RepositoryStatusAsync();
 
-        string RemoveMotorcycle(string link);
+        string RemoveMotorcycle(string link, MotoContext context);
 
         //void MotorcycleExists(T motorcycle); -- Not sure if this will be needed for the scope of the program, will just add it for now
 
