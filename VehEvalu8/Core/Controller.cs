@@ -181,7 +181,7 @@ namespace VehEvalu8.Core
             return newDistance;
         }
     
-        public async Task<string> GetMotorcycleInfo(string link)
+        public async Task<string> GetMotorcycleInfoAsync(string link)
         {
             Motocross mxExists = await motocross.MotorcycleInfoAsync(link, context);
             Enduro enduroExists = await enduro.MotorcycleInfoAsync(link, context);

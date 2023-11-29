@@ -9,13 +9,12 @@ namespace VehEvalu8.Repositories.Interfaces
 
         Task TopFiveByProfitAsync();
 
-        Task<T> MotorcycleInfoAsync(string link, MotoContext context);
+        //WHY THIS WON'T WORK!?
+        //Task<T> MotorcycleInfoAsync(string link, MotoContext context) where T : class;
 
         Task<string> RepositoryStatusAsync();
 
         string RemoveMotorcycle(string link, MotoContext context);
-
-
 
         //void MotorcycleExists(T motorcycle); -- Not sure if this will be needed for the scope of the program, will just add it for now
 
