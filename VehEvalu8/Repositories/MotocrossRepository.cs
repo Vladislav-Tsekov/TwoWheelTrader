@@ -50,8 +50,9 @@ namespace VehEvalu8.Repositories
 
         public async Task<Motocross> MotorcycleInfoAsync(string link, MotoContext context)
         {
-            Motocross motoInfo = await context.Motocrosses.FirstOrDefault(m => m.Link == link);
-            return motoInfo;
+            List<Motocross> mxList = await context.Motocrosses.Where(m => m.Link == link).ToListAsync();
+            Motocross? motoInfo = mxList.FirstOrDefault();
+            return motoInfo!;
         }
 
         public string RemoveMotorcycle(string link, MotoContext context)
