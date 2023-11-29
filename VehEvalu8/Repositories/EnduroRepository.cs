@@ -48,10 +48,9 @@ namespace VehEvalu8.Repositories
             }
         }
 
-        public Enduro MotorcycleInfo(string link)
+        public async Task<Enduro> MotorcycleInfoAsync(string link, MotoContext context)
         {
-            var context = new MotoContext();
-            Enduro? motoInfo = context.Enduroes.FirstOrDefault(m => m.Link == link);
+            Enduro? motoInfo = await context.Enduroes.FirstOrDefault(m => m.Link == link);
             return motoInfo!;
         }
 

@@ -48,10 +48,9 @@ namespace VehEvalu8.Repositories
             }
         }
 
-        public Motocross MotorcycleInfo(string link)
+        public async Task<Motocross> MotorcycleInfoAsync(string link, MotoContext context)
         {
-            var context = new MotoContext();
-            Motocross? motoInfo = context.Motocrosses.FirstOrDefault(m => m.Link == link);
+            Motocross motoInfo = await context.Motocrosses.FirstOrDefault(m => m.Link == link);
             return motoInfo;
         }
 

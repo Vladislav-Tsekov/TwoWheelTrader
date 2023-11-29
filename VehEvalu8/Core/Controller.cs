@@ -181,16 +181,17 @@ namespace VehEvalu8.Core
             return newDistance;
         }
     
-        public string GetMotorcycleInfo(string link)
+        public async Task<string> GetMotorcycleInfo(string link)
         {
-            Motocross mxExists = motocross.MotorcycleInfo(link);
-            Enduro enduroExists = enduro.MotorcycleInfo(link);
+            Motocross mxExists = await motocross.MotorcycleInfoAsync(link, context);
+            Enduro enduroExists = await enduro.MotorcycleInfoAsync(link, context);
 
             StringBuilder infoBuilder = new();
 
             infoBuilder.AppendLine((mxExists != null) 
                 ? $"The motorcycle exists in the MotocrossRepository. ID: {mxExists.Id}" 
-                : "No such link was found in the MotocrossRepository" );
+                : "No such link was found in the MotocrossRepository");
+
             infoBuilder.AppendLine((enduroExists != null)
                 ? $"The motorcycle exists in the EnduroRepository. It's ID: {enduroExists.Id}"
                 : "No such link was found in the EnduroRepository");
@@ -231,9 +232,9 @@ namespace VehEvalu8.Core
         {
             Console.WriteLine(motocross.RemoveMotorcycle(link, context));
             Console.WriteLine(enduro.RemoveMotorcycle(link, context));
-            //Console.WriteLine(naked.RemoveMotorcycle(link));
-            //Console.WriteLine(sport.RemoveMotorcycle(link));
-            //Console.WriteLine(tourer.RemoveMotorcycle(link));
+            //Console.WriteLine(naked.RemoveMotorcycle(link, context));
+            //Console.WriteLine(sport.RemoveMotorcycle(link, context));
+            //Console.WriteLine(tourer.RemoveMotorcycle(link, context));
         }
     }
 }
