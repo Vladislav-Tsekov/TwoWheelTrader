@@ -50,7 +50,8 @@ namespace VehEvalu8.Repositories
 
         public async Task<Enduro> MotorcycleInfoAsync(string link, MotoContext context)
         {
-            Enduro? motoInfo = await context.Enduroes.FirstOrDefault(m => m.Link == link);
+            List<Enduro> enduroList = await context.Enduroes.Where(m => m.Link == link).ToListAsync();
+            Enduro? motoInfo = enduroList.FirstOrDefault();
             return motoInfo!;
         }
 
