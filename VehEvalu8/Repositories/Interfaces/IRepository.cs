@@ -1,4 +1,5 @@
 ﻿using VehEvalu8.Data;
+using VehEvalu8.Data.DBModels;
 
 namespace VehEvalu8.Repositories.Interfaces
 {
@@ -8,9 +9,13 @@ namespace VehEvalu8.Repositories.Interfaces
 
         Task TopFiveByProfitAsync();
 
+        Task<T> MotorcycleInfoAsync(string link, MotoContext context);
+
         Task<string> RepositoryStatusAsync();
 
         string RemoveMotorcycle(string link, MotoContext context);
+
+
 
         //void MotorcycleExists(T motorcycle); -- Not sure if this will be needed for the scope of the program, will just add it for now
 
