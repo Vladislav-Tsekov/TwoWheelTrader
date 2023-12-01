@@ -20,39 +20,39 @@ namespace VehEvalu8.Models.Motocross
             switch (Year)
             {
                 case 2007:
-                    MarketPrice = 4500; break;
+                    MarketPrice = 5175; break;
                 case 2008:
-                    MarketPrice = 4700; break;
+                    MarketPrice = 5250; break;
                 case 2009:
-                    MarketPrice = 5100; break;
+                    MarketPrice = 5300; break;
                 case 2010:
-                    MarketPrice = 5400; break;
+                    MarketPrice = 5500; break;
                 case 2011:
-                    MarketPrice = 5900; break;
+                    MarketPrice = 5800; break;
                 case 2012:
-                    MarketPrice = 6300; break;
+                    MarketPrice = 6100; break;
                 case 2013:
-                    MarketPrice = 6500; break;
+                    MarketPrice = 6200; break;
                 case 2014:
-                    MarketPrice = 6600; break;
+                    MarketPrice = 6700; break;
                 case 2015:
-                    MarketPrice = 6800; break;
+                    MarketPrice = 7200; break;
                 case 2016:
-                    MarketPrice = 7500; break;
+                    MarketPrice = 7400; break;
                 case 2017:
-                    MarketPrice = 8200; break;
+                    MarketPrice = 7900; break;
                 case 2018:
-                    MarketPrice = 8400; break;
+                    MarketPrice = 8500; break;
                 case 2019:
-                    MarketPrice = 9300; break;
+                    MarketPrice = 9200; break;
                 case 2020:
-                    MarketPrice = 9700; break;
+                    MarketPrice = 9800; break;
                 case 2021:
-                    MarketPrice = 10000; break;
+                    MarketPrice = 10300; break;
                 case 2022:
-                    MarketPrice = 11000; break;
+                    MarketPrice = 10900; break;
                 case 2023:
-                    MarketPrice = 12000; break;
+                    MarketPrice = 12300; break;
             }
 
             Profit = MarketPrice - TotalCost;

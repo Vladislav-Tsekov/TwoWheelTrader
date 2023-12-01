@@ -20,11 +20,11 @@ namespace VehEvalu8.Models.Motocross
             switch (Year)
             {
                 case 2021:
-                    MarketPrice = 10500; break;
+                    MarketPrice = 10000; break;
                 case 2022:
-                    MarketPrice = 11250; break;
+                    MarketPrice = 10300; break;
                 case 2023:
-                    MarketPrice = 12300; break;
+                    MarketPrice = 13200; break;
             }
 
             Profit = MarketPrice - TotalCost;
