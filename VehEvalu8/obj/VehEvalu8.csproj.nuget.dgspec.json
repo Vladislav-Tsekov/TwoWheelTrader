@@ -65,6 +65,10 @@
             "Microsoft.SqlServer.Server": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
             }
           },
           "imports": [

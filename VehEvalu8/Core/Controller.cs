@@ -9,12 +9,12 @@ namespace VehEvalu8.Core
 {
     public class Controller : IController
     {
-        private EnduroRepository enduro;
-        private MotocrossRepository motocross;
-        private NakedRepository naked;
-        private SportRepository sport;
-        private TourerRepository tourer;
-        private MotoContext context;
+        public EnduroRepository enduro;
+        public MotocrossRepository motocross;
+        public NakedRepository naked;
+        public SportRepository sport;
+        public TourerRepository tourer;
+        public MotoContext context;
 
         public Controller()
         {
