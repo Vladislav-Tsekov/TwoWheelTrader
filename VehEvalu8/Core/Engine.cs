@@ -56,7 +56,7 @@ namespace VehEvalu8.Core
                     else if (command == "check")
                     {
                         string link = input[1].Trim();
-                        Console.WriteLine(controller.GetMotorcycleInfo(link));
+                        Console.WriteLine(controller.GetMotorcycleInfoAsync(link));
                     }
                     else if (command == "status")
                     {

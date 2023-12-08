@@ -143,7 +143,7 @@ namespace VehEvalu8.Core
         public int DestinationExists(string pickUpDestination)
         {
             string filePath = @"C:\Users\tseko\OneDrive\Documents\SoftUni\C# Personal Projects\VehEvalu8\VehEvalu8\Routes\Routes.csv";
-            int distance = 0;
+            int distance;
 
             using var reader = new StreamReader(filePath);
             reader.ReadLine(); // Used to skip the column titles.
@@ -153,7 +153,7 @@ namespace VehEvalu8.Core
             while (!reader.EndOfStream)
             {
                 string? line = reader.ReadLine();
-                string[] data = line.Split(',');
+                string[] data = line!.Split(',');
 
                 townName = data[0].Trim();
                 distance = int.Parse(data[1].Trim());
@@ -172,7 +172,7 @@ namespace VehEvalu8.Core
             
             using var writer = new StreamWriter(filePath, append: true);
 
-            int newDistance = int.Parse(Console.ReadLine());
+            int newDistance = int.Parse(Console.ReadLine()!);
 
             Console.WriteLine($"New location added: {pickUpDestination}. Distance from Linkoping: {newDistance}");
             writer.WriteLine($"{pickUpDestination}, {newDistance}");
