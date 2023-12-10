@@ -57,7 +57,7 @@ namespace VehEvalu8.Repositories
 
         public string RemoveMotorcycle(string link, MotoContext context)
         {
-            Motocross? motoInfo = context.Motocrosses.FirstOrDefault(m => m.Link == link);
+            Motocross motoInfo = context.Motocrosses.FirstOrDefault(m => m.Link == link);
 
             string output = string.Empty;
 

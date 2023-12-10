@@ -79,6 +79,10 @@ namespace VehEvalu8.Core
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                    Console.WriteLine(ex.StackTrace);
+                    Console.WriteLine(ex.InnerException);
+                    Console.WriteLine(ex.TargetSite);
+                    Console.WriteLine(ex.Source);
                 }
             }
         }

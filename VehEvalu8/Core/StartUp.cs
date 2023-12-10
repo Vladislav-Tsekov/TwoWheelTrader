@@ -19,7 +19,7 @@ namespace VehEvalu8.Core
                 .AddScoped<IEngine, Engine>()
                 .BuildServiceProvider();
 
-                MotoContext context = serviceProvider.GetRequiredService<MotoContext>();
+                //MotoContext context = serviceProvider.GetRequiredService<MotoContext>();
                 IEngine engine = serviceProvider.GetService<IEngine>();
                 engine.RunProgram();
             }
