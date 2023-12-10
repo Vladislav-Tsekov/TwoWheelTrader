@@ -21,7 +21,7 @@ namespace VehEvalu8.Core
                                   $"{Environment.NewLine}Available commands: 'Add', 'Remove', 'Check', 'Status', 'Top' or 'Done'." +
                                   $"{Environment.NewLine}");
 
-                string[] input = Console.ReadLine()!.ToLower().Split();
+                string[] input = Console.ReadLine().ToLower().Split();
 
                 try
                 {
@@ -42,15 +42,14 @@ namespace VehEvalu8.Core
                         string link = input[6].Trim(); 
 
                         Console.WriteLine($"Please input the current location of the vehicle:");
-                        string location = Console.ReadLine()!.Trim();
+                        string location = Console.ReadLine().Trim();
                         int distance = controller.DestinationExists(location);
 
                         controller.CreateMotorcycle(make, model, cc, year, foreignPrice, link, distance);
                     }
                     else if (command == "remove")
                     {
-                        Console.WriteLine("Please input the link of the vehicle you wish to remove:");
-                        string link = Console.ReadLine()!.Trim();
+                        string link = input[1].Trim();
                         controller.RemoveMotorcycle(link);
                     }
                     else if (command == "check")
