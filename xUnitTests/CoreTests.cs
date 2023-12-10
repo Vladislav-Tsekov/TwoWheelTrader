@@ -57,7 +57,6 @@ namespace UnitTests.CoreTests
             string link = "www.kawa250.com";
 
             // Act
-            string info = controller.GetMotorcycleInfoAsync(link);
 
             // Assert
             //TODO - IMPLEMENT TEST

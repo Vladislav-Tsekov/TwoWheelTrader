@@ -28,7 +28,7 @@ namespace VehEvalu8.Core
 
         public IMotorcycle CreateMotorcycle(string make, string model, int cc, int year, int foreignPrice, string link, int distance) 
         {
-            IMotorcycle? motorcycle = null;
+            IMotorcycle motorcycle = null;
 
             switch (make.ToLower())
             {
