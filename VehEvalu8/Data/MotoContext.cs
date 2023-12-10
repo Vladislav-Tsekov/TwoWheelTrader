@@ -9,18 +9,11 @@ public partial class MotoContext : DbContext
 
     public MotoContext(){}
 
-    public MotoContext(DbContextOptions<DbContext> options) : base(options){}
-
     public virtual DbSet<Cc> Ccs { get; set; }
-
     public virtual DbSet<Make> Makes { get; set; }
-
     public virtual DbSet<Model> Models { get; set; }
-
     public virtual DbSet<Year> Years { get; set; }
-
     public virtual DbSet<Motocross> Motocrosses { get; set; }
-
     public virtual DbSet<Enduro> Enduroes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(connectionString);
@@ -29,32 +22,32 @@ public partial class MotoContext : DbContext
     {
         modelBuilder.Entity<Cc>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CC__3214EC07249B8CBA");
+            entity.HasKey(e => e.Id);
             entity.ToTable("CC");
         });
 
         modelBuilder.Entity<Make>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Makes__3214EC07DB6B7174");
+            entity.HasKey(e => e.Id);
             entity.Property(e => e.MakeName).HasMaxLength(70);
         });
 
         modelBuilder.Entity<Model>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Models__3214EC076FE5C533");
+            entity.HasKey(e => e.Id);
             entity.Property(e => e.ModelName).HasMaxLength(70);
         });
 
         modelBuilder.Entity<Year>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Year__3214EC07943E10C2");
+            entity.HasKey(e => e.Id);
             entity.ToTable("Years");
             entity.Property(e => e.Year1).HasColumnName("Year");
         });
 
         modelBuilder.Entity<Motocross>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Motocros__3214EC072EA21A42");
+            entity.HasKey(e => e.Id);
             entity.ToTable("Motocross");
 
             entity.Property(e => e.Ccid).HasColumnName("CCId");
@@ -70,20 +63,16 @@ public partial class MotoContext : DbContext
             entity.Property(e => e.TotalCost).HasColumnType("decimal(10, 2)");
 
             entity.HasOne(d => d.Cc).WithMany(p => p.Motocrosses)
-                .HasForeignKey(d => d.Ccid)
-                .HasConstraintName("FK__Motocross__CCId__403A8C7D");
+                .HasForeignKey(d => d.Ccid);
 
             entity.HasOne(d => d.Make).WithMany(p => p.Motocrosses)
-                .HasForeignKey(d => d.MakeId)
-                .HasConstraintName("FK__Motocross__MakeI__3E52440B");
+                .HasForeignKey(d => d.MakeId);
 
             entity.HasOne(d => d.Model).WithMany(p => p.Motocrosses)
-                .HasForeignKey(d => d.ModelId)
-                .HasConstraintName("FK__Motocross__Model__3F466844");
+                .HasForeignKey(d => d.ModelId);
 
             entity.HasOne(d => d.Year).WithMany(p => p.Motocrosses)
-                .HasForeignKey(d => d.YearId)
-                .HasConstraintName("FK__Motocross__YearI__412EB0B6");
+                .HasForeignKey(d => d.YearId);
         });
 
         modelBuilder.Entity<Enduro>(entity =>
