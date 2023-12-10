@@ -20,8 +20,8 @@ namespace VehEvalu8.Core
                 .BuildServiceProvider();
 
                 MotoContext context = serviceProvider.GetRequiredService<MotoContext>();
-                IEngine? engine = serviceProvider.GetService<IEngine>();
-                engine?.RunProgram();
+                IEngine engine = serviceProvider.GetService<IEngine>();
+                engine.RunProgram();
             }
             catch (Exception exception)
             {

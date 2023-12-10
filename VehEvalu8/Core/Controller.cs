@@ -152,8 +152,8 @@ namespace VehEvalu8.Core
 
             while (!reader.EndOfStream)
             {
-                string? line = reader.ReadLine();
-                string[] data = line!.Split(',');
+                string line = reader.ReadLine();
+                string[] data = line.Split(',');
 
                 townName = data[0].Trim();
                 distance = int.Parse(data[1].Trim());
@@ -172,7 +172,7 @@ namespace VehEvalu8.Core
             
             using var writer = new StreamWriter(filePath, append: true);
 
-            int newDistance = int.Parse(Console.ReadLine()!);
+            int newDistance = int.Parse(Console.ReadLine());
 
             Console.WriteLine($"New location added: {pickUpDestination}. Distance from Linkoping: {newDistance}");
             writer.WriteLine($"{pickUpDestination}, {newDistance}");
