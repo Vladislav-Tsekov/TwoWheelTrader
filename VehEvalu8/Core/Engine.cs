@@ -29,7 +29,7 @@ namespace VehEvalu8.Core
 
                     if (command == "done")
                     {
-                        Task.Run(async () => await controller.GetRepositoriesStatusAsync()).Wait();
+                        Task.Run(async () => await controller.GetRepositoriesStatusAsync());
                         Environment.Exit(0);
                     }
                     else if (command == "add")
@@ -78,11 +78,11 @@ namespace VehEvalu8.Core
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
-                    Console.WriteLine(ex.StackTrace);
-                    Console.WriteLine(ex.InnerException);
-                    Console.WriteLine(ex.TargetSite);
-                    Console.WriteLine(ex.Source);
+                    Console.WriteLine($"{ex.Message}{Environment.NewLine}" +
+                                      $"{ex.StackTrace}{Environment.NewLine}" +
+                                      $"{ex.InnerException}{Environment.NewLine}" +
+                                      $"{ex.TargetSite}{Environment.NewLine}" +
+                                      $"{ex.Source}{Environment.NewLine}");
                 }
             }
         }
