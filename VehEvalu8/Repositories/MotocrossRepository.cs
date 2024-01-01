@@ -25,10 +25,10 @@ namespace VehEvalu8.Repositories
                     Link = motorcycle.Link
                 };
 
-                Make? make = context.Makes.FirstOrDefault(m => m.MakeName == motorcycle.Make);
-                Model? model = context.Models.FirstOrDefault(m => m.ModelName == motorcycle.Model);
-                Year? year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
-                Cc? cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
+                Make make = context.Makes.FirstOrDefault(m => m.MakeName == motorcycle.Make);
+                Model model = context.Models.FirstOrDefault(m => m.ModelName == motorcycle.Model);
+                Year year = context.Years.FirstOrDefault(y => y.Year1 == motorcycle.Year);
+                Cc cc = context.Ccs.FirstOrDefault(c => c.EngineSize == motorcycle.CC);
 
                 moto.Make = make;
                 moto.Model = model;
@@ -51,7 +51,7 @@ namespace VehEvalu8.Repositories
         public async Task<Motocross> MotorcycleInfoAsync(string link, MotoContext context)
         {
             List<Motocross> mxList = await context.Motocrosses.Where(m => m.Link == link).ToListAsync();
-            Motocross? motoInfo = mxList.FirstOrDefault();
+            Motocross motoInfo = mxList.FirstOrDefault();
             return motoInfo!;
         }
 
