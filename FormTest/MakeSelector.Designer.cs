@@ -29,123 +29,143 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            yamahaButton = new Button();
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            hondaButton = new Button();
-            husqButton = new Button();
-            kawaButton = new Button();
-            gasButton = new Button();
-            suzukiButton = new Button();
-            ktmButton = new Button();
+            Motorcycles = new ContextMenuStrip(components);
+            addNewMotorcycleToolStripMenuItem = new ToolStripMenuItem();
+            removeMotorcycleToolStripMenuItem = new ToolStripMenuItem();
+            checkMotorcycleToolStripMenuItem = new ToolStripMenuItem();
+            Data = new ContextMenuStrip(components);
+            repositoryStatusToolStripMenuItem = new ToolStripMenuItem();
+            mostProfitableOffersToolStripMenuItem = new ToolStripMenuItem();
+            Control = new ContextMenuStrip(components);
+            exitProgramToolStripMenuItem = new ToolStripMenuItem();
+            checkedListBox1 = new CheckedListBox();
+            checkedListBox2 = new CheckedListBox();
+            checkedListBox3 = new CheckedListBox();
+            Motorcycles.SuspendLayout();
+            Data.SuspendLayout();
+            Control.SuspendLayout();
             SuspendLayout();
             // 
-            // yamahaButton
+            // Motorcycles
             // 
-            yamahaButton.BackColor = Color.Transparent;
-            yamahaButton.BackgroundImage = Properties.Resources.Yamaha_Motor_Company_Emblem;
-            yamahaButton.BackgroundImageLayout = ImageLayout.Stretch;
-            yamahaButton.Location = new Point(12, 12);
-            yamahaButton.Name = "yamahaButton";
-            yamahaButton.Size = new Size(154, 94);
-            yamahaButton.TabIndex = 0;
-            yamahaButton.UseVisualStyleBackColor = false;
+            Motorcycles.ImageScalingSize = new Size(20, 20);
+            Motorcycles.Items.AddRange(new ToolStripItem[] { addNewMotorcycleToolStripMenuItem, removeMotorcycleToolStripMenuItem, checkMotorcycleToolStripMenuItem });
+            Motorcycles.Name = "Motorcycles";
+            Motorcycles.RenderMode = ToolStripRenderMode.System;
+            Motorcycles.Size = new Size(226, 76);
+            Motorcycles.Text = "Motorcycles";
             // 
-            // contextMenuStrip1
+            // addNewMotorcycleToolStripMenuItem
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
+            addNewMotorcycleToolStripMenuItem.Name = "addNewMotorcycleToolStripMenuItem";
+            addNewMotorcycleToolStripMenuItem.Size = new Size(225, 24);
+            addNewMotorcycleToolStripMenuItem.Text = "Add New Motorcycle";
             // 
-            // hondaButton
+            // removeMotorcycleToolStripMenuItem
             // 
-            hondaButton.BackgroundImage = Properties.Resources.honda_11_logo_png_transparent;
-            hondaButton.BackgroundImageLayout = ImageLayout.Stretch;
-            hondaButton.Location = new Point(245, 13);
-            hondaButton.Name = "hondaButton";
-            hondaButton.Size = new Size(154, 94);
-            hondaButton.TabIndex = 3;
-            hondaButton.UseVisualStyleBackColor = true;
-            hondaButton.Click += hondaButton_Click;
+            removeMotorcycleToolStripMenuItem.Name = "removeMotorcycleToolStripMenuItem";
+            removeMotorcycleToolStripMenuItem.Size = new Size(225, 24);
+            removeMotorcycleToolStripMenuItem.Text = "Remove Motorcycle";
             // 
-            // husqButton
+            // checkMotorcycleToolStripMenuItem
             // 
-            husqButton.BackgroundImage = Properties.Resources.Husqvarna_logo;
-            husqButton.BackgroundImageLayout = ImageLayout.Stretch;
-            husqButton.Location = new Point(365, 126);
-            husqButton.Name = "husqButton";
-            husqButton.Size = new Size(154, 94);
-            husqButton.TabIndex = 4;
-            husqButton.UseVisualStyleBackColor = true;
+            checkMotorcycleToolStripMenuItem.Name = "checkMotorcycleToolStripMenuItem";
+            checkMotorcycleToolStripMenuItem.Size = new Size(225, 24);
+            checkMotorcycleToolStripMenuItem.Text = "Check Motorcycle Info";
             // 
-            // kawaButton
+            // Data
             // 
-            kawaButton.BackgroundImage = Properties.Resources.Kawasaki_Logo;
-            kawaButton.BackgroundImageLayout = ImageLayout.Stretch;
-            kawaButton.Location = new Point(489, 13);
-            kawaButton.Name = "kawaButton";
-            kawaButton.Size = new Size(154, 94);
-            kawaButton.TabIndex = 5;
-            kawaButton.UseVisualStyleBackColor = true;
+            Data.ImageScalingSize = new Size(20, 20);
+            Data.Items.AddRange(new ToolStripItem[] { repositoryStatusToolStripMenuItem, mostProfitableOffersToolStripMenuItem });
+            Data.Name = "Data";
+            Data.RenderMode = ToolStripRenderMode.System;
+            Data.Size = new Size(225, 52);
+            Data.Text = "Data";
             // 
-            // gasButton
+            // repositoryStatusToolStripMenuItem
             // 
-            gasButton.BackgroundImage = Properties.Resources.GASGAS_logo_logotipo_Gas_Gas;
-            gasButton.BackgroundImageLayout = ImageLayout.Stretch;
-            gasButton.Location = new Point(597, 126);
-            gasButton.Name = "gasButton";
-            gasButton.Size = new Size(154, 94);
-            gasButton.TabIndex = 6;
-            gasButton.UseVisualStyleBackColor = true;
-            gasButton.Click += gasButton_Click;
+            repositoryStatusToolStripMenuItem.Name = "repositoryStatusToolStripMenuItem";
+            repositoryStatusToolStripMenuItem.Size = new Size(224, 24);
+            repositoryStatusToolStripMenuItem.Text = "Repository Status";
             // 
-            // suzukiButton
+            // mostProfitableOffersToolStripMenuItem
             // 
-            suzukiButton.BackgroundImage = Properties.Resources.Suzuki_Emblem;
-            suzukiButton.BackgroundImageLayout = ImageLayout.Stretch;
-            suzukiButton.Location = new Point(694, 13);
-            suzukiButton.Name = "suzukiButton";
-            suzukiButton.Size = new Size(154, 94);
-            suzukiButton.TabIndex = 7;
-            suzukiButton.UseVisualStyleBackColor = true;
+            mostProfitableOffersToolStripMenuItem.Name = "mostProfitableOffersToolStripMenuItem";
+            mostProfitableOffersToolStripMenuItem.Size = new Size(224, 24);
+            mostProfitableOffersToolStripMenuItem.Text = "Most Profitable Offers";
             // 
-            // ktmButton
+            // Control
             // 
-            ktmButton.BackgroundImage = Properties.Resources.KTM_logo;
-            ktmButton.BackgroundImageLayout = ImageLayout.Stretch;
-            ktmButton.Location = new Point(122, 126);
-            ktmButton.Name = "ktmButton";
-            ktmButton.Size = new Size(154, 94);
-            ktmButton.TabIndex = 8;
-            ktmButton.UseVisualStyleBackColor = true;
-            ktmButton.Click += button1_Click;
+            Control.ImageScalingSize = new Size(20, 20);
+            Control.Items.AddRange(new ToolStripItem[] { exitProgramToolStripMenuItem });
+            Control.Name = "Control";
+            Control.RenderMode = ToolStripRenderMode.System;
+            Control.Size = new Size(164, 28);
+            Control.Text = "Control";
+            // 
+            // exitProgramToolStripMenuItem
+            // 
+            exitProgramToolStripMenuItem.Name = "exitProgramToolStripMenuItem";
+            exitProgramToolStripMenuItem.Size = new Size(163, 24);
+            exitProgramToolStripMenuItem.Text = "Exit Program";
+            // 
+            // checkedListBox1
+            // 
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "250", "350", "450" });
+            checkedListBox1.Location = new Point(36, 298);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(150, 114);
+            checkedListBox1.Sorted = true;
+            checkedListBox1.TabIndex = 15;
+            // 
+            // checkedListBox2
+            // 
+            checkedListBox2.FormattingEnabled = true;
+            checkedListBox2.Items.AddRange(new object[] { "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024" });
+            checkedListBox2.Location = new Point(230, 298);
+            checkedListBox2.Name = "checkedListBox2";
+            checkedListBox2.Size = new Size(150, 114);
+            checkedListBox2.TabIndex = 16;
+            // 
+            // checkedListBox3
+            // 
+            checkedListBox3.FormattingEnabled = true;
+            checkedListBox3.Items.AddRange(new object[] { "Yamaha", "Honda", "Kawasaki", "Suzuki", "KTM", "Husqvarna", "GASGAS" });
+            checkedListBox3.Location = new Point(450, 298);
+            checkedListBox3.Name = "checkedListBox3";
+            checkedListBox3.Size = new Size(150, 114);
+            checkedListBox3.TabIndex = 17;
             // 
             // MakeSelector
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(861, 634);
-            Controls.Add(ktmButton);
-            Controls.Add(suzukiButton);
-            Controls.Add(gasButton);
-            Controls.Add(kawaButton);
-            Controls.Add(husqButton);
-            Controls.Add(hondaButton);
-            Controls.Add(yamahaButton);
+            ClientSize = new Size(861, 595);
+            Controls.Add(checkedListBox3);
+            Controls.Add(checkedListBox2);
+            Controls.Add(checkedListBox1);
             Name = "MakeSelector";
             Text = "MakeSelector";
             Load += Form1_Load;
+            Motorcycles.ResumeLayout(false);
+            Data.ResumeLayout(false);
+            Control.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button yamahaButton;
-        private ContextMenuStrip contextMenuStrip1;
-        private Button hondaButton;
-        private Button husqButton;
-        private Button kawaButton;
-        private Button gasButton;
-        private Button suzukiButton;
-        private Button ktmButton;
+        private ContextMenuStrip Motorcycles;
+        private ToolStripMenuItem addNewMotorcycleToolStripMenuItem;
+        private ToolStripMenuItem removeMotorcycleToolStripMenuItem;
+        private ToolStripMenuItem checkMotorcycleToolStripMenuItem;
+        private ContextMenuStrip Data;
+        private ToolStripMenuItem repositoryStatusToolStripMenuItem;
+        private ToolStripMenuItem mostProfitableOffersToolStripMenuItem;
+        private ContextMenuStrip Control;
+        private ToolStripMenuItem exitProgramToolStripMenuItem;
+        private CheckedListBox checkedListBox1;
+        private CheckedListBox checkedListBox2;
+        private CheckedListBox checkedListBox3;
     }
 }

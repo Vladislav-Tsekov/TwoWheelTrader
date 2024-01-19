@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehEvalu8", "VehEvalu8\VehE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xUnitTests", "xUnitTests\xUnitTests.csproj", "{73909C6D-A9D1-4149-ACDB-8BEF574B9EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTest", "FormTest\FormTest.csproj", "{F27F30F1-9AC4-48A0-B0A0-A5991E8C0645}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{73909C6D-A9D1-4149-ACDB-8BEF574B9EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73909C6D-A9D1-4149-ACDB-8BEF574B9EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73909C6D-A9D1-4149-ACDB-8BEF574B9EF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F27F30F1-9AC4-48A0-B0A0-A5991E8C0645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F27F30F1-9AC4-48A0-B0A0-A5991E8C0645}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F27F30F1-9AC4-48A0-B0A0-A5991E8C0645}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F27F30F1-9AC4-48A0-B0A0-A5991E8C0645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
